@@ -1,0 +1,17 @@
+.DS_Store
+.idea/
+.vscode/
+*.swp
+node_modules/
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.*
+dist/
+build/
+out/
+coverage/
+playwright-report/
+test-results/

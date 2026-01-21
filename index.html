@@ -82,6 +82,23 @@
         font-weight: 600;
       }
 
+      .print-btn {
+        margin-left: auto;
+        border: 1px solid var(--line);
+        background: #ffffff;
+        color: var(--ink);
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 6px 10px;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+
+      .print-btn:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
       main {
         margin-top: 10px;
         display: grid;
@@ -203,6 +220,10 @@
       }
 
       @media print {
+        .no-print {
+          display: none !important;
+        }
+
         .page {
           padding: 0;
           max-width: 100%;
@@ -227,6 +248,9 @@
           <span><a href="mailto:geilton@live.com">geilton@live.com</a></span>
           <span><a href="https://linkedin.com/in/geiltonxavier">linkedin.com/in/geiltonxavier</a></span>
           <span><a href="https://github.com/geiltonxavier">github.com/geiltonxavier</a></span>
+          <button class="print-btn no-print" type="button" onclick="window.print()">
+            Baixar PDF
+          </button>
         </div>
       </header>
 
