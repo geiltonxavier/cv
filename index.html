@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geilton Xavier | CV</title>
+    <meta
+      name="description"
+      content="Currículo de Geilton Xavier, engenheiro de software especializado em plataformas cloud-native e sistemas distribuídos."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0c0f14;
+        --ink-soft: #2c3340;
+        --accent: #1f2a44;
+        --line: rgba(12, 15, 20, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+        color: var(--ink);
+        background: #ffffff;
+        min-height: 100vh;
+      }
+
+      @page {
+        size: A4;
+        margin: 16mm;
+      }
+
+      .page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 24px 18px 32px;
+      }
+
+      header {
+        display: grid;
+        gap: 6px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h1 {
+        font-family: "IBM Plex Serif", "Times New Roman", serif;
+        font-size: 1.9rem;
+        margin: 0;
+        letter-spacing: 0.2px;
+      }
+
+      .role {
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        max-width: 680px;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+        align-items: center;
+      }
+
+      .contact a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      main {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      section {
+        padding: 6px 0 2px;
+      }
+
+      h2 {
+        font-family: "IBM Plex Serif", "Times New Roman", serif;
+        margin: 0 0 4px;
+        font-size: 0.92rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 3px;
+      }
+
+      .experience {
+        display: grid;
+        gap: 10px;
+      }
+
+      .job {
+        padding-left: 0;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: baseline;
+      }
+
+      .job h3 {
+        margin: 0;
+        font-size: 0.98rem;
+        font-weight: 600;
+      }
+
+      .date {
+        font-size: 0.82rem;
+        color: var(--ink-soft);
+        white-space: nowrap;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        font-size: 0.82rem;
+        color: var(--ink-soft);
+        margin-bottom: 4px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 16px;
+        color: var(--ink-soft);
+        line-height: 1.35;
+      }
+
+      .skills {
+        margin-top: 4px;
+        font-size: 0.82rem;
+        color: var(--ink-soft);
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 4px 12px;
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+        align-items: start;
+      }
+
+      .skills-grid .label {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .accent {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .edu-item {
+        margin-bottom: 6px;
+      }
+
+      .edu-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: baseline;
+      }
+
+      @media (max-width: 900px) {
+        header {
+          padding-bottom: 8px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .page {
+          padding: 20px 14px 28px;
+        }
+
+        .job-header,
+        .edu-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2px;
+        }
+      }
+
+      @media print {
+        .page {
+          padding: 0;
+          max-width: 100%;
+        }
+
+        header {
+          padding-bottom: 8px;
+        }
+
+        main {
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Geilton Xavier</h1>
+        <div class="contact">
+          <span>São Paulo, Brazil</span>
+          <span><a href="mailto:geilton@live.com">geilton@live.com</a></span>
+          <span><a href="https://linkedin.com/in/geiltonxavier">linkedin.com/in/geiltonxavier</a></span>
+          <span><a href="https://github.com/geiltonxavier">github.com/geiltonxavier</a></span>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>Objetivo</h2>
+          <p class="role">
+            Engenheiro de software com 10+ anos de experiência no desenho e
+            construção de sistemas distribuídos e cloud-native. Forte atuação em
+            .NET, arquitetura de plataformas e automação, com histórico
+            comprovado de impacto organizacional, escalabilidade e eficiência
+            operacional.
+          </p>
+        </section>
+
+        <section>
+          <h2>Experiência</h2>
+          <div class="experience">
+            <article class="job">
+              <div class="job-header">
+                <h3>Senior Engineer / Tech Lead · Siemens</h3>
+                <span class="date">Dec 2024–Present</span>
+              </div>
+              <div class="meta">
+                <span>Smart Infrastructure</span>
+                <span>Lisbon, Portugal</span>
+              </div>
+              <ul>
+                <li>
+                  Atuando como Senior Engineer e Tech Lead, liderando a arquitetura de uma plataforma
+                  centralizada de Gestão de Utilizadores integrando SAP, Salesforce, Dynamics e
+                  ServiceNow—construída de raiz e atualmente em produção.
+                </li>
+                <li>
+                  Construindo o sistema único de registo para ciclo de vida de colaboradores e gestão
+                  automatizada de licenças (deteção de licenças não utilizadas, notificações automáticas,
+                  recuperação automática), com projeção de poupança de $1M+ anuais nas operações
+                  globais da Siemens.
+                </li>
+                <li>
+                  Liderando a automação global de onboarding/offboarding, reduzindo operações manuais
+                  e garantindo consistência de processos em múltiplas regiões.
+                </li>
+                <li>
+                  Desenhando uma arquitetura de plataforma extensível para permitir futuras integrações
+                  com sistemas empresariais adicionais.
+                </li>
+                <li>
+                  Liderando a direção técnica de uma equipa de 2 developers, definindo stack,
+                  arquitetura e tarefas técnicas.
+                </li>
+                <li>
+                  Estabeleci workflow de desenvolvimento assistido por IA utilizando Specification-Driven
+                  Development (SDD) com prompts estruturados (skills.md, rules.md) e agentes do
+                  GitHub Copilot, padronizando o uso de IA na equipa para manter qualidade de código
+                  e acelerar o desenvolvimento.
+                </li>
+              </ul>
+              <div class="skills">
+                Skills: .NET, Azure, Angular, Azure SQL, Azure Functions, Microservices, DDD, TDD,
+                CI/CD, Bicep/ARM, Enterprise Integrations, AI-Assisted Development (SDD, GitHub
+                Copilot), Azure Monitor, Log Analytics
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <h3>Staff Engineer - Platforms Architecture · Novabase (Fidelidade)</h3>
+                <span class="date">Apr 2021–Nov 2024</span>
+              </div>
+              <div class="meta">
+                <span>Lisbon, Portugal</span>
+              </div>
+              <ul>
+                <li>
+                  Conduzi a padronização técnica em 17+ times e 300+ desenvolvedores por meio de
+                  platform engineering e fóruns de liderança técnica (sessões mensais com tech leads e
+                  tech talks em nível corporativo).
+                </li>
+                <li>
+                  Criação da Internal Developer Platform com templates reutilizáveis, logging estruturado
+                  e pipelines de CI/CD, eliminando 100% do retrabalho relacionado a logging, acelerando
+                  o setup de novos projetos e sendo adotada por 70+ novos projetos.
+                </li>
+                <li>
+                  Desenho de um sistema de análise de issues com IA, integrando Jira API e Azure OpenAI,
+                  analisando automaticamente 100+ tickets/mês de 300+ desenvolvedores, usando prompt
+                  engineering para categorização automatizada e ranking probabilístico, reduzindo análise
+                  manual em 70% e permitindo priorização baseada em dados que identificou gargalos
+                  críticos de performance.
+                </li>
+                <li>
+                  Desenho de um sistema de gerenciamento de arquivos baseado em streams (substituindo
+                  Base64), removendo limitações de tamanho em transferências de rede.
+                </li>
+                <li>
+                  Criação de um sistema de descoberta de projetos e análise de segurança cobrindo
+                  5.000+ projetos, auto-identificando responsáveis por análise de contribuições,
+                  detectando vulnerabilidades de pacotes via NuGet API e correlacionando com SonarQube
+                  para construir dashboards por time, impulsionando correções críticas de segurança e
+                  melhorias de qualidade.
+                </li>
+                <li>
+                  Definição de padrões arquiteturais cloud-native, adotados em toda a organização.
+                </li>
+              </ul>
+              <div class="skills">
+                Skills: .NET, Azure, Kubernetes, Docker, Microservices, SQL Server, DDD, TDD, CI/CD,
+                Azure OpenAI, Prompt Engineering, Kibana, Observabilidade
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <h3>Senior Software Engineer · Agap2-IT (SoftFinança)</h3>
+                <span class="date">Jan 2020–Mar 2021</span>
+              </div>
+              <div class="meta">
+                <span>Lisbon, Portugal</span>
+              </div>
+              <ul>
+                <li>
+                  Atuei como Senior Software Engineer alocado na SoftFinança, contribuindo para a
+                  arquitetura e evolução de plataformas de Marketplace e Core Banking.
+                </li>
+                <li>
+                  Desenho da arquitetura inicial de um marketplace para farmácias, aplicando princípios
+                  de Clean Architecture.
+                </li>
+                <li>
+                  Contribuição em sistemas de core banking para produtos de cartão de crédito,
+                  suportando fluxos financeiros críticos.
+                </li>
+                <li>
+                  Liderança de melhorias de performance por meio de otimização de LINQ e composição de
+                  queries, resultando em ganhos significativos de tempo de resposta em sistemas
+                  transacionais de alto volume.
+                </li>
+                <li>
+                  Desenvolvimento e evolução de serviços backend utilizando .NET Core, C#, Web API e
+                  WCF, com otimização de acesso a dados em SQL Server.
+                </li>
+                <li>
+                  Atuação em ambientes bancários com alta consistência, segurança e disponibilidade.
+                </li>
+              </ul>
+              <div class="skills">
+                Skills: .NET Core, Clean Architecture, LINQ, SQL Server, Web API, WCF
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <h3>Senior Software Engineer · Mttechne (Ticket)</h3>
+                <span class="date">2019–2020</span>
+              </div>
+              <div class="meta">
+                <span>São Paulo, Brazil</span>
+              </div>
+              <ul>
+                <li>
+                  Atuei como Senior Engineer no Transaction HUB financeiro da Ticket, orquestrando todas
+                  as operações financeiras da organização.
+                </li>
+                <li>
+                  Desenho e evolução de uma arquitetura baseada em microservices, utilizando padrões
+                  event-driven para suportar workflows financeiros assíncronos e escaláveis, integrados
+                  ao Oracle ERP.
+                </li>
+                <li>
+                  Contribuição na plataforma de e-commerce Ticket Shop, com desenvolvimento de serviços
+                  backend para finalização, processamento e entrega de cartões.
+                </li>
+                <li>
+                  Aplicação de princípios de DDD e TDD para modelar regras de negócio complexas e
+                  garantir alta confiabilidade em sistemas financeiros.
+                </li>
+              </ul>
+              <div class="skills">
+                Skills: .NET Core, C#, Microservices, Event-Driven Architecture, DDD, TDD, Oracle,
+                RabbitMQ, Docker, Kubernetes
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <h3>Senior Software Engineer · Vizir (Natura & Ticket)</h3>
+                <span class="date">2017–2019</span>
+              </div>
+              <div class="meta">
+                <span>São Paulo, Brazil</span>
+              </div>
+              <ul>
+                <li>
+                  Desenvolvimento de uma plataforma global de onboarding de consultores de vendas para a
+                  Natura, suportando operações multi-país e integrações com gateways de pagamento.
+                </li>
+                <li>
+                  Liderança de PoCs com AWS Lambda, API Gateway, SNS e SQS, validando arquiteturas
+                  event-driven para futuras implementações em cloud.
+                </li>
+                <li>
+                  Contribuição no Transaction HUB financeiro da Ticket, com desenvolvimento de
+                  microservices em .NET Core, aplicando práticas de DDD e TDD.
+                </li>
+              </ul>
+              <div class="skills">
+                Skills: Node.js, AWS Lambda, API Gateway, SNS, SQS, MySQL, .NET Core, C#,
+                Microservices, Event-Driven Architecture, DDD, TDD, Oracle, RabbitMQ, Docker, Kubernetes
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <h3>Senior Software Engineer · Deal</h3>
+                <span class="date">2017–2019</span>
+              </div>
+              <div class="meta">
+                <span>São Paulo, Brazil</span>
+              </div>
+              <ul>
+                <li>
+                  Atuei como Senior individual contributor no desenho e evolução de uma plataforma B2B
+                  de fidelidade, cloud-based e multi-tenant, suportando gamificação, rankings, cashback
+                  e incentivos baseados em pontos.
+                </li>
+                <li>
+                  Colaboração com outros engenheiros seniores na definição da arquitetura da plataforma,
+                  substituindo um modelo legado específico por cliente por uma solução configurável e
+                  reutilizável.
+                </li>
+                <li>
+                  Liderança do desenvolvimento backend utilizando .NET Core, C# e APIs REST, aplicando
+                  arquitetura modular e bounded contexts para suportar campanhas e regras de negócio
+                  customizáveis.
+                </li>
+                <li>
+                  Desenho e implementação de motores de incentivo e pontuação, responsáveis por
+                  acúmulo de pontos, lógica de campanhas, rankings e resgate de recompensas por meio de
+                  uma plataforma de e-commerce integrada.
+                </li>
+                <li>
+                  Garantia de escalabilidade e estabilidade durante picos de alto volume de
+                  processamento, especialmente em ciclos de distribuição de pontos.
+                </li>
+                <li>
+                  Atuação como parceiro técnico de Product Owners e Project Managers, traduzindo
+                  requisitos de negócio complexos em soluções robustas e manuteníveis.
+                </li>
+                <li>
+                  Suporte a clientes enterprise como Nestlé e Vivo, operando sob altos requisitos de
+                  disponibilidade e performance.
+                </li>
+              </ul>
+              <div class="skills">
+                Skills: .NET Core, C#, REST APIs, Microservices, DDD, TDD, SQL, Azure
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <h3>Software Engineer · Deal, Erisf, FCamara, Confitec, Prodesp, Vizir</h3>
+                <span class="date">2012–2017</span>
+              </div>
+              <div class="meta">
+                <span>São Paulo, Brazil</span>
+              </div>
+              <ul>
+                <li>
+                  Construção, manutenção e evolução de sistemas enterprise nos domínios setor público,
+                  energia, financeiro, fidelidade e jurídico, suportando fluxos críticos de negócio e
+                  operação.
+                </li>
+                <li>
+                  Desenho e desenvolvimento de sistemas ERP, plataformas financeiras e serviços
+                  distribuídos, atuando próximo a dados críticos e regras de negócio complexas.
+                </li>
+                <li>
+                  Atuação em múltiplas stacks tecnológicas, incluindo .NET e Ruby on Rails,
+                  consolidando forte experiência em engenharia backend e integração de sistemas.
+                </li>
+                <li>
+                  Desenho e exposição de Web APIs e serviços backend, integrando sistemas por meio de
+                  comunicação assíncrona e event-driven, utilizando RabbitMQ e Kafka.
+                </li>
+                <li>
+                  Contribuição na evolução de ambientes cloud e containerizados, trabalhando com
+                  Azure, Docker e Kubernetes para melhorar escalabilidade e consistência de deploys.
+                </li>
+                <li>
+                  Aplicação de padrões arquiteturais como CQRS e design modular, suportando
+                  escalabilidade, performance e manutenibilidade dos sistemas.
+                </li>
+                <li>
+                  Atuação em papéis que variaram de engenheiro solo a senior individual contributor,
+                  adaptando-se a diferentes tamanhos de time e níveis de criticidade dos projetos.
+                </li>
+                <li>
+                  Entrega consistente de melhorias de performance, estabilidade de sistemas e soluções
+                  manuteníveis em ambientes de produção.
+                </li>
+              </ul>
+              <div class="skills">
+                Skills: .NET, Ruby on Rails, Azure, CQRS, RabbitMQ, Kafka, Docker, Kubernetes, SQL,
+                Web APIs
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <span class="label">Técnicas</span>
+            <span>.NET, Microservices, DDD, TDD, CI/CD, SQL Server, Oracle</span>
+            <span class="label">Cloud</span>
+            <span>Azure (Functions, SQL, Monitor), AWS (Lambda, API Gateway, SNS, SQS)</span>
+            <span class="label">Plataforma</span>
+            <span>Kubernetes, Docker, RabbitMQ, Kafka, Observabilidade</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>Educação</h2>
+          <div class="edu-item">
+            <div class="edu-header">
+              <strong>Mestrado em Engenharia Informática (M.Sc.)</strong>
+              <span class="date">2025 – Atual</span>
+            </div>
+            <div class="meta">
+              <span>Universidade de Évora, Portugal</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-header">
+              <strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong>
+              <span class="date">2013 – 2015</span>
+            </div>
+            <div class="meta">
+              <span>Universidade Cruzeiro do Sul, Brasil</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Certificações</h2>
+          <p>Microsoft Certified: Azure Developer Associate (AZ-204)</p>
+        </section>
+
+        <section>
+          <h2>Além do Trabalho</h2>
+          <p>
+            Blog <span class="accent">geiltonxavier.dev</span>, escrevo sobre engenharia
+            de software e reflexões sobre a prática da profissão.
+          </p>
+          <p>
+            Open source: <span class="accent">Go (aprenda-go)</span>.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
