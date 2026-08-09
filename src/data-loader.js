@@ -9,9 +9,10 @@ async function readYaml(filePath) {
 }
 
 async function loadCareerData() {
-  const [profile, experiences, claims, metrics, education, conflicts, reviewQueue, tracks] =
+  const [profile, sources, experiences, claims, metrics, education, conflicts, reviewQueue, tracks] =
     await Promise.all([
       readYaml(path.join(DATA_DIR, "profile.yml")),
+      readYaml(path.join(DATA_DIR, "sources.yml")),
       readYaml(path.join(DATA_DIR, "experiences.yml")),
       readYaml(path.join(DATA_DIR, "claims.yml")),
       readYaml(path.join(DATA_DIR, "metrics.yml")),
@@ -25,6 +26,7 @@ async function loadCareerData() {
 
   return {
     profile: profileData,
+    direct_sources: sources.direct_sources,
     experiences: experiences.experiences,
     claims: claims.claims,
     metrics: metrics.metrics,

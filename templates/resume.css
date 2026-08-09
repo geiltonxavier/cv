@@ -108,6 +108,10 @@ h2 {
   page-break-inside: avoid;
 }
 
+.continued-heading {
+  display: none;
+}
+
 .job-heading {
   display: flex;
   align-items: baseline;
@@ -213,7 +217,8 @@ li {
   }
 
   body {
-    font-size: 8.8pt;
+    font-size: 10pt;
+    line-height: 1.38;
   }
 
   .resume {
@@ -227,7 +232,17 @@ li {
   }
 
   .experience-list {
-    gap: 7px;
+    gap: 9px;
+  }
+
+  .job.page-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .continued-heading {
+    display: block;
+    margin-bottom: 7px;
   }
 
   a {

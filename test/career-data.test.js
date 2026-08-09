@@ -20,6 +20,7 @@ test("all configured tracks select only usable claims and metrics", async () => 
     const claimIds = [
       ...track.summary_claim_ids,
       ...Object.values(track.experience_claims).flat(),
+      ...track.early_career_claim_ids,
       ...track.skill_groups.flatMap((group) => group.evidence_claim_ids),
     ];
     for (const claimId of claimIds) {
@@ -43,19 +44,77 @@ test("legacy-only information stays review-gated and traceable", async () => {
   }
 });
 
-test("generated CV excludes blocked metrics, contacts, credentials, and third-party sources", async () => {
+test("newly confirmed career facts remain traceable to a direct user source", async () => {
+  const data = await loadCareerData();
+  const directSource = data.direct_sources.find((source) => source.id === "USR-20260809-001");
+  const confirmedClaimIds = [
+    "CLAIM-0115",
+    "CLAIM-0116",
+    "CLAIM-0117",
+    "CLAIM-0118",
+    "CLAIM-0119",
+  ];
+
+  assert.ok(directSource);
+  for (const claimId of confirmedClaimIds) {
+    const claim = data.claims.find((item) => item.id === claimId);
+    assert.equal(claim.status, "usable");
+    assert.equal(claim.confidence, "high");
+    assert.equal(claim.source_ids.includes(directSource.id), true);
+  }
+
+  const phoneSource = data.direct_sources.find((source) => source.id === "USR-20260809-002");
+  const phones = data.profile.contacts.filter((contact) => contact.kind === "phone");
+  assert.ok(phoneSource);
+  assert.equal(phones.length, 2);
+  for (const phone of phones) {
+    assert.equal(phone.status, "usable");
+    assert.equal(phone.whatsapp, true);
+    assert.equal(phone.source_ids.includes(phoneSource.id), true);
+  }
+});
+
+test("Portugal-market CV uses only the confirmed Portugal WhatsApp number", async () => {
   const data = await loadCareerData();
   const { resume, audit } = buildResume(data, {
     language: "en",
+    market: "pt",
     trackId: "architecture-staff",
   });
   const html = await renderResume(resume);
 
-  for (const blockedText of ["$1M+", "900K", "99.9%", "+351", "+55 11", "AZ-204", "IEEE", "geiltonxavier.dev"]) {
+  for (const blockedText of ["$1M+", "900K", "99.9%", "+55 11", "AZ-204", "IEEE", "geiltonxavier.dev"]) {
     assert.equal(html.includes(blockedText), false, `must exclude ${blockedText}`);
   }
+  assert.equal(html.includes("+351 910 702 889 (WhatsApp)"), true);
+  assert.deepEqual(audit.selected_contact_ids.sort(), [
+    "contact-email",
+    "contact-linkedin",
+    "contact-phone-pt",
+  ]);
+  assert.equal(audit.market, "pt");
+  assert.equal(audit.selected_source_ids.includes("USR-20260809-002"), true);
   assert.equal(audit.selected_source_ids.includes("SRC-017"), false);
   assert.equal(audit.excluded_source_ids.includes("SRC-017"), true);
+});
+
+test("Brazil-market CV uses only the confirmed Brazil WhatsApp number", async () => {
+  const data = await loadCareerData();
+  const { resume, audit } = buildResume(data, {
+    language: "en",
+    market: "br",
+    trackId: "architecture-staff",
+  });
+  const html = await renderResume(resume);
+
+  assert.equal(html.includes("+55 11 92648-6761 (WhatsApp)"), true);
+  assert.equal(html.includes("+351 910 702 889"), false);
+  assert.deepEqual(audit.selected_contact_ids.sort(), [
+    "contact-email",
+    "contact-linkedin",
+    "contact-phone-br",
+  ]);
+  assert.equal(audit.market, "br");
 });
 
 test("reference validation rejects a non-usable claim selected by a track", async () => {
@@ -78,4 +137,45 @@ test("rendered HTML keeps standard ATS sections and source claim markers", async
   assert.match(html, /<h2 id="experience-heading">Experiência<\/h2>/);
   assert.match(html, /<h2 id="skills-heading">Habilidades técnicas<\/h2>/);
   assert.match(html, /data-claim-id="CLAIM-0003"/);
+  assert.match(html, /data-claim-id="CLAIM-0093"/);
+});
+
+test("architecture CV includes confirmed ATS terms and an intentional second-page boundary", async () => {
+  const data = await loadCareerData();
+  const { resume, audit } = buildResume(data, {
+    language: "en",
+    trackId: "architecture-staff",
+  });
+  const html = await renderResume(resume);
+
+  for (const expected of [
+    "Platform Engineering",
+    "Terraform",
+    "Specification-Driven Development (SDD)",
+    "AI-assisted development",
+    "Trained 300+ developers",
+    "cross-team",
+  ]) {
+    assert.equal(html.includes(expected), true, `must include ${expected}`);
+  }
+
+  assert.equal(resume.targetPages, 2);
+  assert.equal(audit.target_pages, 2);
+  assert.equal(audit.page_break_before_experience, "mttechne-ticket");
+  assert.equal(audit.selected_source_ids.includes("USR-20260809-001"), true);
+  assert.match(
+    html,
+    /class="job page-break-before"[^>]*>[\s\S]*Experience \(continued\)[\s\S]*Mttechne/,
+  );
+});
+
+test("reference validation rejects unknown direct evidence", async () => {
+  const data = await loadCareerData();
+  const unsafe = structuredClone(data);
+  unsafe.claims.find((claim) => claim.id === "CLAIM-0115").source_ids = [
+    "USR-20260809-999",
+  ];
+
+  const errors = validateReferences(unsafe);
+  assert.ok(errors.some((error) => error.includes("unknown direct source USR-20260809-999")));
 });

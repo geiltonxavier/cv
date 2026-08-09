@@ -12,25 +12,31 @@ tracks:
       pt: Sistemas distribuídos · .NET · Azure · Platform Engineering
       en: Distributed Systems · .NET · Azure · Platform Engineering
     summary:
-      pt: Engenheiro de software com mais de 10 anos de experiência em sistemas distribuídos, arquitetura e engenharia de plataformas. Atualmente atuo com decisões arquiteturais e sistemas cloud-native em .NET e Azure na Siemens. Anteriormente liderei iniciativas de padronização que alcançaram 17+ times e 300+ desenvolvedores.
-      en: Software engineer with 10+ years of experience in distributed systems, architecture, and platform engineering. Currently working on architecture decisions and cloud-native .NET and Azure systems at Siemens. Previously led standardization initiatives reaching 17+ teams and 300+ developers.
-    summary_claim_ids: [CLAIM-0002, CLAIM-0003, CLAIM-0012]
+      pt: Arquiteto de soluções e Staff Engineer com mais de 15 anos de experiência em sistemas distribuídos, arquitetura e Platform Engineering. Na Siemens, atuo com .NET e Azure, infraestrutura como código com Terraform e Bicep, Specification-Driven Development e desenvolvimento assistido por IA. Na Fidelidade, liderei iniciativas cross-team em 17+ times e treinei mais de 300 desenvolvedores em boas práticas de engenharia.
+      en: Solutions Architect and Staff Engineer with 15+ years of experience in distributed systems, architecture, and Platform Engineering. At Siemens, I work with .NET and Azure, infrastructure as code using Terraform and Bicep, Specification-Driven Development, and AI-assisted development. At Fidelidade, I led cross-team initiatives across 17+ teams and trained 300+ developers in engineering best practices.
+    summary_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0118, CLAIM-0119]
     experience_claims:
-      siemens: [CLAIM-0002, CLAIM-0003, CLAIM-0005, CLAIM-0006, CLAIM-0007]
-      novabase-fidelidade: [CLAIM-0012, CLAIM-0013, CLAIM-0014, CLAIM-0016, CLAIM-0017]
+      siemens: [CLAIM-0115, CLAIM-0003, CLAIM-0116, CLAIM-0117, CLAIM-0006, CLAIM-0007]
+      novabase-fidelidade: [CLAIM-0119, CLAIM-0118, CLAIM-0013, CLAIM-0014, CLAIM-0016]
       agap2-softfinanca: [CLAIM-0023, CLAIM-0025, CLAIM-0024]
       mttechne-ticket: [CLAIM-0030, CLAIM-0031, CLAIM-0032]
       vizir-second: [CLAIM-0036, CLAIM-0038, CLAIM-0040]
+    early_career_claim_ids: [CLAIM-0048, CLAIM-0060, CLAIM-0068, CLAIM-0093]
+    page_break_before_experience: mttechne-ticket
+    target_pages: 2
     skill_groups:
       - label: {pt: Arquitetura, en: Architecture}
         items: [.NET, Distributed Systems, Event-Driven Architecture, DDD, Clean Architecture, Microservices]
         evidence_claim_ids: [CLAIM-0003, CLAIM-0004, CLAIM-0030, CLAIM-0031]
       - label: {pt: Cloud e Plataforma, en: Cloud & Platform}
-        items: [Azure, AWS, Platform Engineering, Docker, Kubernetes, Bicep, CI/CD]
-        evidence_claim_ids: [CLAIM-0005, CLAIM-0012, CLAIM-0013, CLAIM-0038]
+        items: [Azure, AWS, Platform Engineering, Terraform, Bicep, Docker, Kubernetes, CI/CD]
+        evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0013, CLAIM-0038]
+      - label: {pt: IA e produtividade, en: AI & Productivity}
+        items: [Specification-Driven Development (SDD), AI-Assisted Development, Developer Experience]
+        evidence_claim_ids: [CLAIM-0117, CLAIM-0013, CLAIM-0014]
       - label: {pt: Liderança técnica, en: Technical Leadership}
-        items: [Architecture Reviews, Engineering Standards, Mentoring, Cross-team Influence]
-        evidence_claim_ids: [CLAIM-0002, CLAIM-0007, CLAIM-0017, CLAIM-0018]
+        items: [Architecture Reviews, Engineering Standards, Mentoring, Developer Training, Cross-team Influence]
+        evidence_claim_ids: [CLAIM-0002, CLAIM-0007, CLAIM-0118, CLAIM-0119]
       - label: {pt: Operação e segurança, en: Operations & Security}
         items: [Observability, IAM, RBAC, Reliability, SonarQube, NuGet Security]
         evidence_claim_ids: [CLAIM-0006, CLAIM-0016]
@@ -46,15 +52,18 @@ tracks:
       pt: .NET · Sistemas distribuídos · APIs · Arquitetura orientada a eventos
       en: .NET · Distributed Systems · APIs · Event-Driven Architecture
     summary:
-      pt: Engenheiro backend com mais de 10 anos de experiência em .NET, APIs, sistemas distribuídos e domínios transacionais. Projeto e implemento sistemas cloud-native em Azure e tenho experiência em marketplace, core banking, cartões, mensageria e otimização de acesso a dados.
-      en: Backend engineer with 10+ years of experience in .NET, APIs, distributed systems, and transactional domains. I design and implement cloud-native systems on Azure, with experience across marketplace, core banking, payment cards, messaging, and data-access optimization.
-    summary_claim_ids: [CLAIM-0003, CLAIM-0022, CLAIM-0026, CLAIM-0031]
+      pt: Engenheiro backend com mais de 15 anos de experiência em .NET, APIs, sistemas distribuídos e domínios transacionais. Na Siemens, projeto sistemas cloud-native em Azure, atuo com Platform Engineering, uso Terraform e Bicep e aplico SDD e IA para acelerar o desenvolvimento. Também tenho experiência em marketplace, core banking, cartões, mensageria e otimização de acesso a dados.
+      en: Backend engineer with 15+ years of experience in .NET, APIs, distributed systems, and transactional domains. At Siemens, I design cloud-native systems on Azure, work in Platform Engineering, use Terraform and Bicep, and apply SDD and AI to accelerate development. My experience also covers marketplace, core banking, payment cards, messaging, and data-access optimization.
+    summary_claim_ids: [CLAIM-0003, CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0022, CLAIM-0026, CLAIM-0031]
     experience_claims:
-      siemens: [CLAIM-0003, CLAIM-0004, CLAIM-0005, CLAIM-0006]
-      novabase-fidelidade: [CLAIM-0014, CLAIM-0016, CLAIM-0013]
+      siemens: [CLAIM-0003, CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0004, CLAIM-0006]
+      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0014, CLAIM-0016, CLAIM-0013]
       agap2-softfinanca: [CLAIM-0023, CLAIM-0024, CLAIM-0025, CLAIM-0026]
       mttechne-ticket: [CLAIM-0029, CLAIM-0031, CLAIM-0032, CLAIM-0033]
       vizir-second: [CLAIM-0036, CLAIM-0037, CLAIM-0040, CLAIM-0043]
+    early_career_claim_ids: [CLAIM-0048, CLAIM-0068, CLAIM-0076, CLAIM-0082, CLAIM-0093]
+    page_break_before_experience: mttechne-ticket
+    target_pages: 2
     skill_groups:
       - label: {pt: Backend, en: Backend}
         items: [C#, .NET, .NET Core, REST APIs, Web API, WCF, Microservices]
@@ -63,8 +72,11 @@ tracks:
         items: [Distributed Systems, Event-Driven Architecture, DDD, TDD, Clean Architecture]
         evidence_claim_ids: [CLAIM-0004, CLAIM-0023, CLAIM-0030, CLAIM-0031, CLAIM-0032]
       - label: {pt: Cloud e infraestrutura, en: Cloud & Infrastructure}
-        items: [Azure, AWS, Docker, Kubernetes, Bicep, CI/CD]
-        evidence_claim_ids: [CLAIM-0005, CLAIM-0038]
+        items: [Azure, AWS, Terraform, Bicep, Docker, Kubernetes, CI/CD]
+        evidence_claim_ids: [CLAIM-0116, CLAIM-0005, CLAIM-0038]
+      - label: {pt: Produtividade de engenharia, en: Engineering Productivity}
+        items: [Platform Engineering, Specification-Driven Development (SDD), AI-Assisted Development, Developer Training]
+        evidence_claim_ids: [CLAIM-0115, CLAIM-0117, CLAIM-0118]
       - label: {pt: Dados e operação, en: Data & Operations}
         items: [SQL Server, LINQ, Observability, SonarQube, NuGet Security]
         evidence_claim_ids: [CLAIM-0006, CLAIM-0016, CLAIM-0025]
@@ -80,15 +92,18 @@ tracks:
       pt: Sistemas distribuídos · .NET · Ruby on Rails · APIs
       en: Distributed Systems · .NET · Ruby on Rails · APIs
     summary:
-      pt: Engenheiro de software com mais de 10 anos de experiência em sistemas backend, APIs e arquiteturas distribuídas. Minha trajetória combina .NET em ambientes enterprise e transacionais com experiência anterior em Ruby on Rails, processamento assíncrono e integração de sistemas.
-      en: Software engineer with 10+ years of experience in backend systems, APIs, and distributed architectures. My background combines .NET in enterprise and transactional environments with earlier Ruby on Rails, asynchronous processing, and systems-integration experience.
-    summary_claim_ids: [CLAIM-0003, CLAIM-0026, CLAIM-0031, CLAIM-0058, CLAIM-0060]
+      pt: Engenheiro de software com mais de 15 anos de experiência em sistemas backend, APIs e arquiteturas distribuídas. Na Siemens, combino .NET e Azure com Platform Engineering, Terraform, SDD e desenvolvimento assistido por IA. Minha trajetória também inclui Ruby on Rails, processamento assíncrono, integração de sistemas e atuação cross-team.
+      en: Software engineer with 15+ years of experience in backend systems, APIs, and distributed architectures. At Siemens, I combine .NET and Azure with Platform Engineering, Terraform, SDD, and AI-assisted development. My background also includes Ruby on Rails, asynchronous processing, systems integration, and cross-team engineering.
+    summary_claim_ids: [CLAIM-0003, CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0119, CLAIM-0026, CLAIM-0031, CLAIM-0058, CLAIM-0060]
     experience_claims:
-      siemens: [CLAIM-0003, CLAIM-0004, CLAIM-0006]
-      novabase-fidelidade: [CLAIM-0013, CLAIM-0014, CLAIM-0016]
+      siemens: [CLAIM-0003, CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0004, CLAIM-0006]
+      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0013, CLAIM-0014, CLAIM-0016]
       agap2-softfinanca: [CLAIM-0023, CLAIM-0024, CLAIM-0026]
       mttechne-ticket: [CLAIM-0029, CLAIM-0031, CLAIM-0033]
       vizir-second: [CLAIM-0036, CLAIM-0037, CLAIM-0043]
+    early_career_claim_ids: [CLAIM-0048, CLAIM-0058, CLAIM-0060, CLAIM-0068, CLAIM-0093]
+    page_break_before_experience: mttechne-ticket
+    target_pages: 2
     skill_groups:
       - label: {pt: Backend, en: Backend}
         items: [C#, .NET, Ruby on Rails, REST APIs, Web API, WCF]
@@ -97,8 +112,11 @@ tracks:
         items: [Microservices, Event-Driven Architecture, DDD, TDD, Messaging]
         evidence_claim_ids: [CLAIM-0004, CLAIM-0030, CLAIM-0031, CLAIM-0032]
       - label: {pt: Cloud e plataforma, en: Cloud & Platform}
-        items: [Azure, AWS, Docker, Kubernetes, CI/CD]
-        evidence_claim_ids: [CLAIM-0005, CLAIM-0038]
+        items: [Azure, AWS, Platform Engineering, Terraform, Bicep, Docker, Kubernetes, CI/CD]
+        evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0005, CLAIM-0038]
+      - label: {pt: Produtividade de engenharia, en: Engineering Productivity}
+        items: [Specification-Driven Development (SDD), AI-Assisted Development, Developer Training, Cross-team Influence]
+        evidence_claim_ids: [CLAIM-0117, CLAIM-0118, CLAIM-0119]
       - label: {pt: Dados e qualidade, en: Data & Quality}
         items: [SQL Server, PostgreSQL, LINQ, RSpec, Cucumber, Observability]
         evidence_claim_ids: [CLAIM-0006, CLAIM-0025, CLAIM-0060]

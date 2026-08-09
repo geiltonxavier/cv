@@ -12,6 +12,7 @@ contacts:
     value: geilton@live.com
     href: mailto:geilton@live.com
     status: usable
+    markets: [pt, br]
     source_ids: [SRC-018, SRC-019, SRC-020]
   - id: contact-linkedin
     kind: linkedin
@@ -19,26 +20,30 @@ contacts:
     value: linkedin.com/in/geiltonxavier
     href: https://linkedin.com/in/geiltonxavier
     status: usable
+    markets: [pt, br]
     source_ids: [SRC-018, SRC-019, SRC-020]
-  - id: contact-phone-pt
+  - id: contact-phone-br
     kind: phone
-    label: "+55 11 92648-6761"
+    label: "+55 11 92648-6761 (WhatsApp)"
     value: "+5511926486761"
     href: tel:+5511926486761
-    status: blocked
-    conflict_ids: [CON-002]
-    source_ids: [SRC-019]
-  - id: contact-phone-eu
+    whatsapp: true
+    status: usable
+    markets: [br]
+    source_ids: [SRC-019, USR-20260809-002]
+  - id: contact-phone-pt
     kind: phone
-    label: "+351 910 702 889"
+    label: "+351 910 702 889 (WhatsApp)"
     value: "+351910702889"
     href: tel:+351910702889
-    status: blocked
-    conflict_ids: [CON-002]
-    source_ids: [SRC-018, SRC-020]
+    whatsapp: true
+    status: usable
+    markets: [pt]
+    source_ids: [SRC-018, SRC-020, USR-20260809-002]
 
 defaults:
   language: en
+  market: pt
   track: architecture-staff
   format: all
 

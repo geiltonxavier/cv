@@ -14,12 +14,17 @@ async function assertValidData(data) {
   }
 }
 
-async function generateResume({ language, trackId, format = "all", outputRoot = OUTPUT_DIR }) {
+async function generateResume({ language, market, trackId, format = "all", outputRoot = OUTPUT_DIR }) {
   const data = await loadCareerData();
   await assertValidData(data);
-  const { resume, audit } = buildResume(data, { language, trackId });
+  const selectedMarket = market || data.profile.defaults.market;
+  const { resume, audit } = buildResume(data, {
+    language,
+    market: selectedMarket,
+    trackId,
+  });
   const html = await renderResume(resume);
-  const outputDir = path.resolve(outputRoot, "general", language, trackId);
+  const outputDir = path.resolve(outputRoot, "general", selectedMarket, language, trackId);
   const htmlPath = path.join(outputDir, "resume.html");
   const pdfPath = path.join(outputDir, "resume.pdf");
   const auditPath = path.join(outputDir, "audit.json");

@@ -58,6 +58,34 @@ claims:
     confidence: high
     source_ids: [SRC-020]
 
+  - id: CLAIM-0115
+    experience_id: siemens
+    text:
+      pt: Atuo com arquitetura e Platform Engineering para sistemas distribuídos em .NET e Azure, definindo padrões técnicos para os times.
+      en: Work across architecture and Platform Engineering for distributed .NET and Azure systems, defining technical standards for teams.
+    tags: [platform-engineering, architecture, dotnet, azure, engineering-standards]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260809-001]
+  - id: CLAIM-0116
+    experience_id: siemens
+    text:
+      pt: Uso Terraform e Bicep para definir e manter infraestrutura como código em ambientes Azure.
+      en: Use Terraform and Bicep to define and maintain infrastructure as code in Azure environments.
+    tags: [terraform, bicep, azure, infrastructure-as-code]
+    status: usable
+    confidence: high
+    source_ids: [SRC-020, USR-20260809-001]
+  - id: CLAIM-0117
+    experience_id: siemens
+    text:
+      pt: Aplico Specification-Driven Development (SDD) e desenvolvimento assistido por IA para acelerar o ciclo de desenvolvimento.
+      en: Apply Specification-Driven Development (SDD) and AI-assisted development to accelerate the development lifecycle.
+    tags: [sdd, ai-assisted-development, engineering-productivity]
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, SRC-019, USR-20260809-001]
+
   - id: CLAIM-0012
     experience_id: novabase-fidelidade
     text:
@@ -114,6 +142,27 @@ claims:
     status: usable
     confidence: high
     source_ids: [SRC-020]
+
+  - id: CLAIM-0118
+    experience_id: novabase-fidelidade
+    text:
+      pt: Treinei mais de 300 desenvolvedores em boas práticas de desenvolvimento de software por meio de sessões práticas, documentação e fóruns técnicos.
+      en: Trained 300+ developers in software-development best practices through hands-on sessions, documentation, and technical forums.
+    tags: [developer-training, engineering-practices, technical-leadership, enablement]
+    metric_ids: [MET-041]
+    status: usable
+    confidence: high
+    source_ids: [SRC-020, USR-20260809-001]
+  - id: CLAIM-0119
+    experience_id: novabase-fidelidade
+    text:
+      pt: Conduzi iniciativas cross-team de Platform Engineering e padronização cloud-native em 17+ times de delivery.
+      en: Led cross-team Platform Engineering and cloud-native standardization initiatives across 17+ delivery teams.
+    tags: [cross-team, platform-engineering, cloud-native, technical-leadership]
+    metric_ids: [MET-004]
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, SRC-019, SRC-020, USR-20260809-001]
 
   - id: CLAIM-0022
     experience_id: agap2-softfinanca

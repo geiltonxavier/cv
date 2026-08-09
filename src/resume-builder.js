@@ -8,6 +8,7 @@ const LABELS = {
     education: "Formação",
     present: "Presente",
     earlyCareer: "Início da carreira",
+    experienceContinued: "Experiência (continuação)",
     earlyCareerSummary:
       "Experiência em desenvolvimento de software e TI nos domínios de loyalty, varejo, governo eletrônico, energia, ERP e sistemas enterprise.",
   },
@@ -18,6 +19,7 @@ const LABELS = {
     education: "Education",
     present: "Present",
     earlyCareer: "Earlier Career",
+    experienceContinued: "Experience (continued)",
     earlyCareerSummary:
       "Software development and IT experience across loyalty, retail, e-government, energy, ERP, and enterprise systems.",
   },
@@ -57,7 +59,7 @@ function unique(values) {
   return [...new Set(values)];
 }
 
-function buildResume(data, { language, trackId }) {
+function buildResume(data, { language, trackId, market = data.profile.defaults.market }) {
   if (!LABELS[language]) {
     throw new Error(`Unsupported language: ${language}`);
   }
@@ -65,6 +67,9 @@ function buildResume(data, { language, trackId }) {
   const track = data.tracks[trackId];
   if (!track) {
     throw new Error(`Unknown track: ${trackId}`);
+  }
+  if (!["pt", "br"].includes(market)) {
+    throw new Error(`Unsupported market: ${market}`);
   }
 
   const experienceById = new Map(data.experiences.map((item) => [item.id, item]));
@@ -89,12 +94,14 @@ function buildResume(data, { language, trackId }) {
         role: localized(experience.role, language),
         location: localized(experience.location, language),
         date: `${formatDate(experience.start, language)} – ${formatDate(experience.end, language)}`,
+        pageBreakBefore: experience.id === track.page_break_before_experience,
         claims,
       };
     },
   );
 
   selectedClaimIds.push(...track.summary_claim_ids);
+  selectedClaimIds.push(...track.early_career_claim_ids);
   for (const group of track.skill_groups) {
     selectedClaimIds.push(...group.evidence_claim_ids);
   }
@@ -108,10 +115,18 @@ function buildResume(data, { language, trackId }) {
         .replace(" · Grupo LTM", ""),
     ),
   );
+  const earlyCareerClaims = track.early_career_claim_ids.map((claimId) => {
+    const claim = claimById.get(claimId);
+    return {
+      id: claim.id,
+      text: localized(claim.text, language),
+    };
+  });
 
-  const contacts = data.profile.contacts
-    .filter((contact) => contact.status === "usable")
-    .map(({ kind, label, href }) => ({ kind, label, href }));
+  const selectedContactRecords = data.profile.contacts.filter(
+    (contact) => contact.status === "usable" && contact.markets.includes(market),
+  );
+  const contacts = selectedContactRecords.map(({ kind, label, href }) => ({ kind, label, href }));
 
   const education = data.education
     .filter((item) => item.status === "usable")
@@ -129,15 +144,25 @@ function buildResume(data, { language, trackId }) {
 
   const uniqueClaimIds = unique(selectedClaimIds);
   const selectedClaims = uniqueClaimIds.map((id) => claimById.get(id));
-  const selectedSourceIds = unique(selectedClaims.flatMap((claim) => claim.source_ids)).sort();
+  const selectedSourceIds = unique([
+    ...data.profile.person.source_ids,
+    ...selectedContactRecords.flatMap((contact) => contact.source_ids),
+    ...selectedClaims.flatMap((claim) => claim.source_ids),
+    ...data.education
+      .filter((item) => item.status === "usable")
+      .flatMap((item) => item.source_ids),
+  ]).sort();
   const fingerprintPayload = JSON.stringify({
     language,
+    market,
     trackId,
+    contacts: selectedContactRecords.map(({ id, value, source_ids }) => ({ id, value, source_ids })),
     claims: selectedClaims.map(({ id, text, source_ids }) => ({ id, text, source_ids })),
   });
 
   const resume = {
     language,
+    market,
     labels: LABELS[language],
     person: {
       name: data.profile.person.professional_name,
@@ -152,18 +177,24 @@ function buildResume(data, { language, trackId }) {
       date: "2010 – 2017",
       companies: earlyCompanies.join(" · "),
       summary: LABELS[language].earlyCareerSummary,
+      claims: earlyCareerClaims,
     },
     skillGroups,
     education,
+    targetPages: track.target_pages,
   };
 
   const audit = {
     schema_version: 1,
     mode: "general",
     language,
+    market,
     track: trackId,
+    target_pages: track.target_pages,
+    page_break_before_experience: track.page_break_before_experience || null,
     data_fingerprint: crypto.createHash("sha256").update(fingerprintPayload).digest("hex"),
     selected_claim_ids: uniqueClaimIds.sort(),
+    selected_contact_ids: selectedContactRecords.map((contact) => contact.id).sort(),
     selected_source_ids: selectedSourceIds,
     excluded_source_ids: data.profile.evidence.excluded_source_ids,
     blocked_metric_ids: data.metrics

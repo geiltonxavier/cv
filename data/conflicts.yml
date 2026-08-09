@@ -4,7 +4,7 @@ schema_version: 1
 # They remain data-quality gates; a generator must not silently resolve them.
 conflicts:
   - {id: CON-001, field: professional_name, status: open, question: Qual nome profissional deve ser usado atualmente?}
-  - {id: CON-002, field: current_phone, status: open, question: Qual telefone deve ser usado atualmente nos CVs?}
+  - {id: CON-002, field: current_phone, status: resolved, question: Qual telefone deve ser usado atualmente nos CVs?, resolution: Portugal e internacional usam +351 910 702 889; empresas brasileiras usam +55 11 92648-6761. Ambos têm WhatsApp.}
   - {id: CON-003, field: historical_phone, status: open, question: O telefone histórico do Stack Overflow perdeu um dígito ou era outro número?}
   - {id: CON-004, field: email, status: open, question: O Gmail histórico deve ser tratado como contato profissional?}
   - {id: CON-005, field: historical_address, status: open, question: Os endereços históricos diferentes representam mudanças reais?}

@@ -29,6 +29,13 @@ metrics:
     status: usable
     confidence: high
     source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: MET-041
+    value: 300+
+    unit: developers trained
+    context: Fidelidade software-development best-practices training
+    status: usable
+    confidence: high
+    source_ids: [USR-20260809-001]
   - id: MET-002
     value: $1M+
     unit: projected USD per year

@@ -3,6 +3,17 @@ const path = require("path");
 const Ajv2020 = require("ajv/dist/2020");
 const { SCHEMA_DIR } = require("./paths");
 
+const EARLY_CAREER_EXPERIENCE_IDS = new Set([
+  "fcamara-via-varejo",
+  "deal-ltm",
+  "vizir-first",
+  "sofhar-prodesp",
+  "confitec",
+  "fcamara-first",
+  "eris",
+  "pkz",
+]);
+
 function assertUnique(items, label, errors) {
   const seen = new Set();
   for (const item of items) {
@@ -20,7 +31,9 @@ function validateReferences(data) {
   const metricById = new Map(data.metrics.map((item) => [item.id, item]));
   const conflictById = new Map(data.conflicts.map((item) => [item.id, item]));
   const legacySourceIds = new Set(data.review_queue.sources.map((item) => item.id));
+  const directSourceIds = new Set(data.direct_sources.map((item) => item.id));
 
+  assertUnique(data.direct_sources, "direct sources", errors);
   assertUnique(data.experiences, "experiences", errors);
   assertUnique(data.claims, "claims", errors);
   assertUnique(data.metrics, "metrics", errors);
@@ -52,8 +65,25 @@ function validateReferences(data) {
         errors.push(`${claim.id}: usable claim references non-usable metric ${metricId}`);
       }
     }
-    if (claim.source_ids.includes("SRC-017")) {
-      errors.push(`${claim.id}: forbidden third-party source SRC-017`);
+  }
+
+  const recordsWithSources = [
+    data.profile.person,
+    ...data.profile.contacts,
+    ...data.experiences,
+    ...data.claims,
+    ...data.metrics,
+    ...data.education,
+    ...data.credentials,
+  ];
+  for (const record of recordsWithSources) {
+    if (record.source_ids.includes("SRC-017")) {
+      errors.push(`${record.id || "profile.person"}: forbidden third-party source SRC-017`);
+    }
+    for (const sourceId of record.source_ids.filter((id) => id.startsWith("USR-"))) {
+      if (!directSourceIds.has(sourceId)) {
+        errors.push(`${record.id || "profile.person"}: unknown direct source ${sourceId}`);
+      }
     }
   }
 
@@ -76,6 +106,7 @@ function validateReferences(data) {
     const selectedClaimIds = [
       ...track.summary_claim_ids,
       ...Object.values(track.experience_claims).flat(),
+      ...track.early_career_claim_ids,
       ...track.skill_groups.flatMap((group) => group.evidence_claim_ids),
     ];
 
@@ -83,6 +114,15 @@ function validateReferences(data) {
       if (!experienceById.has(experienceId)) {
         errors.push(`${trackId}: unknown experience ${experienceId}`);
       }
+    }
+
+    if (
+      track.page_break_before_experience &&
+      !Object.hasOwn(track.experience_claims, track.page_break_before_experience)
+    ) {
+      errors.push(
+        `${trackId}: page break targets unselected experience ${track.page_break_before_experience}`,
+      );
     }
 
     for (const claimId of selectedClaimIds) {
@@ -100,6 +140,13 @@ function validateReferences(data) {
         if (claim && claim.experience_id !== experienceId) {
           errors.push(`${trackId}: ${claimId} belongs to ${claim.experience_id}, not ${experienceId}`);
         }
+      }
+    }
+
+    for (const claimId of track.early_career_claim_ids) {
+      const claim = claimById.get(claimId);
+      if (claim && !EARLY_CAREER_EXPERIENCE_IDS.has(claim.experience_id)) {
+        errors.push(`${trackId}: ${claimId} does not belong to an early-career experience`);
       }
     }
   }

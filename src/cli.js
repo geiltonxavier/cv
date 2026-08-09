@@ -44,6 +44,10 @@ async function interactiveOptions(data) {
       { label: "Inglês", value: "en" },
       { label: "Português", value: "pt" },
     ]);
+    const market = await askChoice(rl, "Mercado da candidatura:", [
+      { label: "Portugal / internacional", value: "pt" },
+      { label: "Brasil", value: "br" },
+    ]);
     const trackId = await askChoice(
       rl,
       "Direcionamento:",
@@ -57,7 +61,7 @@ async function interactiveOptions(data) {
       { label: "Somente HTML", value: "html" },
       { label: "Somente PDF", value: "pdf" },
     ]);
-    return { language, trackId, format };
+    return { language, market, trackId, format };
   } finally {
     rl.close();
   }
@@ -66,9 +70,10 @@ async function interactiveOptions(data) {
 function printHelp() {
   stdout.write(`CV generator\n\n`);
   stdout.write(`  npm run cv\n`);
-  stdout.write(`  npm run cv -- generate --lang en --track architecture-staff --format all\n`);
+  stdout.write(`  npm run cv -- generate --lang en --market pt --track architecture-staff --format all\n`);
   stdout.write(`  npm run cv -- validate\n`);
   stdout.write(`  npm run cv -- list\n\n`);
+  stdout.write(`Markets: pt, br\n`);
   stdout.write(`Formats: html, pdf, all\n`);
 }
 
@@ -104,6 +109,7 @@ async function run() {
   } else if (command === "generate") {
     generationOptions = {
       language: options.lang || data.profile.defaults.language,
+      market: options.market || data.profile.defaults.market,
       trackId: options.track || data.profile.defaults.track,
       format: options.format || data.profile.defaults.format,
     };
@@ -113,6 +119,9 @@ async function run() {
 
   if (!["pt", "en"].includes(generationOptions.language)) {
     throw new Error("Language must be pt or en.");
+  }
+  if (!["pt", "br"].includes(generationOptions.market)) {
+    throw new Error("Market must be pt or br.");
   }
   if (!["html", "pdf", "all"].includes(generationOptions.format)) {
     throw new Error("Format must be html, pdf, or all.");

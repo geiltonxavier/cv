@@ -30,7 +30,10 @@
           <h2 id="experience-heading">{{ resume.labels.experience }}</h2>
           <div class="experience-list">
             {% for experience in resume.experiences %}
-              <section class="job" aria-label="{{ experience.role }} — {{ experience.company }}">
+              <section class="job{% if experience.pageBreakBefore %} page-break-before{% endif %}" aria-label="{{ experience.role }} — {{ experience.company }}">
+                {% if experience.pageBreakBefore %}
+                  <h2 class="continued-heading">{{ resume.labels.experienceContinued }}</h2>
+                {% endif %}
                 <div class="job-heading">
                   <h3>{{ experience.role }} <span>· {{ experience.company }}</span></h3>
                   <p class="date">{{ experience.date }}</p>
@@ -51,6 +54,11 @@
               </div>
               <p class="early-companies">{{ resume.earlyCareer.companies }}</p>
               <p>{{ resume.earlyCareer.summary }}</p>
+              <ul>
+                {% for claim in resume.earlyCareer.claims %}
+                  <li data-claim-id="{{ claim.id }}">{{ claim.text }}</li>
+                {% endfor %}
+              </ul>
             </section>
           </div>
         </section>

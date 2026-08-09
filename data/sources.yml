@@ -1,0 +1,23 @@
+schema_version: 1
+
+# Direct confirmations supplied by Geilton. These sources are intentionally
+# distinct from historical CV source IDs so the audit trail shows what was
+# confirmed in conversation instead of inferred from an older document.
+direct_sources:
+  - id: USR-20260809-001
+    kind: user_confirmation
+    recorded_at: 2026-08-09
+    statements:
+      - Current Siemens work includes platform engineering.
+      - Current Siemens work uses Terraform for infrastructure as code.
+      - Current Siemens work applies Specification-Driven Development (SDD).
+      - Current Siemens work uses AI-assisted development to accelerate delivery.
+      - At Fidelidade, trained 300+ developers in software-development best practices.
+      - At Fidelidade, led substantial cross-team engineering work.
+  - id: USR-20260809-002
+    kind: user_confirmation
+    recorded_at: 2026-08-09
+    statements:
+      - Portugal phone number is +351 910 702 889 and supports WhatsApp.
+      - Brazil phone number is +55 11 92648-6761 and supports WhatsApp.
+      - Use the Brazil number for applications to Brazilian companies.
