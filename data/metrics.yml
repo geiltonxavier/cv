@@ -1,0 +1,87 @@
+schema_version: 1
+
+metrics:
+  - id: MET-004
+    value: 17+
+    unit: delivery teams
+    context: Novabase cloud-native standardization reach
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: MET-005
+    value: 300+
+    unit: developers
+    context: Novabase cloud-native standardization reach
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: MET-006
+    value: 100%
+    unit: logging rework eliminated
+    context: Novabase reusable templates and IDP
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: MET-011
+    value: 5,000+
+    unit: projects
+    context: Novabase discovery and security analysis portfolio
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: MET-002
+    value: $1M+
+    unit: projected USD per year
+    context: Siemens User Management platform
+    status: blocked
+    confidence: medium
+    source_ids: [SRC-018, SRC-019]
+    conflict_ids: [CON-046]
+  - id: MET-003
+    value: 300+
+    unit: engineers
+    context: Siemens SDD and Copilot workflow reach
+    status: blocked
+    confidence: low
+    source_ids: [SRC-019]
+    conflict_ids: [CON-047]
+  - id: MET-007
+    value: ~60%
+    unit: project setup time reduction
+    context: Novabase IDP
+    status: blocked
+    confidence: medium
+    source_ids: [SRC-018, SRC-019]
+    conflict_ids: [CON-048]
+  - id: MET-008
+    value: 70+
+    unit: projects
+    context: Novabase IDP adoption
+    status: blocked
+    confidence: medium
+    source_ids: [SRC-018, SRC-019]
+    conflict_ids: [CON-049]
+  - id: MET-009
+    value: 70%
+    unit: manual issue-analysis reduction
+    context: Novabase Jira and Azure OpenAI system
+    status: blocked
+    confidence: medium
+    source_ids: [SRC-018, SRC-019]
+    conflict_ids: [CON-050]
+  - id: MET-014
+    value: 900K
+    unit: transactions per day
+    context: Mttechne Transaction HUB
+    status: blocked
+    confidence: low
+    source_ids: [SRC-018]
+    conflict_ids: [CON-051]
+  - id: MET-015
+    value: 99.9%
+    unit: availability
+    context: Mttechne Transaction HUB
+    status: blocked
+    confidence: low
+    source_ids: [SRC-018]
+    conflict_ids: [CON-051]

@@ -15,3 +15,9 @@ out/
 coverage/
 playwright-report/
 test-results/
+
+# Private source documents and generated CV artifacts.
+# Canonical, reviewed career data lives in data/ and is safe to version.
+source-material/
+outputs/
+tmp/

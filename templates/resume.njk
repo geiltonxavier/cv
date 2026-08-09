@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="{{ resume.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ resume.person.name }} — {{ resume.person.headline }}">
+    <title>{{ resume.person.name }} | CV</title>
+    <style>{{ css | safe }}</style>
+  </head>
+  <body>
+    <article class="resume">
+      <header class="resume-header">
+        <h1>{{ resume.person.name }}</h1>
+        <p class="headline">{{ resume.person.headline }}</p>
+        <p class="subheadline">{{ resume.person.subheadline }}</p>
+        <address class="contacts">
+          {% for contact in resume.person.contacts %}
+            <a href="{{ contact.href }}">{{ contact.label }}</a>{% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
+          {% endfor %}
+        </address>
+      </header>
+
+      <main>
+        <section aria-labelledby="summary-heading">
+          <h2 id="summary-heading">{{ resume.labels.summary }}</h2>
+          <p class="summary">{{ resume.summary }}</p>
+        </section>
+
+        <section aria-labelledby="experience-heading">
+          <h2 id="experience-heading">{{ resume.labels.experience }}</h2>
+          <div class="experience-list">
+            {% for experience in resume.experiences %}
+              <section class="job" aria-label="{{ experience.role }} — {{ experience.company }}">
+                <div class="job-heading">
+                  <h3>{{ experience.role }} <span>· {{ experience.company }}</span></h3>
+                  <p class="date">{{ experience.date }}</p>
+                </div>
+                {% if experience.location %}<p class="location">{{ experience.location }}</p>{% endif %}
+                <ul>
+                  {% for claim in experience.claims %}
+                    <li data-claim-id="{{ claim.id }}">{{ claim.text }}</li>
+                  {% endfor %}
+                </ul>
+              </section>
+            {% endfor %}
+
+            <section class="job early-career" aria-label="{{ resume.earlyCareer.title }}">
+              <div class="job-heading">
+                <h3>{{ resume.earlyCareer.title }}</h3>
+                <p class="date">{{ resume.earlyCareer.date }}</p>
+              </div>
+              <p class="early-companies">{{ resume.earlyCareer.companies }}</p>
+              <p>{{ resume.earlyCareer.summary }}</p>
+            </section>
+          </div>
+        </section>
+
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">{{ resume.labels.skills }}</h2>
+          <dl class="skills">
+            {% for group in resume.skillGroups %}
+              <dt>{{ group.label }}</dt>
+              <dd>{{ group.items | join(", ") }}</dd>
+            {% endfor %}
+          </dl>
+        </section>
+
+        {% if resume.education.length %}
+          <section aria-labelledby="education-heading">
+            <h2 id="education-heading">{{ resume.labels.education }}</h2>
+            {% for item in resume.education %}
+              <div class="education-item">
+                <p><strong>{{ item.degree }}</strong> · {{ item.institution }}</p>
+                <p class="date">{{ item.date }}</p>
+              </div>
+            {% endfor %}
+          </section>
+        {% endif %}
+      </main>
+    </article>
+  </body>
+</html>

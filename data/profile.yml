@@ -1,0 +1,52 @@
+schema_version: 1
+
+person:
+  professional_name: Geilton Xavier
+  name_status: usable
+  source_ids: [SRC-018, SRC-019, SRC-020]
+
+contacts:
+  - id: contact-email
+    kind: email
+    label: geilton@live.com
+    value: geilton@live.com
+    href: mailto:geilton@live.com
+    status: usable
+    source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: contact-linkedin
+    kind: linkedin
+    label: linkedin.com/in/geiltonxavier
+    value: linkedin.com/in/geiltonxavier
+    href: https://linkedin.com/in/geiltonxavier
+    status: usable
+    source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: contact-phone-pt
+    kind: phone
+    label: "+55 11 92648-6761"
+    value: "+5511926486761"
+    href: tel:+5511926486761
+    status: blocked
+    conflict_ids: [CON-002]
+    source_ids: [SRC-019]
+  - id: contact-phone-eu
+    kind: phone
+    label: "+351 910 702 889"
+    value: "+351910702889"
+    href: tel:+351910702889
+    status: blocked
+    conflict_ids: [CON-002]
+    source_ids: [SRC-018, SRC-020]
+
+defaults:
+  language: en
+  track: architecture-staff
+  format: all
+
+evidence:
+  inventory: source-material/chatgpt/career-evidence-inventory.md
+  audit_date: 2026-08-09
+  status: imported_not_independently_verified
+  excluded_source_ids: [SRC-017]
+  notes:
+    - SRC-017 belongs to Olivia Harrison and must never feed generated CVs.
+    - Historical addresses and phone numbers are intentionally excluded from generated CVs.

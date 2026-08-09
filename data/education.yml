@@ -1,0 +1,49 @@
+schema_version: 1
+
+education:
+  - id: EDU-003
+    institution: Universidade Cruzeiro do Sul
+    degree:
+      pt: Graduação Tecnológica em Análise e Desenvolvimento de Sistemas
+      en: B.Tech. in Systems Analysis and Development
+    start: 2013
+    end: 2015
+    completion: completed
+    status: usable
+    source_ids: [SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-018, SRC-019, SRC-020]
+  - id: EDU-001
+    institution: Universidade de Évora
+    degree:
+      pt: Mestrado em Engenharia Informática
+      en: M.Sc. in Informatics Engineering
+    start: 2025
+    end: 2026
+    completion: unknown
+    status: blocked
+    source_ids: [SRC-018, SRC-019, SRC-020]
+    conflict_ids: [CON-040, CON-041]
+  - id: EDU-002
+    institution: Etep Centro Universitário
+    degree:
+      pt: Bacharelado em Ciência da Computação
+      en: Bachelor's degree in Computer Science
+    start: 2021
+    end: 2024
+    completion: unknown
+    status: blocked
+    source_ids: [SRC-020]
+    conflict_ids: [CON-042]
+
+credentials:
+  - id: CERT-019
+    institution: Microsoft
+    name: Microsoft Certified Azure Developer Associate (AZ-204)
+    status: blocked
+    source_ids: [SRC-018, SRC-019, SRC-020]
+    conflict_ids: [CON-043]
+  - id: AFF-001
+    institution: IEEE
+    name: IEEE Senior Member
+    type: affiliation
+    status: blocked
+    source_ids: [SRC-018, SRC-019, SRC-020]

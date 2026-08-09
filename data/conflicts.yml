@@ -1,0 +1,57 @@
+schema_version: 1
+
+# Open conflicts imported from section 12 of the historical evidence inventory.
+# They remain data-quality gates; a generator must not silently resolve them.
+conflicts:
+  - {id: CON-001, field: professional_name, status: open, question: Qual nome profissional deve ser usado atualmente?}
+  - {id: CON-002, field: current_phone, status: open, question: Qual telefone deve ser usado atualmente nos CVs?}
+  - {id: CON-003, field: historical_phone, status: open, question: O telefone histórico do Stack Overflow perdeu um dígito ou era outro número?}
+  - {id: CON-004, field: email, status: open, question: O Gmail histórico deve ser tratado como contato profissional?}
+  - {id: CON-005, field: historical_address, status: open, question: Os endereços históricos diferentes representam mudanças reais?}
+  - {id: CON-006, field: deal_start, status: open, question: Qual foi o mês e ano exatos de início na Deal/LTM?}
+  - {id: CON-007, field: deal_early_start, status: open, question: Setembro de 2015 na Deal é erro de versão ou outra relação?}
+  - {id: CON-008, field: deal_end, status: open, question: Qual foi a data final exata na Deal/LTM?}
+  - {id: CON-009, field: deal_title, status: open, question: Qual era o título contratual na Deal/LTM?}
+  - {id: CON-010, field: deal_clients, status: open, question: Quais clientes você atendeu diretamente na Deal/LTM?}
+  - {id: CON-011, field: loyalty_project_company, status: open, question: A plataforma loyalty cloud multi-tenant pertence à Deal/LTM ou à Vizir?}
+  - {id: CON-012, field: deal_leadership_strength, status: open, question: Na Deal você liderou o backend ou atuou como senior individual contributor?}
+  - {id: CON-013, field: fcamara_via_varejo_start, status: open, question: A passagem FCamara/Via Varejo começou em julho ou agosto de 2017?}
+  - {id: CON-014, field: via_varejo_java_scope, status: open, question: Você implementou Java em produção na Via Varejo?}
+  - {id: CON-015, field: vizir_second_start, status: open, question: A segunda passagem na Vizir começou exatamente em 30 de setembro de 2017?}
+  - {id: CON-016, field: vizir_first_start, status: open, question: A primeira passagem na Vizir começou em agosto ou setembro de 2015?}
+  - {id: CON-017, field: vizir_first_end, status: open, question: A primeira passagem na Vizir terminou em junho ou julho de 2016?}
+  - {id: CON-018, field: isa_cteep_ownership, status: open, question: Você era o único engenheiro responsável pelo sistema ISA CTEEP?}
+  - {id: CON-019, field: isa_cteep_scale, status: open, question: Os percentuais de escala da ISA CTEEP eram oficialmente documentados?}
+  - {id: CON-020, field: sofhar_title, status: open, question: Qual era o cargo oficial na Sofhar/PRODESP?}
+  - {id: CON-021, field: sofhar_location, status: open, question: Onde a atividade Sofhar/PRODESP era exercida?}
+  - {id: CON-022, field: prodesp_ownership, status: open, question: Você era o único desenvolvedor do SELJ/SICCEL durante todo o período?}
+  - {id: CON-023, field: sports_system_owner, status: open, question: Qual órgão era responsável pelo sistema esportivo?}
+  - {id: CON-024, field: confitec_title, status: open, question: Qual era seu título oficial na Confitec?}
+  - {id: CON-025, field: belo_monte_scope, status: open, question: O sistema de Belo Monte controlava cargas equipamentos ou ambos?}
+  - {id: CON-026, field: fcamara_first_start, status: open, question: A primeira passagem na FCamara começou em maio junho ou julho de 2013?}
+  - {id: CON-027, field: fcamara_profile_start, status: open, question: Julho de 2013 no perfil atual está correto?}
+  - {id: CON-028, field: fcamara_first_contract, status: open, question: A primeira passagem na FCamara era estágio formal?}
+  - {id: CON-029, field: eris_start, status: open, question: A passagem na Eris começou em janeiro fevereiro ou março de 2012?}
+  - {id: CON-030, field: eris_internship_dates, status: open, question: Quais foram as datas exatas do estágio na Eris?}
+  - {id: CON-031, field: eris_promotion, status: open, question: A promoção na Eris ocorreu em agosto ou outubro de 2012?}
+  - {id: CON-032, field: eris_end, status: open, question: A saída da Eris foi em junho ou julho de 2013?}
+  - {id: CON-033, field: eris_leadership_metrics, status: open, question: Você confirma referência técnica mentoria e ganho de produtividade na Eris?}
+  - {id: CON-034, field: pkz_start, status: open, question: A passagem na PKZ começou em janeiro ou junho de 2010?}
+  - {id: CON-035, field: pkz_role_dates, status: open, question: Quais datas correspondem a Auxiliar e Analista na PKZ?}
+  - {id: CON-036, field: pkz_title, status: open, question: Qual título oficial deve ser preservado para a PKZ?}
+  - {id: CON-037, field: information_systems_institution, status: open, question: O curso de Sistemas de Informação foi na São Judas ou Cruzeiro do Sul?}
+  - {id: CON-038, field: information_systems_status, status: open, question: O curso de Sistemas de Informação foi formalmente interrompido em 2013?}
+  - {id: CON-039, field: ads_completion_month, status: open, question: Qual foi o mês de conclusão do tecnólogo em ADS?}
+  - {id: CON-040, field: masters_degree_name, status: open, question: Qual é o nome oficial do mestrado na Universidade de Évora?}
+  - {id: CON-041, field: masters_status, status: open, question: Qual é o status atual do mestrado?}
+  - {id: CON-042, field: bachelors_completion, status: open, question: O bacharelado em Ciência da Computação foi concluído em 2024?}
+  - {id: CON-043, field: az204_validity, status: open, question: Qual foi a data de obtenção e a situação atual do AZ-204?}
+  - {id: CON-044, field: english_level, status: open, question: Qual nível atual de inglês deve ser usado?}
+  - {id: CON-045, field: current_job_title, status: open, question: Qual é o cargo oficial atual na Siemens?}
+  - {id: CON-046, field: siemens_savings, status: open, question: Existe cálculo ou documento que sustente a projeção de um milhão de dólares por ano?}
+  - {id: CON-047, field: siemens_ai_reach, status: open, question: O workflow SDD e Copilot foi efetivamente padronizado para 300+ engenheiros?}
+  - {id: CON-048, field: idp_setup_reduction, status: open, question: Como foi medido aproximadamente 60% de redução no setup?}
+  - {id: CON-049, field: idp_adoption, status: open, question: Qual era a definição e a data de corte dos 70+ projetos?}
+  - {id: CON-050, field: ai_issue_analysis, status: open, question: O sistema Jira e Azure OpenAI esteve em produção e como os 70% foram medidos?}
+  - {id: CON-051, field: transaction_hub_scale, status: open, question: "Você confirma 900K transações por dia e 99,9% de disponibilidade?"}
+  - {id: CON-052, field: unidentified_erp_letter, status: open, question: A carta de apresentação descreve a PKZ ou outra empresa?}
