@@ -10,6 +10,7 @@ The project currently supports general CVs in Portuguese and English. Job-descri
 - `data/` contains the curated, versionable career record.
 - Only records with `status: usable` may enter a generated CV.
 - Conflicting or weak claims remain `needs_confirmation` or `blocked`.
+- Legacy-only statements awaiting confirmation live in `data/review-queue.yml` and cannot enter generated CVs.
 - `SRC-017` belongs to a third-party template and is explicitly forbidden.
 - Each generated CV includes an `audit.json` with selected claim and source IDs.
 
@@ -17,7 +18,7 @@ The project currently supports general CVs in Portuguese and English. Job-descri
 
 ```text
 config/tracks.yml       CV positioning and deterministic selections
-data/                   Canonical career facts and open conflicts
+data/                   Canonical facts, open conflicts, and review queue
 schemas/                JSON Schema for canonical data
 src/                    Validation, composition, rendering, and CLI
 templates/              Single semantic HTML template and print CSS
@@ -25,8 +26,6 @@ test/                   Data-safety and rendering tests
 outputs/                Generated HTML, PDF, and audit files (ignored)
 source-material/        Private imported evidence (ignored)
 ```
-
-The older hand-written HTML CVs remain in `ingles/` and `portugues/` while the new generator is validated. The new implementation does not overwrite them.
 
 ## Requirements
 
@@ -71,12 +70,6 @@ Run the test suite:
 npm test
 ```
 
-The legacy HTML-to-PDF script remains available as:
-
-```bash
-npm run pdf:legacy
-```
-
 ## Generated files
 
 For example, the architecture/staff English CV is written to:
@@ -99,6 +92,8 @@ Do not edit generated HTML or PDF files. Update the corresponding file in `data/
 - `blocked`: conflicting, sensitive, or too weak to use.
 
 Then run validation and tests before generating a new CV.
+
+Information found only in removed legacy CVs is preserved in `data/review-queue.yml`. Confirm a candidate against real experience before promoting it into the canonical profile, claims, or contacts.
 
 ## Current limitations
 

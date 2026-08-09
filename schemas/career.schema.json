@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Canonical career data",
   "type": "object",
-  "required": ["profile", "experiences", "claims", "metrics", "education", "credentials", "conflicts", "tracks"],
+  "required": ["profile", "experiences", "claims", "metrics", "education", "credentials", "conflicts", "review_queue", "tracks"],
   "properties": {
     "profile": {
       "type": "object",
@@ -159,6 +159,47 @@
         },
         "additionalProperties": false
       }
+    },
+    "review_queue": {
+      "type": "object",
+      "required": ["sources", "candidates"],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "repository_path", "recovery_commit", "status", "note"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^LEGACY-[A-Z0-9-]+$"},
+              "repository_path": {"type": "string"},
+              "recovery_commit": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"},
+              "status": {"enum": ["preserved_in_git_history"]},
+              "note": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": false
+          }
+        },
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "kind", "statement", "status", "source_id", "reason"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^LEGACY-CANDIDATE-[0-9]{3}$"},
+              "kind": {"enum": ["contact", "claim", "technology", "context"]},
+              "statement": {"$ref": "#/$defs/localized"},
+              "status": {"enum": ["needs_confirmation", "blocked"]},
+              "source_id": {"type": "string", "pattern": "^LEGACY-[A-Z0-9-]+$"},
+              "related_experience_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+              "reason": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
     },
     "tracks": {
       "type": "object",

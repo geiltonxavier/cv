@@ -86,7 +86,7 @@ async function run() {
     if (!result.valid) {
       throw new Error(`Validation failed:\n- ${result.errors.join("\n- ")}`);
     }
-    stdout.write(`Career data valid: ${data.experiences.length} experiences, ${data.claims.length} curated claims, ${data.metrics.length} metrics.\n`);
+    stdout.write(`Career data valid: ${data.experiences.length} experiences, ${data.claims.length} curated claims, ${data.metrics.length} metrics, ${data.review_queue.candidates.length} legacy candidates.\n`);
     return;
   }
 

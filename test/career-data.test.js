@@ -32,6 +32,17 @@ test("all configured tracks select only usable claims and metrics", async () => 
   }
 });
 
+test("legacy-only information stays review-gated and traceable", async () => {
+  const data = await loadCareerData();
+  const sourceIds = new Set(data.review_queue.sources.map((source) => source.id));
+
+  assert.equal(data.review_queue.candidates.length, 7);
+  for (const candidate of data.review_queue.candidates) {
+    assert.notEqual(candidate.status, "usable");
+    assert.equal(sourceIds.has(candidate.source_id), true);
+  }
+});
+
 test("generated CV excludes blocked metrics, contacts, credentials, and third-party sources", async () => {
   const data = await loadCareerData();
   const { resume, audit } = buildResume(data, {
@@ -40,7 +51,7 @@ test("generated CV excludes blocked metrics, contacts, credentials, and third-pa
   });
   const html = await renderResume(resume);
 
-  for (const blockedText of ["$1M+", "900K", "99.9%", "+351", "+55 11", "AZ-204", "IEEE"]) {
+  for (const blockedText of ["$1M+", "900K", "99.9%", "+351", "+55 11", "AZ-204", "IEEE", "geiltonxavier.dev"]) {
     assert.equal(html.includes(blockedText), false, `must exclude ${blockedText}`);
   }
   assert.equal(audit.selected_source_ids.includes("SRC-017"), false);

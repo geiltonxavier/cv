@@ -8,7 +8,6 @@
     "cv:generate": "node src/cli.js generate",
     "cv:validate": "node src/cli.js validate",
     "pdf": "node src/cli.js generate --format pdf",
-    "pdf:legacy": "node scripts/generate-pdf.js",
     "pdf:install": "npx playwright install",
     "test": "node --test"
   },

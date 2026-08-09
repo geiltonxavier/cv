@@ -1,0 +1,80 @@
+schema_version: 1
+
+review_queue:
+  sources:
+    - id: LEGACY-PT-RUBY-HTML
+      repository_path: portugues/ruby/index.html
+      recovery_commit: 59b5c66
+      status: preserved_in_git_history
+      note: >-
+        Hand-written Ruby-focused CV removed during the generator cleanup.
+        Its unique statements were not part of the ChatGPT evidence inventory.
+
+  candidates:
+    - id: LEGACY-CANDIDATE-001
+      kind: contact
+      statement:
+        pt: geiltonxavier.dev é um blog profissional sobre engenharia de software, sistemas distribuídos e produtividade de desenvolvedores.
+        en: geiltonxavier.dev is a professional blog about software engineering, distributed systems, and developer productivity.
+      status: needs_confirmation
+      source_id: LEGACY-PT-RUBY-HTML
+      reason: O endereço e a descrição aparecem somente no CV Ruby legado.
+
+    - id: LEGACY-CANDIDATE-002
+      kind: contact
+      statement:
+        pt: github.com/geiltonxavier é o perfil profissional e de open source atual.
+        en: github.com/geiltonxavier is the current professional and open-source profile.
+      status: needs_confirmation
+      source_id: LEGACY-PT-RUBY-HTML
+      reason: O inventário confirma apenas um endereço histórico de GitHub Pages, não este perfil.
+
+    - id: LEGACY-CANDIDATE-003
+      kind: claim
+      statement:
+        pt: Criei APIs backend em Ruby on Rails para integração com gateways de pagamento e serviços externos durante o período Vizir/Deal.
+        en: Built Ruby on Rails backend APIs for payment-gateway and external-service integrations during the Vizir/Deal period.
+      status: needs_confirmation
+      source_id: LEGACY-PT-RUBY-HTML
+      related_experience_ids: [vizir-second, deal-ltm]
+      reason: O inventário confirma Rails e integrações de pagamento separadamente, mas não essa associação direta.
+
+    - id: LEGACY-CANDIDATE-004
+      kind: claim
+      statement:
+        pt: PostgreSQL era o banco principal de uma aplicação no período Vizir/Deal.
+        en: PostgreSQL was the primary database of an application during the Vizir/Deal period.
+      status: needs_confirmation
+      source_id: LEGACY-PT-RUBY-HTML
+      related_experience_ids: [vizir-first, vizir-second, deal-ltm]
+      reason: O inventário comprova uso de PostgreSQL, mas não que fosse o banco principal nem em qual projeto.
+
+    - id: LEGACY-CANDIDATE-005
+      kind: claim
+      statement:
+        pt: Usei Sidekiq e DelayedJob para processamento assíncrono de tarefas e integrações.
+        en: Used Sidekiq and DelayedJob for asynchronous task and integration processing.
+      status: needs_confirmation
+      source_id: LEGACY-PT-RUBY-HTML
+      related_experience_ids: [vizir-first]
+      reason: As ferramentas constam no inventário, mas o contexto exato de tarefas e integrações aparece somente no CV Ruby.
+
+    - id: LEGACY-CANDIDATE-006
+      kind: claim
+      statement:
+        pt: Desenvolvi serviços backend responsáveis por processamento de checkout e regras de negócio complexas na Ticket/Edenred.
+        en: Developed backend services responsible for checkout processing and complex business rules at Ticket/Edenred.
+      status: needs_confirmation
+      source_id: LEGACY-PT-RUBY-HTML
+      related_experience_ids: [mttechne-ticket]
+      reason: O inventário confirma serviços do Ticket Shop, mas não preserva exatamente checkout e regras complexas.
+
+    - id: LEGACY-CANDIDATE-007
+      kind: claim
+      statement:
+        pt: Construí APIs e serviços de integração para sincronização de identidades entre sistemas corporativos na Siemens.
+        en: Built APIs and integration services to synchronize identities across enterprise systems at Siemens.
+      status: needs_confirmation
+      source_id: LEGACY-PT-RUBY-HTML
+      related_experience_ids: [siemens]
+      reason: O inventário confirma a plataforma e as integrações, mas não indexa essa formulação específica como claim atômico.

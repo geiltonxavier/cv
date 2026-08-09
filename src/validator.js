@@ -19,12 +19,26 @@ function validateReferences(data) {
   const claimById = new Map(data.claims.map((item) => [item.id, item]));
   const metricById = new Map(data.metrics.map((item) => [item.id, item]));
   const conflictById = new Map(data.conflicts.map((item) => [item.id, item]));
+  const legacySourceIds = new Set(data.review_queue.sources.map((item) => item.id));
 
   assertUnique(data.experiences, "experiences", errors);
   assertUnique(data.claims, "claims", errors);
   assertUnique(data.metrics, "metrics", errors);
   assertUnique(data.education, "education", errors);
   assertUnique(data.conflicts, "conflicts", errors);
+  assertUnique(data.review_queue.sources, "review queue sources", errors);
+  assertUnique(data.review_queue.candidates, "review queue candidates", errors);
+
+  for (const candidate of data.review_queue.candidates) {
+    if (!legacySourceIds.has(candidate.source_id)) {
+      errors.push(`${candidate.id}: unknown legacy source ${candidate.source_id}`);
+    }
+    for (const experienceId of candidate.related_experience_ids || []) {
+      if (!experienceById.has(experienceId)) {
+        errors.push(`${candidate.id}: unknown experience ${experienceId}`);
+      }
+    }
+  }
 
   for (const claim of data.claims) {
     if (!experienceById.has(claim.experience_id)) {
