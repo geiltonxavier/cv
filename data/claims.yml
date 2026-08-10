@@ -38,7 +38,7 @@ claims:
     tags: [cicd, docker, kubernetes, bicep, infrastructure-as-code]
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids: [SRC-020, USR-20260810-001]
   - id: CLAIM-0006
     experience_id: siemens
     text:
@@ -85,6 +85,16 @@ claims:
     status: usable
     confidence: high
     source_ids: [SRC-018, SRC-019, USR-20260809-001]
+
+  - id: CLAIM-0120
+    experience_id: siemens
+    text:
+      pt: Uso Scrum e Kanban diariamente e trabalho com essas práticas ágeis há muitos anos.
+      en: Use Scrum and Kanban daily and have worked with these agile practices for many years.
+    tags: [scrum, kanban, agile, engineering-practices]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260810-001]
 
   - id: CLAIM-0012
     experience_id: novabase-fidelidade
@@ -245,7 +255,7 @@ claims:
     tags: [ddd, tdd]
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020]
+    source_ids: [SRC-018, SRC-019, SRC-020, USR-20260810-001]
   - id: CLAIM-0033
     experience_id: mttechne-ticket
     text:

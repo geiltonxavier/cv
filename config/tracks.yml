@@ -16,7 +16,7 @@ tracks:
       en: Solutions Architect and Staff Engineer with 15+ years of experience in distributed systems, architecture, and Platform Engineering. At Siemens, I work with .NET and Azure, infrastructure as code using Terraform and Bicep, Specification-Driven Development, and AI-assisted development. At Fidelidade, I led cross-team initiatives across 17+ teams and trained 300+ developers in engineering best practices.
     summary_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0118, CLAIM-0119]
     experience_claims:
-      siemens: [CLAIM-0115, CLAIM-0003, CLAIM-0116, CLAIM-0117, CLAIM-0006, CLAIM-0007]
+      siemens: [CLAIM-0115, CLAIM-0003, CLAIM-0116, CLAIM-0117, CLAIM-0120, CLAIM-0006]
       novabase-fidelidade: [CLAIM-0119, CLAIM-0118, CLAIM-0013, CLAIM-0014, CLAIM-0016]
       agap2-softfinanca: [CLAIM-0023, CLAIM-0025, CLAIM-0024]
       mttechne-ticket: [CLAIM-0030, CLAIM-0031, CLAIM-0032]
@@ -26,17 +26,17 @@ tracks:
     target_pages: 2
     skill_groups:
       - label: {pt: Arquitetura, en: Architecture}
-        items: [.NET, Distributed Systems, Event-Driven Architecture, DDD, Clean Architecture, Microservices]
-        evidence_claim_ids: [CLAIM-0003, CLAIM-0004, CLAIM-0030, CLAIM-0031]
+        items: [.NET, Distributed Systems, Event-Driven Architecture, DDD, TDD, Clean Architecture, Microservices]
+        evidence_claim_ids: [CLAIM-0003, CLAIM-0004, CLAIM-0030, CLAIM-0031, CLAIM-0032]
       - label: {pt: Cloud e Plataforma, en: Cloud & Platform}
         items: [Azure, AWS, Platform Engineering, Terraform, Bicep, Docker, Kubernetes, CI/CD]
-        evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0013, CLAIM-0038]
+        evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0005, CLAIM-0013, CLAIM-0038]
       - label: {pt: IA e produtividade, en: AI & Productivity}
         items: [Specification-Driven Development (SDD), AI-Assisted Development, Developer Experience]
         evidence_claim_ids: [CLAIM-0117, CLAIM-0013, CLAIM-0014]
       - label: {pt: Liderança técnica, en: Technical Leadership}
-        items: [Architecture Reviews, Engineering Standards, Mentoring, Developer Training, Cross-team Influence]
-        evidence_claim_ids: [CLAIM-0002, CLAIM-0007, CLAIM-0118, CLAIM-0119]
+        items: [Architecture Reviews, Engineering Standards, Mentoring, Developer Training, Cross-team Influence, Scrum, Kanban]
+        evidence_claim_ids: [CLAIM-0002, CLAIM-0007, CLAIM-0118, CLAIM-0119, CLAIM-0120]
       - label: {pt: Operação e segurança, en: Operations & Security}
         items: [Observability, IAM, RBAC, Reliability, SonarQube, NuGet Security]
         evidence_claim_ids: [CLAIM-0006, CLAIM-0016]
@@ -75,8 +75,8 @@ tracks:
         items: [Azure, AWS, Terraform, Bicep, Docker, Kubernetes, CI/CD]
         evidence_claim_ids: [CLAIM-0116, CLAIM-0005, CLAIM-0038]
       - label: {pt: Produtividade de engenharia, en: Engineering Productivity}
-        items: [Platform Engineering, Specification-Driven Development (SDD), AI-Assisted Development, Developer Training]
-        evidence_claim_ids: [CLAIM-0115, CLAIM-0117, CLAIM-0118]
+        items: [Platform Engineering, Specification-Driven Development (SDD), AI-Assisted Development, Developer Training, Scrum, Kanban]
+        evidence_claim_ids: [CLAIM-0115, CLAIM-0117, CLAIM-0118, CLAIM-0120]
       - label: {pt: Dados e operação, en: Data & Operations}
         items: [SQL Server, LINQ, Observability, SonarQube, NuGet Security]
         evidence_claim_ids: [CLAIM-0006, CLAIM-0016, CLAIM-0025]
@@ -115,8 +115,8 @@ tracks:
         items: [Azure, AWS, Platform Engineering, Terraform, Bicep, Docker, Kubernetes, CI/CD]
         evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0005, CLAIM-0038]
       - label: {pt: Produtividade de engenharia, en: Engineering Productivity}
-        items: [Specification-Driven Development (SDD), AI-Assisted Development, Developer Training, Cross-team Influence]
-        evidence_claim_ids: [CLAIM-0117, CLAIM-0118, CLAIM-0119]
+        items: [Specification-Driven Development (SDD), AI-Assisted Development, Developer Training, Cross-team Influence, Scrum, Kanban]
+        evidence_claim_ids: [CLAIM-0117, CLAIM-0118, CLAIM-0119, CLAIM-0120]
       - label: {pt: Dados e qualidade, en: Data & Quality}
         items: [SQL Server, PostgreSQL, LINQ, RSpec, Cucumber, Observability]
         evidence_claim_ids: [CLAIM-0006, CLAIM-0025, CLAIM-0060]

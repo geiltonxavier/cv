@@ -21,3 +21,10 @@ direct_sources:
       - Portugal phone number is +351 910 702 889 and supports WhatsApp.
       - Brazil phone number is +55 11 92648-6761 and supports WhatsApp.
       - Use the Brazil number for applications to Brazilian companies.
+  - id: USR-20260810-001
+    kind: user_confirmation
+    recorded_at: 2026-08-10
+    statements:
+      - Uses Scrum and Kanban daily and has worked with both practices for many years.
+      - Uses Docker in professional software-development work.
+      - Applies Test-Driven Development (TDD) in professional software-development work.

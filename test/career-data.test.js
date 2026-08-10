@@ -72,6 +72,15 @@ test("newly confirmed career facts remain traceable to a direct user source", as
     assert.equal(phone.whatsapp, true);
     assert.equal(phone.source_ids.includes(phoneSource.id), true);
   }
+
+  const practicesSource = data.direct_sources.find((source) => source.id === "USR-20260810-001");
+  const practicesClaim = data.claims.find((claim) => claim.id === "CLAIM-0120");
+  assert.ok(practicesSource);
+  assert.equal(practicesClaim.status, "usable");
+  assert.equal(practicesClaim.confidence, "high");
+  assert.equal(practicesClaim.source_ids.includes(practicesSource.id), true);
+  assert.equal(data.claims.find((claim) => claim.id === "CLAIM-0005").source_ids.includes(practicesSource.id), true);
+  assert.equal(data.claims.find((claim) => claim.id === "CLAIM-0032").source_ids.includes(practicesSource.id), true);
 });
 
 test("Portugal-market CV uses only the confirmed Portugal WhatsApp number", async () => {
@@ -155,6 +164,10 @@ test("architecture CV includes confirmed ATS terms and an intentional second-pag
     "AI-assisted development",
     "Trained 300+ developers",
     "cross-team",
+    "Scrum",
+    "Kanban",
+    "Docker",
+    "TDD",
   ]) {
     assert.equal(html.includes(expected), true, `must include ${expected}`);
   }
