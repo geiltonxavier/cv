@@ -1,0 +1,41 @@
+schema_version: 1
+
+# Fixture only: fictional company used by test/jobs.test.js. Kept out of
+# config/jobs/ on purpose, so fixtures never mix with real applications.
+jobs:
+  acme-staff-backend:
+    job:
+      company: Acme Payments
+      title: Staff Backend Engineer
+      url: https://example.com/acme/staff-backend
+      captured_at: 2026-09-10
+      source: pasted_text
+      defaults:
+        language: en
+        market: br
+    based_on: backend-dotnet
+    label:
+      pt: Acme — Staff Backend
+      en: Acme — Staff Backend
+    headline:
+      pt: Staff Backend Engineer
+      en: Staff Backend Engineer
+    subheadline:
+      pt: .NET · Eventos · Pagamentos
+      en: .NET · Events · Payments
+    summary:
+      pt: Resumo de teste em português, ajustado para a vaga da Acme.
+      en: Test summary in English, tailored to the Acme role.
+    summary_claim_ids: [CLAIM-0115, CLAIM-0003, CLAIM-0119]
+    experience_claims:
+      siemens: [CLAIM-0115, CLAIM-0003, CLAIM-0116]
+      novabase-fidelidade: inherit
+      mttechne-ticket: [CLAIM-0031, CLAIM-0032]
+      agap2-softfinanca: inherit
+      vizir-second: inherit
+    early_career_claim_ids: inherit
+    skill_groups:
+      - label: {pt: Backend, en: Backend}
+        items: [C#, .NET, Event-Driven Architecture]
+        evidence_claim_ids: [CLAIM-0003, CLAIM-0031]
+    page_break_before_experience: mttechne-ticket

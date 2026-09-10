@@ -1,0 +1,99 @@
+# Template de config por vaga (arquivos com "_" no início são ignorados pelo gerador).
+#
+# Uso:
+#   1. cp config/jobs/_template.yml config/jobs/<empresa>-<slug>.yml
+#   2. ajuste metadata, summary, claims e skill_groups
+#   3. npm run cv:validate
+#   4. npm run cv -- generate --job <slug> --format all
+#
+# Regras:
+# - based_on: herda tudo da track indicada. Só sobrescreva o que muda para ESTA vaga.
+# - experience_claims: a chave "inherit" reusa as claims da track base naquela
+#   experiência. A ORDEM das chaves neste mapa é a ordem das experiências no CV.
+# - Só claims com status usable em data/claims.yml podem ser citadas, e cada claim
+#   precisa pertencer à experiência onde está listada. O validador barra o resto.
+# - Métricas bloqueadas (data/metrics.yml + data/conflicts.yml) NÃO entram. Se a
+#   vaga pede algo sem evidência, registre em job.notes e pergunte ao Geilton antes
+#   de afirmar qualquer coisa.
+
+schema_version: 1
+
+jobs:
+  empresa-exemplo-staff-backend:
+    job:
+      company: Empresa Exemplo
+      title: Staff Backend Engineer (.NET)
+      url: https://example.com/vagas/staff-backend
+      location: Lisboa, Portugal (híbrido)
+      captured_at: 2026-09-10
+      source: pasted_text
+      defaults:
+        # Idioma do CV a gerar e mercado da candidatura.
+        # market pt = Portugal/internacional (+351) · market br = Brasil (+55)
+        language: en
+        market: pt
+      notes: >-
+        Requisitos da vaga sem evidência na base: <liste aqui>. Perguntas abertas
+        para o Geilton: <liste aqui>. Nunca transformar isso em bullet sem confirmação.
+
+    based_on: backend-dotnet
+
+    label:
+      pt: Empresa Exemplo — Staff Backend
+      en: Empresa Exemplo — Staff Backend
+
+    # Reescreva headline/subheadline/summary espelhando o vocabulário da vaga.
+    # Isso é apresentação: os fatos continuam vindo das claims citadas abaixo.
+    headline:
+      pt: Staff Backend Engineer
+      en: Staff Backend Engineer
+    subheadline:
+      pt: .NET · Azure · Sistemas distribuídos · Platform Engineering
+      en: .NET · Azure · Distributed Systems · Platform Engineering
+    summary:
+      pt: >-
+        Engenheiro backend com mais de 15 anos de experiência em .NET, Azure e
+        sistemas distribuídos. Hoje atuo em arquitetura e Platform Engineering na
+        Siemens, definindo padrões técnicos, infraestrutura como código com
+        Terraform e Bicep, e Specification-Driven Development com apoio de IA.
+        Antes disso, na Fidelidade, conduzi iniciativas cross-team de padronização
+        cloud-native em 17+ times e treinei mais de 300 desenvolvedores.
+      en: >-
+        Backend engineer with 15+ years of experience in .NET, Azure, and
+        distributed systems. Today I work across architecture and Platform
+        Engineering at Siemens, defining technical standards, infrastructure as
+        code with Terraform and Bicep, and Specification-Driven Development with
+        AI assistance. Previously, at Fidelidade, I led cross-team cloud-native
+        standardization across 17+ teams and trained 300+ developers.
+
+    summary_claim_ids: [CLAIM-0115, CLAIM-0003, CLAIM-0116, CLAIM-0117, CLAIM-0119, CLAIM-0118]
+
+    # A ordem aqui é a ordem no CV: ponha primeiro o que a vaga mais valoriza.
+    experience_claims:
+      siemens: [CLAIM-0115, CLAIM-0003, CLAIM-0116, CLAIM-0117, CLAIM-0006, CLAIM-0007]
+      novabase-fidelidade: [CLAIM-0119, CLAIM-0018, CLAIM-0118, CLAIM-0013, CLAIM-0016]
+      agap2-softfinanca: [CLAIM-0026, CLAIM-0024, CLAIM-0025]
+      mttechne-ticket: [CLAIM-0031, CLAIM-0032, CLAIM-0030]
+      vizir-second: inherit
+
+    early_career_claim_ids: inherit
+
+    skill_groups:
+      - label: {pt: Backend, en: Backend}
+        items: [C#, .NET, .NET Core, REST APIs, Web API, Microservices]
+        evidence_claim_ids: [CLAIM-0003, CLAIM-0026]
+      - label: {pt: Arquitetura, en: Architecture}
+        items: [Distributed Systems, Event-Driven Architecture, DDD, TDD, Clean Architecture]
+        evidence_claim_ids: [CLAIM-0004, CLAIM-0031, CLAIM-0032]
+      - label: {pt: Cloud e plataforma, en: Cloud & Platform}
+        items: [Azure, Platform Engineering, Terraform, Bicep, Docker, Kubernetes, CI/CD]
+        evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0005]
+      - label: {pt: Liderança técnica, en: Technical Leadership}
+        items: [Architecture Reviews, Engineering Standards, Mentoring, Developer Training, Cross-team Influence]
+        evidence_claim_ids: [CLAIM-0007, CLAIM-0118, CLAIM-0119, CLAIM-0018]
+      - label: {pt: Qualidade e operação, en: Quality & Operations}
+        items: [Observability, IAM, RBAC, Reliability, SonarQube]
+        evidence_claim_ids: [CLAIM-0006, CLAIM-0016]
+
+    page_break_before_experience: mttechne-ticket
+    target_pages: 2

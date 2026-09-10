@@ -21,3 +21,8 @@ test-results/
 source-material/
 outputs/
 tmp/
+
+# Per-application job configs stay local: this repository is public and a job
+# file names the companies Geilton is applying to. Only the template ships.
+config/jobs/*
+!config/jobs/_template.yml

@@ -2,6 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const Ajv2020 = require("ajv/dist/2020");
 const { SCHEMA_DIR } = require("./paths");
+const { resolveJobConfig } = require("./jobs");
 
 const EARLY_CAREER_EXPERIENCE_IDS = new Set([
   "fcamara-via-varejo",
@@ -102,53 +103,82 @@ function validateReferences(data) {
     }
   }
 
-  for (const [trackId, track] of Object.entries(data.tracks)) {
+  function validateConfig(label, config) {
+    const experienceClaims = config.experience_claims || {};
+    const earlyCareerClaimIds = Array.isArray(config.early_career_claim_ids)
+      ? config.early_career_claim_ids
+      : [];
+    if (config.early_career_claim_ids === "inherit") {
+      errors.push(
+        `${label}: early_career_claim_ids must list claim ids (inherit is only valid in a job with based_on)`,
+      );
+    }
     const selectedClaimIds = [
-      ...track.summary_claim_ids,
-      ...Object.values(track.experience_claims).flat(),
-      ...track.early_career_claim_ids,
-      ...track.skill_groups.flatMap((group) => group.evidence_claim_ids),
+      ...(config.summary_claim_ids || []),
+      ...Object.values(experienceClaims).filter(Array.isArray).flat(),
+      ...earlyCareerClaimIds,
+      ...(config.skill_groups || []).flatMap((group) => group.evidence_claim_ids),
     ];
 
-    for (const experienceId of Object.keys(track.experience_claims)) {
+    for (const [experienceId, claimIds] of Object.entries(experienceClaims)) {
       if (!experienceById.has(experienceId)) {
-        errors.push(`${trackId}: unknown experience ${experienceId}`);
+        errors.push(`${label}: unknown experience ${experienceId}`);
+      }
+      if (!Array.isArray(claimIds)) {
+        errors.push(
+          `${label}: experience ${experienceId} must list claim ids (inherit is only valid in a job with based_on)`,
+        );
       }
     }
 
     if (
-      track.page_break_before_experience &&
-      !Object.hasOwn(track.experience_claims, track.page_break_before_experience)
+      config.page_break_before_experience &&
+      !Object.hasOwn(experienceClaims, config.page_break_before_experience)
     ) {
       errors.push(
-        `${trackId}: page break targets unselected experience ${track.page_break_before_experience}`,
+        `${label}: page break targets unselected experience ${config.page_break_before_experience}`,
       );
     }
 
     for (const claimId of selectedClaimIds) {
       const claim = claimById.get(claimId);
       if (!claim) {
-        errors.push(`${trackId}: unknown claim ${claimId}`);
+        errors.push(`${label}: unknown claim ${claimId}`);
       } else if (claim.status !== "usable") {
-        errors.push(`${trackId}: non-usable claim selected ${claimId}`);
+        errors.push(`${label}: non-usable claim selected ${claimId}`);
       }
     }
 
-    for (const [experienceId, claimIds] of Object.entries(track.experience_claims)) {
-      for (const claimId of claimIds) {
+    for (const [experienceId, claimIds] of Object.entries(experienceClaims)) {
+      for (const claimId of Array.isArray(claimIds) ? claimIds : []) {
         const claim = claimById.get(claimId);
         if (claim && claim.experience_id !== experienceId) {
-          errors.push(`${trackId}: ${claimId} belongs to ${claim.experience_id}, not ${experienceId}`);
+          errors.push(`${label}: ${claimId} belongs to ${claim.experience_id}, not ${experienceId}`);
         }
       }
     }
 
-    for (const claimId of track.early_career_claim_ids) {
+    for (const claimId of earlyCareerClaimIds) {
       const claim = claimById.get(claimId);
       if (claim && !EARLY_CAREER_EXPERIENCE_IDS.has(claim.experience_id)) {
-        errors.push(`${trackId}: ${claimId} does not belong to an early-career experience`);
+        errors.push(`${label}: ${claimId} does not belong to an early-career experience`);
       }
     }
+  }
+
+  for (const [trackId, track] of Object.entries(data.tracks)) {
+    validateConfig(trackId, track);
+  }
+
+  for (const jobId of Object.keys(data.jobs || {})) {
+    let resolved;
+    try {
+      resolved = resolveJobConfig(data.jobs, data.tracks, jobId).config;
+    } catch (error) {
+      errors.push(error.message);
+      continue;
+    }
+    validateConfig(`job ${jobId}`, resolved);
   }
 
   return errors;
@@ -157,7 +187,10 @@ function validateReferences(data) {
 async function validateCareerData(data) {
   const schemaPath = path.join(SCHEMA_DIR, "career.schema.json");
   const schema = JSON.parse(await fs.readFile(schemaPath, "utf8"));
-  const ajv = new Ajv2020({ allErrors: true, strict: true });
+  // strictRequired is off because a track/job schema reaches its `properties`
+  // through a $ref, so Ajv cannot see the required fields next to them. A test
+  // asserts that required fields are still enforced at runtime.
+  const ajv = new Ajv2020({ allErrors: true, strict: true, strictRequired: false });
   const validate = ajv.compile(schema);
   const valid = validate(data);
   const errors = [];
@@ -165,6 +198,25 @@ async function validateCareerData(data) {
   if (!valid) {
     for (const error of validate.errors || []) {
       errors.push(`${error.instancePath || "/"} ${error.message}`);
+    }
+  }
+
+  // A job file may be partial (based_on inheritance), so schema validation only
+  // covers what the job itself declares. Check the resolved config as well,
+  // because the resolved config is what actually renders.
+  const resolvedTrackValidator = ajv.compile({ $defs: schema.$defs, $ref: "#/$defs/trackConfig" });
+  for (const jobId of Object.keys(data.jobs || {})) {
+    let resolved;
+    try {
+      resolved = resolveJobConfig(data.jobs, data.tracks, jobId).config;
+    } catch (error) {
+      errors.push(error.message);
+      continue;
+    }
+    if (!resolvedTrackValidator(resolved)) {
+      for (const error of resolvedTrackValidator.errors || []) {
+        errors.push(`job ${jobId}: ${error.instancePath || "/"} ${error.message}`);
+      }
     }
   }
 

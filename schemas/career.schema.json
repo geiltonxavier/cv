@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Canonical career data",
   "type": "object",
-  "required": ["profile", "direct_sources", "experiences", "claims", "metrics", "education", "credentials", "conflicts", "review_queue", "tracks"],
+  "required": ["profile", "direct_sources", "experiences", "claims", "metrics", "education", "credentials", "conflicts", "review_queue", "tracks", "jobs"],
   "properties": {
     "profile": {
       "type": "object",
@@ -232,41 +232,83 @@
     "tracks": {
       "type": "object",
       "minProperties": 1,
-      "additionalProperties": {
-        "type": "object",
-        "required": ["label", "headline", "subheadline", "summary", "summary_claim_ids", "experience_claims", "early_career_claim_ids", "target_pages", "skill_groups"],
-        "properties": {
-          "label": {"$ref": "#/$defs/localized"},
-          "headline": {"$ref": "#/$defs/localized"},
-          "subheadline": {"$ref": "#/$defs/localized"},
-          "summary": {"$ref": "#/$defs/localized"},
-          "summary_claim_ids": {"$ref": "#/$defs/claimIds"},
-          "experience_claims": {
-            "type": "object",
-            "additionalProperties": {"$ref": "#/$defs/claimIds"}
-          },
-          "page_break_before_experience": {"type": "string", "pattern": "^[a-z0-9-]+$"},
-          "early_career_claim_ids": {"$ref": "#/$defs/claimIds"},
-          "target_pages": {"type": "integer", "minimum": 1, "maximum": 2},
-          "skill_groups": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": ["label", "items", "evidence_claim_ids"],
-              "properties": {
-                "label": {"$ref": "#/$defs/localized"},
-                "items": {"type": "array", "minItems": 1, "items": {"type": "string"}},
-                "evidence_claim_ids": {"$ref": "#/$defs/claimIds"}
-              },
-              "additionalProperties": false
-            }
-          }
-        },
-        "additionalProperties": false
-      }
+      "additionalProperties": {"$ref": "#/$defs/trackConfig"}
+    },
+    "jobs": {
+      "type": "object",
+      "additionalProperties": {"$ref": "#/$defs/jobConfig"}
     }
   },
   "$defs": {
+    "trackProperties": {
+      "type": "object",
+      "properties": {
+        "label": {"$ref": "#/$defs/localized"},
+        "headline": {"$ref": "#/$defs/localized"},
+        "subheadline": {"$ref": "#/$defs/localized"},
+        "summary": {"$ref": "#/$defs/localized"},
+        "summary_claim_ids": {"$ref": "#/$defs/claimIds"},
+        "experience_claims": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [{"$ref": "#/$defs/claimIds"}, {"const": "inherit"}]
+          }
+        },
+        "page_break_before_experience": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "early_career_claim_ids": {"oneOf": [{"$ref": "#/$defs/claimIds"}, {"const": "inherit"}]},
+        "target_pages": {"type": "integer", "minimum": 1, "maximum": 2},
+        "skill_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "items", "evidence_claim_ids"],
+            "properties": {
+              "label": {"$ref": "#/$defs/localized"},
+              "items": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+              "evidence_claim_ids": {"$ref": "#/$defs/claimIds"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "based_on": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "job": {"$ref": "#/$defs/jobMetadata"}
+      },
+      "additionalProperties": false
+    },
+    "trackConfig": {
+      "type": "object",
+      "$ref": "#/$defs/trackProperties",
+      "required": ["label", "headline", "subheadline", "summary", "summary_claim_ids", "experience_claims", "early_career_claim_ids", "target_pages", "skill_groups"]
+    },
+    "jobConfig": {
+      "allOf": [
+        {"$ref": "#/$defs/trackProperties"},
+        {"type": "object", "required": ["job"]}
+      ]
+    },
+    "jobMetadata": {
+      "type": "object",
+      "required": ["company", "title"],
+      "properties": {
+        "company": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "url": {"type": "string"},
+        "location": {"type": "string"},
+        "captured_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "source": {"enum": ["pasted_text", "url", "pdf"]},
+        "description_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "notes": {"type": "string"},
+        "defaults": {
+          "type": "object",
+          "properties": {
+            "language": {"enum": ["pt", "en"]},
+            "market": {"enum": ["pt", "br"]}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
     "localized": {
       "type": "object",
       "required": ["pt", "en"],

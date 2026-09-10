@@ -1,4 +1,5 @@
 const crypto = require("crypto");
+const { resolveJobConfig } = require("./jobs");
 
 const LABELS = {
   pt: {
@@ -59,15 +60,30 @@ function unique(values) {
   return [...new Set(values)];
 }
 
-function buildResume(data, { language, trackId, market = data.profile.defaults.market }) {
+function buildResume(data, { language, trackId = null, jobId = null, market = data.profile.defaults.market }) {
   if (!LABELS[language]) {
     throw new Error(`Unsupported language: ${language}`);
   }
-
-  const track = data.tracks[trackId];
-  if (!track) {
-    throw new Error(`Unknown track: ${trackId}`);
+  if (jobId && trackId) {
+    throw new Error("Provide either a track or a job, not both.");
   }
+
+  let jobMetadata = null;
+  let baseTrackId = null;
+  let track;
+
+  if (jobId) {
+    const resolved = resolveJobConfig(data.jobs, data.tracks, jobId);
+    track = resolved.config;
+    jobMetadata = resolved.job;
+    baseTrackId = resolved.based_on;
+  } else {
+    track = data.tracks[trackId];
+    if (!track) {
+      throw new Error(`Unknown track: ${trackId}`);
+    }
+  }
+
   if (!["pt", "br"].includes(market)) {
     throw new Error(`Unsupported market: ${market}`);
   }
@@ -155,7 +171,14 @@ function buildResume(data, { language, trackId, market = data.profile.defaults.m
   const fingerprintPayload = JSON.stringify({
     language,
     market,
-    trackId,
+    trackId: jobId || trackId,
+    ...(jobMetadata
+      ? {
+          jobCompany: jobMetadata.company,
+          jobTitle: jobMetadata.title,
+          jobUrl: jobMetadata.url || null,
+        }
+      : {}),
     contacts: selectedContactRecords.map(({ id, value, source_ids }) => ({ id, value, source_ids })),
     claims: selectedClaims.map(({ id, text, source_ids }) => ({ id, text, source_ids })),
   });
@@ -186,10 +209,12 @@ function buildResume(data, { language, trackId, market = data.profile.defaults.m
 
   const audit = {
     schema_version: 1,
-    mode: "general",
+    mode: jobId ? "job" : "general",
+    config_id: jobId || trackId,
     language,
     market,
-    track: trackId,
+    track: jobId ? baseTrackId : trackId,
+    ...(jobId ? { job_id: jobId, job: jobMetadata } : {}),
     target_pages: track.target_pages,
     page_break_before_experience: track.page_break_before_experience || null,
     data_fingerprint: crypto.createHash("sha256").update(fingerprintPayload).digest("hex"),
