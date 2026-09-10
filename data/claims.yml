@@ -186,12 +186,12 @@ claims:
   - id: CLAIM-0023
     experience_id: agap2-softfinanca
     text:
-      pt: Desenhei e implementei a arquitetura inicial de um marketplace para farmácias usando Clean Architecture.
-      en: Designed and implemented the initial architecture of a pharmacy marketplace using Clean Architecture.
-    tags: [architecture, marketplace, clean-architecture]
+      pt: Desenhei e implementei a arquitetura inicial de um marketplace para farmácias usando Clean Architecture (ports and adapters / hexagonal).
+      en: Designed and implemented the initial architecture of a pharmacy marketplace using Clean Architecture (ports and adapters / hexagonal).
+    tags: [architecture, marketplace, clean-architecture, hexagonal-architecture]
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020]
+    source_ids: [SRC-018, SRC-019, SRC-020, USR-20260910-002]
   - id: CLAIM-0024
     experience_id: agap2-softfinanca
     text:
@@ -223,12 +223,13 @@ claims:
   - id: CLAIM-0029
     experience_id: mttechne-ticket
     text:
-      pt: Atuei como integrante da equipe responsável por um Transaction HUB financeiro central.
-      en: Worked as part of the team responsible for a central financial Transaction HUB.
-    tags: [financial-systems, transactions, backend]
+      pt: Atuei na equipe responsável por um Transaction HUB financeiro central que processava 900 mil transações por dia com 99,9% de disponibilidade.
+      en: Worked on the team responsible for a central financial Transaction HUB processing 900K transactions per day with 99.9% availability.
+    tags: [financial-systems, transactions, backend, high-throughput, scale]
+    metric_ids: [MET-014, MET-015]
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids: [SRC-020, USR-20260910-005]
   - id: CLAIM-0030
     experience_id: mttechne-ticket
     text:
@@ -269,12 +270,13 @@ claims:
   - id: CLAIM-0036
     experience_id: vizir-second
     text:
-      pt: Trabalhei em uma plataforma global e multi-país de cadastro e onboarding de consultoras da Natura.
-      en: Worked on a global, multi-country registration and onboarding platform for Natura consultants.
-    tags: [onboarding, global-platform, backend]
+      pt: Trabalhei na plataforma global e multi-país de cadastro e onboarding de consultoras da Natura, que atendia mais de 1 milhão de consultores.
+      en: Worked on Natura's global, multi-country consultant registration and onboarding platform, serving more than 1 million consultants.
+    tags: [onboarding, global-platform, backend, scale]
+    metric_ids: [MET-016]
     status: usable
     confidence: high
-    source_ids: [SRC-016, SRC-019, SRC-020]
+    source_ids: [SRC-016, SRC-019, SRC-020, USR-20260910-005]
   - id: CLAIM-0037
     experience_id: vizir-second
     text:
@@ -472,3 +474,154 @@ claims:
     status: usable
     confidence: high
     source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-006, SRC-008, SRC-009, SRC-014, SRC-015]
+
+  # Confirmado por Geilton em 2026-09-10 (USR-20260910-001/002/004).
+  # Atribuição de stack por empresa: vizir-second, siemens, mttechne-ticket.
+  - id: CLAIM-0121
+    experience_id: mttechne-ticket
+    text:
+      pt: Desenvolvi microsserviços em .NET Core com arquitetura hexagonal, Docker e Kubernetes em produção.
+      en: Built .NET Core microservices with hexagonal architecture, Docker, and Kubernetes in production.
+    tags: [microservices, dotnet, hexagonal-architecture, docker, kubernetes]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-004]
+  - id: CLAIM-0122
+    experience_id: mttechne-ticket
+    text:
+      pt: Usei RabbitMQ para comunicação assíncrona entre serviços em produção.
+      en: Used RabbitMQ for asynchronous inter-service communication in production.
+    tags: [rabbitmq, messaging, event-driven, backend]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-001, USR-20260910-004]
+  - id: CLAIM-0123
+    experience_id: mttechne-ticket
+    text:
+      pt: Automatizei o pipeline de entrega com GoCD.
+      en: Automated the delivery pipeline with GoCD.
+    tags: [cicd, gocd, delivery]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-004]
+  - id: CLAIM-0124
+    experience_id: mttechne-ticket
+    text:
+      pt: Contribuí com desenvolvimento frontend em Angular.
+      en: Contributed frontend development in Angular.
+    tags: [angular, frontend]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-004]
+  - id: CLAIM-0125
+    experience_id: siemens
+    text:
+      pt: Participo de rotação de on-call e respondo a incidentes em produção.
+      en: Participate in on-call rotations and respond to production incidents.
+    tags: [on-call, incident-response, reliability, operations]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-002, USR-20260910-004]
+  - id: CLAIM-0126
+    experience_id: siemens
+    text:
+      pt: Trabalho com pair programming como parte do fluxo diário de desenvolvimento.
+      en: Work with pair programming as part of the daily development flow.
+    tags: [pair-programming, engineering-practices, collaboration]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-002, USR-20260910-004]
+  - id: CLAIM-0127
+    experience_id: vizir-second
+    text:
+      pt: Usei MongoDB como banco NoSQL em produção.
+      en: Used MongoDB as a NoSQL database in production.
+    tags: [mongodb, nosql, database]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-001, USR-20260910-004]
+  - id: CLAIM-0128
+    experience_id: vizir-second
+    text:
+      pt: Coloquei em produção serviços AWS com Lambda, SNS, SQS e Elastic Beanstalk.
+      en: Shipped AWS services to production with Lambda, SNS, SQS, and Elastic Beanstalk.
+    tags: [aws, lambda, sqs, sns, serverless, event-driven]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-002, USR-20260910-004]
+  - id: CLAIM-0129
+    experience_id: vizir-second
+    text:
+      pt: Usei RabbitMQ para comunicação assíncrona entre serviços em produção.
+      en: Used RabbitMQ for asynchronous inter-service communication in production.
+    tags: [rabbitmq, messaging, event-driven, backend]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-001, USR-20260910-004]
+
+  # Confirmado por Geilton em 2026-09-10 (USR-20260910-006).
+  - id: CLAIM-0130
+    experience_id: agap2-softfinanca
+    text:
+      pt: Apliquei arquitetura hexagonal (ports and adapters) nos sistemas backend em que atuei.
+      en: Applied hexagonal architecture (ports and adapters) in the backend systems I worked on.
+    tags: [hexagonal-architecture, architecture, backend]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-006]
+  - id: CLAIM-0131
+    experience_id: novabase-fidelidade
+    text:
+      pt: Usei RabbitMQ para comunicação assíncrona entre serviços.
+      en: Used RabbitMQ for asynchronous inter-service communication.
+    tags: [rabbitmq, messaging, event-driven]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-006]
+  - id: CLAIM-0132
+    experience_id: novabase-fidelidade
+    text:
+      pt: Trabalhei com Docker em aplicações e serviços.
+      en: Worked with Docker in applications and services.
+    tags: [docker, containers, delivery]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-006]
+  - id: CLAIM-0133
+    experience_id: novabase-fidelidade
+    text:
+      pt: Usei Kibana para análise de logs e observabilidade de serviços.
+      en: Used Kibana for log analysis and service observability.
+    tags: [kibana, observability, logging, monitoring]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-006]
+  - id: CLAIM-0134
+    experience_id: novabase-fidelidade
+    text:
+      pt: Usei Azure DevOps para pipelines de CI/CD.
+      en: Used Azure DevOps for CI/CD pipelines.
+    tags: [azure-devops, cicd, delivery]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-006]
+
+  # Confirmado por Geilton em 2026-09-10 (USR-20260910-007).
+  - id: CLAIM-0135
+    experience_id: novabase-fidelidade
+    text:
+      pt: Trabalhei com .NET Core, RabbitMQ, Docker, Kubernetes, Azure Key Vault, Azure App Services e pipelines de CI/CD em YAML.
+      en: Worked with .NET Core, RabbitMQ, Docker, Kubernetes, Azure Key Vault, Azure App Services, and CI/CD YAML pipelines.
+    tags: [dotnet-core, kubernetes, azure, key-vault, app-services, rabbitmq, docker, cicd, backend]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-006, USR-20260910-007]
+  - id: CLAIM-0136
+    experience_id: siemens
+    text:
+      pt: Usei Azure Service Bus para comunicação assíncrona entre serviços.
+      en: Used Azure Service Bus for asynchronous inter-service communication.
+    tags: [azure-service-bus, messaging, event-driven, azure]
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-007]

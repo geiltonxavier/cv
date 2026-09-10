@@ -28,3 +28,52 @@ direct_sources:
       - Uses Scrum and Kanban daily and has worked with both practices for many years.
       - Uses Docker in professional software-development work.
       - Applies Test-Driven Development (TDD) in professional software-development work.
+  - id: USR-20260910-001
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - Uses RabbitMQ for inter-service messaging in production.
+      - Uses Azure Service Bus for inter-service messaging in production.
+      - Uses MongoDB as a NoSQL database in production.
+      - Uses Kibana for log analysis and observability.
+      - C# is his main programming language.
+      - Has no production experience with Kafka, DynamoDB, Datomic, Prometheus, or a functional language such as Clojure, Elixir, or Scala.
+  - id: USR-20260910-002
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - Uses AWS in production with Lambda, SNS, SQS, and Elastic Beanstalk.
+      - Participated in on-call rotations and responded to production incidents.
+      - Practices pair programming.
+      - Uses "hexagonal architecture" as the name for the ports-and-adapters style he applies.
+  - id: USR-20260910-003
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - Works daily in an international environment where English is the working language.
+      - Declares no English level on the CV; the international working environment is mentioned instead.
+  - id: USR-20260910-004
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - At Vizir, used RabbitMQ, MongoDB, and AWS in production.
+      - At Siemens, participates in on-call rotations and pair programming.
+      - At Edenred/Ticket, used RabbitMQ, Docker, Kubernetes, hexagonal architecture, GoCD, .NET Core, Angular, and microservices in production.
+  - id: USR-20260910-005
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - Confirms the Mttechne Transaction HUB processed 900K transactions per day with 99.9% availability.
+      - Confirms the Natura consultant platform he worked on served more than 1 million consultants.
+  - id: USR-20260910-006
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - At SoftFinança, also used hexagonal architecture.
+      - At Fidelidade, used RabbitMQ, Docker, Kibana, and Azure DevOps.
+  - id: USR-20260910-007
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - At Siemens, uses Azure Service Bus for asynchronous inter-service communication.
+      - At Fidelidade, used .NET Core, RabbitMQ, Docker, Kubernetes, Azure services (Key Vault, App Services), and CI/CD YAML pipelines.

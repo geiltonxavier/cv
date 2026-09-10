@@ -80,15 +80,22 @@ metrics:
     value: 900K
     unit: transactions per day
     context: Mttechne Transaction HUB
-    status: blocked
-    confidence: low
-    source_ids: [SRC-018]
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, USR-20260910-005]
     conflict_ids: [CON-051]
   - id: MET-015
     value: 99.9%
     unit: availability
     context: Mttechne Transaction HUB
-    status: blocked
-    confidence: low
-    source_ids: [SRC-018]
+    status: usable
+    confidence: high
+    source_ids: [SRC-018, USR-20260910-005]
     conflict_ids: [CON-051]
+  - id: MET-016
+    value: 1M+
+    unit: consultants served
+    context: Vizir · Natura consultant onboarding platform
+    status: usable
+    confidence: high
+    source_ids: [USR-20260910-005]
