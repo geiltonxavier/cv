@@ -40,9 +40,9 @@ metrics:
     value: $1M+
     unit: projected USD per year
     context: Siemens User Management platform
-    status: blocked
+    status: usable
     confidence: medium
-    source_ids: [SRC-018, SRC-019]
+    source_ids: [SRC-018, SRC-019, USR-20260912-003]
     conflict_ids: [CON-046]
   - id: MET-003
     value: 300+

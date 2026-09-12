@@ -176,3 +176,29 @@ direct_sources:
       - The Faculdade Facint postgraduate degree (Ethical Hacking and
         CyberSecurity, 2024-2025) stays out of the CV for space reasons; it is
         not part of the evidence base yet.
+  - id: USR-20260912-003
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - Confirmed the $1M+ per year figure for the Siemens User Management
+        platform (MET-002); it is an internal projection, so no external
+        document can be required for it.
+      - Corrected the "300+ engineers" figure - it belongs to Fidelidade/Novabase
+        training and standardization, not to a Siemens SDD/Copilot rollout.
+        The Siemens version of that metric is discarded.
+      - At Fidelidade, the reusable Visual Studio templates he built — and the
+        projects created from them — standardized Hexagonal/Clean Architecture,
+        observability, and CI/CD; the CI/CD templates served several projects.
+      - The security discovery at Fidelidade (owners and vulnerable packages
+        across 5,000+ repositories) came from a metrics software he built.
+  - id: USR-20260912-004
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - The $1M+ per year figure for the Siemens User Management platform is
+        business value generated (avoided cost or projected gain).
+      - "Correction - there was no freelance Ruby on Rails period. Rails work
+        happened at Vizir, from 2015 to part of 2016, where he started with C#
+        and later moved to Rails projects. The legacy expense-only 'Freelancer'
+        entry and its claim were removed from the canonical data."
+      - CV header must carry geiltonxavier.com and github.com/geiltonxavier.

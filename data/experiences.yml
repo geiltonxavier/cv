@@ -113,19 +113,6 @@ experiences:
     source_ids: [SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-019, SRC-020]
     conflict_ids: [CON-006, CON-007, CON-008, CON-009, CON-010, CON-011, CON-012]
 
-  - id: freelancer-rails
-    evidence_id: EXP-008
-    company: Freelancer
-    role:
-      pt: Desenvolvedor Ruby on Rails
-      en: Ruby on Rails Developer
-    start: 2015-07
-    end: 2017-04
-    domains: [web-development]
-    status: reference_only
-    source_ids: [SRC-014]
-    conflict_ids: []
-
   - id: vizir-first
     evidence_id: EXP-009
     company: Vizir Software Studio

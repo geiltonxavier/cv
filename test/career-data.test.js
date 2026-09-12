@@ -105,8 +105,10 @@ test("Portugal-market CV uses only the confirmed Portugal WhatsApp number", asyn
   assert.equal(html.includes("+351 910 702 889 (WhatsApp)"), true);
   assert.deepEqual(audit.selected_contact_ids.sort(), [
     "contact-email",
+    "contact-github",
     "contact-linkedin",
     "contact-phone-pt",
+    "contact-site",
   ]);
   assert.equal(audit.market, "pt");
   assert.equal(audit.selected_source_ids.includes("USR-20260809-002"), true);
@@ -127,8 +129,10 @@ test("Brazil-market CV uses only the confirmed Brazil WhatsApp number", async ()
   assert.equal(html.includes("+351 910 702 889"), false);
   assert.deepEqual(audit.selected_contact_ids.sort(), [
     "contact-email",
+    "contact-github",
     "contact-linkedin",
     "contact-phone-br",
+    "contact-site",
   ]);
   assert.equal(audit.market, "br");
 });
@@ -136,9 +140,11 @@ test("Brazil-market CV uses only the confirmed Brazil WhatsApp number", async ()
 test("reference validation rejects a non-usable claim selected by a track", async () => {
   const data = await loadCareerData();
   const unsafe = structuredClone(data);
-  unsafe.tracks["backend-general"].summary_claim_ids.push("CLAIM-0057");
+  // Every canonical claim is usable, so the fixture creates the conflict itself.
+  unsafe.claims.find((claim) => claim.id === "CLAIM-0145").status = "needs_confirmation";
+  unsafe.tracks["backend-general"].summary_claim_ids.push("CLAIM-0145");
   const errors = validateReferences(unsafe);
-  assert.ok(errors.some((error) => error.includes("non-usable claim selected CLAIM-0057")));
+  assert.ok(errors.some((error) => error.includes("non-usable claim selected CLAIM-0145")));
 });
 
 test("rendered HTML keeps standard ATS sections and source claim markers", async () => {

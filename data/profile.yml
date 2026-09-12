@@ -22,6 +22,22 @@ contacts:
     status: usable
     markets: [pt, br]
     source_ids: [SRC-018, SRC-019, SRC-020]
+  - id: contact-site
+    kind: website
+    label: geiltonxavier.com
+    value: geiltonxavier.com
+    href: https://geiltonxavier.com
+    status: usable
+    markets: [pt, br]
+    source_ids: [USR-20260912-004]
+  - id: contact-github
+    kind: github
+    label: github.com/geiltonxavier
+    value: github.com/geiltonxavier
+    href: https://github.com/geiltonxavier
+    status: usable
+    markets: [pt, br]
+    source_ids: [USR-20260912-004]
   - id: contact-phone-br
     kind: phone
     label: "+55 11 92648-6761 (WhatsApp)"

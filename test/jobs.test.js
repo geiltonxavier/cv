@@ -130,11 +130,13 @@ test("inheriting from an unknown base track is rejected", async () => {
 test("reference validation rejects a job that selects a non-usable claim", async () => {
   const data = await loadFixtureData();
   const unsafe = structuredClone(data);
-  unsafe.jobs[JOB_ID].summary_claim_ids.push("CLAIM-0057");
+  // Every canonical claim is usable, so the fixture creates the conflict itself.
+  unsafe.claims.find((claim) => claim.id === "CLAIM-0145").status = "needs_confirmation";
+  unsafe.jobs[JOB_ID].summary_claim_ids.push("CLAIM-0145");
 
   const errors = validateReferences(unsafe);
   assert.ok(
-    errors.some((error) => error.includes(`job ${JOB_ID}: non-usable claim selected CLAIM-0057`)),
+    errors.some((error) => error.includes(`job ${JOB_ID}: non-usable claim selected CLAIM-0145`)),
     errors.join("\n"),
   );
 });
@@ -175,8 +177,10 @@ test("job generation writes under outputs/jobs/<slug>/<lang>-<market>", async ()
     assert.equal(audit.market, "br");
     assert.deepEqual(audit.selected_contact_ids.sort(), [
       "contact-email",
+      "contact-github",
       "contact-linkedin",
       "contact-phone-br",
+      "contact-site",
     ]);
 
     const html = await fs.readFile(result.htmlPath, "utf8");

@@ -16,18 +16,23 @@ review_queue:
       statement:
         pt: geiltonxavier.dev é um blog profissional sobre engenharia de software, sistemas distribuídos e produtividade de desenvolvedores.
         en: geiltonxavier.dev is a professional blog about software engineering, distributed systems, and developer productivity.
-      status: needs_confirmation
+      status: blocked
       source_id: LEGACY-PT-RUBY-HTML
-      reason: O endereço e a descrição aparecem somente no CV Ruby legado.
+      reason: >-
+        Superado em 2026-09-12 (USR-20260912-004): o blog profissional é
+        geiltonxavier.com, já registrado como contato do CV. O endereço .dev do
+        CV Ruby legado não deve ser usado.
 
     - id: LEGACY-CANDIDATE-002
       kind: contact
       statement:
         pt: github.com/geiltonxavier é o perfil profissional e de open source atual.
         en: github.com/geiltonxavier is the current professional and open-source profile.
-      status: needs_confirmation
+      status: blocked
       source_id: LEGACY-PT-RUBY-HTML
-      reason: O inventário confirma apenas um endereço histórico de GitHub Pages, não este perfil.
+      reason: >-
+        Confirmado e promovido em 2026-09-12 (USR-20260912-004): github.com/geiltonxavier
+        virou contato do CV; este candidato fica fechado.
 
     - id: LEGACY-CANDIDATE-003
       kind: claim

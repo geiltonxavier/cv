@@ -199,19 +199,23 @@ claims:
   - id: CLAIM-0014
     experience_id: novabase-fidelidade
     text:
-      pt: Desenhei e entreguei templates reutilizáveis com logging estruturado,
-        múltiplas opções de acesso a dados e pipelines CI/CD em YAML.
-      en: Designed and delivered reusable templates with structured logging, multiple
-        data-access options, and YAML CI/CD pipelines.
+      pt: Desenhei e entreguei templates reutilizáveis com logging estruturado, arquitetura
+        Hexagonal/Clean, observabilidade, múltiplas opções de acesso a dados e pipelines
+        CI/CD em YAML, usados por vários projetos.
+      en: Designed and delivered reusable templates with structured logging, Hexagonal/Clean
+        architecture, observability, multiple data-access options, and YAML CI/CD pipelines,
+        used across several projects.
     tags:
       - templates
       - observability
+      - hexagonal-architecture
       - data-access
       - cicd
     status: usable
     confidence: high
     source_ids:
       - SRC-020
+      - USR-20260912-003
   - id: CLAIM-0016
     experience_id: novabase-fidelidade
     text:
@@ -582,20 +586,6 @@ claims:
     confidence: high
     source_ids:
       - SRC-016
-  - id: CLAIM-0057
-    experience_id: freelancer-rails
-    text:
-      pt: Desenvolvi aplicações web em Ruby on Rails como freelancer.
-      en: Developed Ruby on Rails web applications as a freelancer.
-    tags:
-      - ruby
-      - rails
-      - backend
-      - freelance
-    status: needs_confirmation
-    confidence: medium
-    source_ids:
-      - SRC-014
   - id: CLAIM-0058
     experience_id: vizir-first
     text:
@@ -1404,3 +1394,36 @@ claims:
     confidence: high
     source_ids:
       - USR-20260912-002
+  - id: CLAIM-0157
+    experience_id: siemens
+    text:
+      pt: Projetei mais de US$ 1 milhão por ano em economia e valor gerado para o
+        negócio na plataforma de user management.
+      en: Projected over $1M per year in savings and business value for the user
+        management platform.
+    tags:
+      - business-value
+      - cost-savings
+      - architecture
+    metric_ids: [MET-002]
+    status: usable
+    confidence: medium
+    source_ids:
+      - USR-20260912-003
+  - id: CLAIM-0158
+    experience_id: vizir-first
+    text:
+      pt: Iniciei na Vizir com desenvolvimento em C# e passei depois a atuar em
+        projetos Ruby on Rails.
+      en: Started at Vizir with C# development and later moved on to Ruby on Rails
+        projects.
+    tags:
+      - dotnet
+      - csharp
+      - ruby
+      - rails
+      - backend
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-004
