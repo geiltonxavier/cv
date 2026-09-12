@@ -56,25 +56,25 @@ metrics:
     value: ~60%
     unit: project setup time reduction
     context: Novabase IDP
-    status: blocked
+    status: usable
     confidence: medium
-    source_ids: [SRC-018, SRC-019]
+    source_ids: [SRC-018, SRC-019, USR-20260912-005]
     conflict_ids: [CON-048]
   - id: MET-008
     value: 70+
     unit: projects
     context: Novabase IDP adoption
-    status: blocked
+    status: usable
     confidence: medium
-    source_ids: [SRC-018, SRC-019]
+    source_ids: [SRC-018, SRC-019, USR-20260912-005]
     conflict_ids: [CON-049]
   - id: MET-009
     value: 70%
     unit: manual issue-analysis reduction
     context: Novabase Jira and Azure OpenAI system
-    status: blocked
+    status: usable
     confidence: medium
-    source_ids: [SRC-018, SRC-019]
+    source_ids: [SRC-018, SRC-019, USR-20260912-005]
     conflict_ids: [CON-050]
   - id: MET-014
     value: 900K

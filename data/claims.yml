@@ -1427,3 +1427,58 @@ claims:
     confidence: high
     source_ids:
       - USR-20260912-004
+  - id: CLAIM-0159
+    experience_id: novabase-fidelidade
+    text:
+      pt: Reduzi em cerca de 60% o tempo de setup de novos serviços com a Internal
+        Developer Platform, que já entregava estrutura, padrões e deployment prontos.
+      en: Cut new-service setup time by around 60% with the Internal Developer Platform,
+        which shipped structure, standards, and deployment out of the box.
+    tags:
+      - platform-engineering
+      - developer-experience
+      - internal-developer-platform
+    metric_ids: [MET-007]
+    status: usable
+    confidence: medium
+    source_ids:
+      - USR-20260912-005
+  - id: CLAIM-0160
+    experience_id: novabase-fidelidade
+    text:
+      pt: Meu template interno EBL (Enterprise Business Layer) virou o framework oficial
+        de novos projetos e mais de 70 projetos nasceram dele, contabilizados por
+        métricas sobre a nomenclatura dos repositórios.
+      en: My internal EBL (Enterprise Business Layer) template became the official
+        framework for new projects, and more than 70 projects were created from it,
+        counted through metrics on repository naming.
+    tags:
+      - templates
+      - internal-developer-platform
+      - adoption
+    metric_ids: [MET-008]
+    status: usable
+    confidence: medium
+    source_ids:
+      - USR-20260912-005
+      - USR-20260912-006
+  - id: CLAIM-0161
+    experience_id: novabase-fidelidade
+    text:
+      pt: Coloquei em produção interna um classificador de issues que extraía métricas de
+        recorrência do Jira e as sumarizava com LLM (system prompt), reduzindo em cerca
+        de 70% a análise manual e dispensando revisar milhares de issues abertas.
+      en: Put an issue classifier into internal production that extracted Jira recurrence
+        metrics and summarized them with an LLM (system prompt), cutting manual
+        analysis by around 70% and removing the need to review thousands of open issues.
+    tags:
+      - ai
+      - llm
+      - jira
+      - developer-productivity
+    metric_ids: [MET-009]
+    status: usable
+    confidence: medium
+    source_ids:
+      - USR-20260912-005
+      - USR-20260912-006

@@ -202,3 +202,28 @@ direct_sources:
         and later moved to Rails projects. The legacy expense-only 'Freelancer'
         entry and its claim were removed from the canonical data."
       - CV header must carry geiltonxavier.com and github.com/geiltonxavier.
+  - id: USR-20260912-005
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - Setup time at Fidelidade was reduced after the templates and the IDP -
+        developers no longer had to figure out how to start a project or how to
+        deploy; they consumed the IDP instead. He states the gain was larger
+        than 60% and hard to measure precisely, and chose to keep the ~60%
+        figure on the CV.
+      - The adoption count came from an internal template framework he named
+        EBL (Enterprise Business Layer); projects born from it were countable
+        through metrics on the repository naming.
+      - The Jira plus LLM system was also at Fidelidade - he collected issue
+        metrics from Jira and classified them with an LLM using a system prompt
+        along with other internal metrics.
+  - id: USR-20260912-006
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - Confirmed the 70+ project count for the EBL template and added that it
+        kept growing and became the official framework for new projects.
+      - Confirmed the Jira plus LLM issue classifier ran in internal production.
+        He collected issue recurrence metrics from Jira, summarized them with an
+        LLM, and no longer had to review thousands of open issues to see what
+        kept coming back as a problem.

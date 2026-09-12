@@ -17,7 +17,7 @@ tracks:
     summary_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0136, CLAIM-0144, CLAIM-0118, CLAIM-0119]
     experience_claims:
       siemens: [CLAIM-0115, CLAIM-0003, CLAIM-0155, CLAIM-0136, CLAIM-0116, CLAIM-0117, CLAIM-0157, CLAIM-0006]
-      novabase-fidelidade: [CLAIM-0119, CLAIM-0118, CLAIM-0013, CLAIM-0014, CLAIM-0152, CLAIM-0016, CLAIM-0153]
+      novabase-fidelidade: [CLAIM-0119, CLAIM-0118, CLAIM-0159, CLAIM-0160, CLAIM-0016, CLAIM-0152, CLAIM-0153, CLAIM-0161]
       agap2-softfinanca: [CLAIM-0023, CLAIM-0025, CLAIM-0024]
       mttechne-ticket: [CLAIM-0029, CLAIM-0030, CLAIM-0031, CLAIM-0121, CLAIM-0122]
       vizir-second: [CLAIM-0036, CLAIM-0128, CLAIM-0040, CLAIM-0129]
@@ -29,14 +29,14 @@ tracks:
         items: [.NET, Go, Distributed Systems, Event-Driven Architecture, DDD, TDD, Clean Architecture, Hexagonal Architecture, Microservices, CQRS, Sagas, Multi-tenant]
         evidence_claim_ids: [CLAIM-0003, CLAIM-0004, CLAIM-0030, CLAIM-0031, CLAIM-0130, CLAIM-0139, CLAIM-0142, CLAIM-0146, CLAIM-0155]
       - label: {pt: Cloud e Plataforma, en: Cloud & Platform}
-        items: [Azure, AWS, Platform Engineering, Terraform, Bicep, Docker, Kubernetes, CI/CD, Azure DevOps, Jenkins]
-        evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0005, CLAIM-0013, CLAIM-0038, CLAIM-0134, CLAIM-0143]
+        items: [Azure, AWS, Platform Engineering, Internal Developer Platform, Terraform, Bicep, Docker, Kubernetes, CI/CD, Azure DevOps, Jenkins]
+        evidence_claim_ids: [CLAIM-0115, CLAIM-0116, CLAIM-0005, CLAIM-0013, CLAIM-0159, CLAIM-0160, CLAIM-0038, CLAIM-0134, CLAIM-0143]
       - label: {pt: Mensageria e dados, en: Messaging & Data}
         items: [RabbitMQ, Azure Service Bus, MongoDB, Redis, SQL Server, LINQ]
         evidence_claim_ids: [CLAIM-0122, CLAIM-0129, CLAIM-0131, CLAIM-0136, CLAIM-0145, CLAIM-0127, CLAIM-0025]
       - label: {pt: IA e produtividade, en: AI & Productivity}
         items: [Specification-Driven Development (SDD), AI-Assisted Development, LLM Product Integration, Developer Experience]
-        evidence_claim_ids: [CLAIM-0117, CLAIM-0144, CLAIM-0013, CLAIM-0014]
+        evidence_claim_ids: [CLAIM-0117, CLAIM-0144, CLAIM-0013, CLAIM-0014, CLAIM-0161]
       - label: {pt: Liderança técnica, en: Technical Leadership}
         items: [Architecture Reviews, Engineering Standards, Mentoring, Developer Training, Cross-team Influence, Pair Programming, Scrum, Kanban]
         evidence_claim_ids: [CLAIM-0002, CLAIM-0007, CLAIM-0118, CLAIM-0119, CLAIM-0126, CLAIM-0120]
@@ -60,7 +60,7 @@ tracks:
     summary_claim_ids: [CLAIM-0003, CLAIM-0115, CLAIM-0136, CLAIM-0116, CLAIM-0117, CLAIM-0144, CLAIM-0022, CLAIM-0026, CLAIM-0031]
     experience_claims:
       siemens: [CLAIM-0003, CLAIM-0155, CLAIM-0136, CLAIM-0115, CLAIM-0116, CLAIM-0117, CLAIM-0144]
-      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0013, CLAIM-0014, CLAIM-0135, CLAIM-0016, CLAIM-0131]
+      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0013, CLAIM-0135, CLAIM-0016, CLAIM-0131, CLAIM-0161]
       agap2-softfinanca: [CLAIM-0023, CLAIM-0026, CLAIM-0025, CLAIM-0024]
       mttechne-ticket: [CLAIM-0029, CLAIM-0121, CLAIM-0122, CLAIM-0031, CLAIM-0032, CLAIM-0123]
       vizir-second: [CLAIM-0036, CLAIM-0043, CLAIM-0128, CLAIM-0129, CLAIM-0127]
@@ -103,7 +103,7 @@ tracks:
     summary_claim_ids: [CLAIM-0003, CLAIM-0115, CLAIM-0136, CLAIM-0117, CLAIM-0144, CLAIM-0119, CLAIM-0026, CLAIM-0031, CLAIM-0058, CLAIM-0060, CLAIM-0127]
     experience_claims:
       siemens: [CLAIM-0003, CLAIM-0155, CLAIM-0136, CLAIM-0116, CLAIM-0117, CLAIM-0144]
-      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0013, CLAIM-0014, CLAIM-0152, CLAIM-0016]
+      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0013, CLAIM-0159, CLAIM-0152, CLAIM-0016]
       agap2-softfinanca: [CLAIM-0023, CLAIM-0026, CLAIM-0024]
       mttechne-ticket: [CLAIM-0029, CLAIM-0031, CLAIM-0121, CLAIM-0122, CLAIM-0033]
       vizir-second: [CLAIM-0036, CLAIM-0156, CLAIM-0127, CLAIM-0129, CLAIM-0043]
