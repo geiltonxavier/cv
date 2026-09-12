@@ -92,8 +92,15 @@ test("Portugal-market CV uses only the confirmed Portugal WhatsApp number", asyn
   });
   const html = await renderResume(resume);
 
-  for (const blockedText of ["$1M+", "900K", "99.9%", "+55 11", "AZ-204", "IEEE", "geiltonxavier.dev"]) {
+  // 2026-09-12: the user asked the generic tracks to surface the facts confirmed
+  // on 2026-09-10/11 and approved IEEE Senior Member and AZ-204 for the CV, so
+  // those no longer belong in the blocked list. What must stay out: blocked
+  // metrics, the Brazil phone in a Portugal CV, and review-gated legacy contacts.
+  for (const blockedText of ["$1M+", "~60%", "70+", "+55 11", "geiltonxavier.dev"]) {
     assert.equal(html.includes(blockedText), false, `must exclude ${blockedText}`);
+  }
+  for (const promotedText of ["900K", "99.9%", "IEEE Senior Member", "Azure Service Bus", "RabbitMQ"]) {
+    assert.equal(html.includes(promotedText), true, `must include ${promotedText}`);
   }
   assert.equal(html.includes("+351 910 702 889 (WhatsApp)"), true);
   assert.deepEqual(audit.selected_contact_ids.sort(), [

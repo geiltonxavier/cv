@@ -1,8 +1,4 @@
 schema_version: 1
-
-# Direct confirmations supplied by Geilton. These sources are intentionally
-# distinct from historical CV source IDs so the audit trail shows what was
-# confirmed in conversation instead of inferred from an older document.
 direct_sources:
   - id: USR-20260809-001
     kind: user_confirmation
@@ -12,7 +8,8 @@ direct_sources:
       - Current Siemens work uses Terraform for infrastructure as code.
       - Current Siemens work applies Specification-Driven Development (SDD).
       - Current Siemens work uses AI-assisted development to accelerate delivery.
-      - At Fidelidade, trained 300+ developers in software-development best practices.
+      - At Fidelidade, trained 300+ developers in software-development best
+        practices.
       - At Fidelidade, led substantial cross-team engineering work.
   - id: USR-20260809-002
     kind: user_confirmation
@@ -25,9 +22,11 @@ direct_sources:
     kind: user_confirmation
     recorded_at: 2026-08-10
     statements:
-      - Uses Scrum and Kanban daily and has worked with both practices for many years.
+      - Uses Scrum and Kanban daily and has worked with both practices for many
+        years.
       - Uses Docker in professional software-development work.
-      - Applies Test-Driven Development (TDD) in professional software-development work.
+      - Applies Test-Driven Development (TDD) in professional
+        software-development work.
   - id: USR-20260910-001
     kind: user_confirmation
     recorded_at: 2026-09-10
@@ -37,7 +36,8 @@ direct_sources:
       - Uses MongoDB as a NoSQL database in production.
       - Uses Kibana for log analysis and observability.
       - C# is his main programming language.
-      - Has no production experience with Kafka, DynamoDB, Datomic, Prometheus, or a functional language such as Clojure, Elixir, or Scala.
+      - Has no production experience with Kafka, DynamoDB, Datomic, Prometheus,
+        or a functional language such as Clojure, Elixir, or Scala.
   - id: USR-20260910-002
     kind: user_confirmation
     recorded_at: 2026-09-10
@@ -45,26 +45,32 @@ direct_sources:
       - Uses AWS in production with Lambda, SNS, SQS, and Elastic Beanstalk.
       - Participated in on-call rotations and responded to production incidents.
       - Practices pair programming.
-      - Uses "hexagonal architecture" as the name for the ports-and-adapters style he applies.
+      - Uses "hexagonal architecture" as the name for the ports-and-adapters
+        style he applies.
   - id: USR-20260910-003
     kind: user_confirmation
     recorded_at: 2026-09-10
     statements:
-      - Works daily in an international environment where English is the working language.
-      - Declares no English level on the CV; the international working environment is mentioned instead.
+      - Works daily in an international environment where English is the working
+        language.
+      - Declares no English level on the CV; the international working
+        environment is mentioned instead.
   - id: USR-20260910-004
     kind: user_confirmation
     recorded_at: 2026-09-10
     statements:
       - At Vizir, used RabbitMQ, MongoDB, and AWS in production.
       - At Siemens, participates in on-call rotations and pair programming.
-      - At Edenred/Ticket, used RabbitMQ, Docker, Kubernetes, hexagonal architecture, GoCD, .NET Core, Angular, and microservices in production.
+      - At Edenred/Ticket, used RabbitMQ, Docker, Kubernetes, hexagonal
+        architecture, GoCD, .NET Core, Angular, and microservices in production.
   - id: USR-20260910-005
     kind: user_confirmation
     recorded_at: 2026-09-10
     statements:
-      - Confirms the Mttechne Transaction HUB processed 900K transactions per day with 99.9% availability.
-      - Confirms the Natura consultant platform he worked on served more than 1 million consultants.
+      - Confirms the Mttechne Transaction HUB processed 900K transactions per
+        day with 99.9% availability.
+      - Confirms the Natura consultant platform he worked on served more than 1
+        million consultants.
   - id: USR-20260910-006
     kind: user_confirmation
     recorded_at: 2026-09-10
@@ -75,5 +81,98 @@ direct_sources:
     kind: user_confirmation
     recorded_at: 2026-09-10
     statements:
-      - At Siemens, uses Azure Service Bus for asynchronous inter-service communication.
-      - At Fidelidade, used .NET Core, RabbitMQ, Docker, Kubernetes, Azure services (Key Vault, App Services), and CI/CD YAML pipelines.
+      - At Siemens, uses Azure Service Bus for asynchronous inter-service
+        communication.
+      - At Fidelidade, used .NET Core, RabbitMQ, Docker, Kubernetes, Azure
+        services (Key Vault, App Services), and CI/CD YAML pipelines.
+  - id: USR-20260910-008
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - Applies sagas, CQRS and event sourcing since 2016, in every company
+        after that, starting with DEAL (Grupo LTM).
+  - id: USR-20260910-009
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - Operated Jenkins in production on the Natura platform via Vizir.
+  - id: USR-20260910-010
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - At Siemens, user management system uses LLM integrated into the product,
+        distributed cache with Redis, and multi-tenant architecture.
+      - Has operated multi-tenant systems at DEAL (LTM), Vizir, Edenred,
+        SoftFinanca, Fidelidade and Siemens.
+      - Has not used MySQL in production; relational databases are SQL Server
+        and PostgreSQL.
+  - id: USR-20260910-011
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - At Fidelidade, improved observability with a logging framework that
+        traced a request end-to-end across all involved services.
+  - id: USR-20260910-012
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - At Fidelidade, led post-mortems with root cause analysis, turning
+        incidents into systemic fixes.
+  - id: USR-20260910-013
+    kind: user_confirmation
+    recorded_at: 2026-09-10
+    statements:
+      - At Siemens, works on authentication and authorization in the user
+        management system, following secure-by-design principles.
+  - id: USR-20260911-001
+    kind: user_confirmation
+    recorded_at: 2026-09-11
+    statements:
+      - Earned Microsoft Certified Azure Developer Associate (AZ-204) on
+        December 08, 2022; badge expired on December 08, 2023.
+      - Credly badge URL is https://www.credly.com/badges/5c4b032c-bde1-498e-8aa7-237f1dc525dc
+        issued to Geilton Santos de Jesus.
+  - id: USR-20260911-002
+    kind: user_confirmation
+    recorded_at: 2026-09-11
+    statements:
+      - On profiling and production debugging tools, answered ".NET stack"
+        without naming a specific profiler or company.
+      - Has conducted technical hiring interviews at Siemens and at Vizir
+        (scope and criteria definition not detailed).
+      - Is available to relocate to Sao Paulo for 100% on-site work in
+        Pinheiros, Monday to Friday; believes Enter has relocated developers
+        before.
+  - id: USR-20260912-001
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - Confirmed on 2026-09-12 that IEEE Senior Member must appear on the CV;
+        public evidence is his own LinkedIn post from 2025-08-11 announcing
+        the title.
+      - "Decided on 2026-09-12 to show AZ-204 on the CV as 'Microsoft Certified: Azure Developer Associate (2022)' without mentioning that the certification expired on 2023-12-08."
+      - Decided on 2026-09-12 not to include the Stanford/DeepLearning.AI
+        Machine Learning specialization on the CV for now.
+      - Requested on 2026-09-12 that the generic tracks (architecture-staff,
+        backend-dotnet, backend-general) surface the facts confirmed on
+        2026-09-10 and 2026-09-11, which until then reached only the
+        job-specific configs.
+  - id: USR-20260912-002
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - Confirmed Node.js and TypeScript were used at Vizir (2017-2019) on the
+        Natura onboarding platform.
+      - Confirmed Go (Golang) is used at Siemens.
+      - The Computer Science bachelor's degree (Etep) ran from 2022 to 2024 and
+        was completed in 2024, two years shorter through credit transfer from the
+        earlier technology degree in Systems Analysis and Development.
+      - The master's degree at the University of Évora is on hold; decided to
+        keep it on the CV as a positive signal rather than hiding it.
+      - Current Siemens title is Solutions Architect and Tech Lead; asked to keep
+        it as a single line (Dec 2024 - present) instead of splitting the
+        promotion from Senior Software Engineer.
+      - PKZ Plastic (2010-2012, IT support and infrastructure) stays out of the CV.
+      - The Faculdade Facint postgraduate degree (Ethical Hacking and
+        CyberSecurity, 2024-2025) stays out of the CV for space reasons; it is
+        not part of the evidence base yet.

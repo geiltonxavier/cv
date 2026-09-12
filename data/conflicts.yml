@@ -42,12 +42,12 @@ conflicts:
   - {id: CON-037, field: information_systems_institution, status: open, question: O curso de Sistemas de Informação foi na São Judas ou Cruzeiro do Sul?}
   - {id: CON-038, field: information_systems_status, status: open, question: O curso de Sistemas de Informação foi formalmente interrompido em 2013?}
   - {id: CON-039, field: ads_completion_month, status: open, question: Qual foi o mês de conclusão do tecnólogo em ADS?}
-  - {id: CON-040, field: masters_degree_name, status: open, question: Qual é o nome oficial do mestrado na Universidade de Évora?}
-  - {id: CON-041, field: masters_status, status: open, question: Qual é o status atual do mestrado?}
-  - {id: CON-042, field: bachelors_completion, status: open, question: O bacharelado em Ciência da Computação foi concluído em 2024?}
-  - {id: CON-043, field: az204_validity, status: open, question: Qual foi a data de obtenção e a situação atual do AZ-204?}
+  - {id: CON-040, field: masters_degree_name, status: resolved, resolution: "Mestrado em Engenharia Informática (Universidade de Évora); admissão em 2025 com 2º lugar no processo seletivo (USR-20260912-002).", question: Qual é o nome oficial do mestrado na Universidade de Évora?}
+  - {id: CON-041, field: masters_status, status: resolved, resolution: "Programa em pausa (trancado), sem data de conclusão. Decisão de 2026-09-12: manter no CV como sinal positivo, com o período 2025-2026 (USR-20260912-002).", question: Qual é o status atual do mestrado?}
+  - {id: CON-042, field: bachelors_completion, status: resolved, resolution: "Concluído em 2024; cursado de 2022 a 2024, dois anos a menos por aproveitamento de créditos do tecnólogo em Análise e Desenvolvimento de Sistemas (USR-20260912-002).", question: O bacharelado em Ciência da Computação foi concluído em 2024?}
+  - {id: CON-043, field: az204_validity, status: resolved, question: Qual foi a data de obtenção e a situação atual do AZ-204?, resolution: "Obtido em 2022-12-08 e expirado em 2023-12-08 (USR-20260911-001); decisão de 2026-09-12 (USR-20260912-001) é exibir no CV como 'Microsoft Certified: Azure Developer Associate (2022)' sem menção à validade."}
   - {id: CON-044, field: english_level, status: resolved, question: Qual nível atual de inglês deve ser usado?, resolution: "Nenhum nível declarado no CV; o CV menciona atuação em ambiente internacional em inglês (confirmado em 2026-09-10, USR-20260910-003)."}
-  - {id: CON-045, field: current_job_title, status: open, question: Qual é o cargo oficial atual na Siemens?}
+  - {id: CON-045, field: current_job_title, status: resolved, resolution: "Cargo atual confirmado em 2026-09-12: Solutions Architect e Tech Lead na Siemens. Decisão: uma única linha no CV (Dez 2024 - Presente), sem separar a promoção de Senior Software Engineer (USR-20260912-002).", question: Qual é o cargo oficial atual na Siemens?}
   - {id: CON-046, field: siemens_savings, status: open, question: Existe cálculo ou documento que sustente a projeção de um milhão de dólares por ano?}
   - {id: CON-047, field: siemens_ai_reach, status: open, question: O workflow SDD e Copilot foi efetivamente padronizado para 300+ engenheiros?}
   - {id: CON-048, field: idp_setup_reduction, status: open, question: Como foi medido aproximadamente 60% de redução no setup?}

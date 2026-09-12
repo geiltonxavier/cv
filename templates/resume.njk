@@ -84,6 +84,17 @@
             {% endfor %}
           </section>
         {% endif %}
+
+        {% if resume.credentials.length %}
+          <section aria-labelledby="credentials-heading">
+            <h2 id="credentials-heading">{{ resume.labels.credentials }}</h2>
+            {% for item in resume.credentials %}
+              <div class="education-item" data-credential-id="{{ item.id }}">
+                <p><strong>{{ item.name }}</strong>{% if item.year %} ({{ item.year }}){% endif %} · {{ item.institution }}</p>
+              </div>
+            {% endfor %}
+          </section>
+        {% endif %}
       </main>
     </article>
   </body>

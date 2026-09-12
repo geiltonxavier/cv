@@ -7,6 +7,7 @@ const LABELS = {
     experience: "Experiência",
     skills: "Habilidades técnicas",
     education: "Formação",
+    credentials: "Certificações e associações",
     present: "Presente",
     earlyCareer: "Início da carreira",
     experienceContinued: "Experiência (continuação)",
@@ -18,6 +19,7 @@ const LABELS = {
     experience: "Experience",
     skills: "Technical Skills",
     education: "Education",
+    credentials: "Certifications & Affiliations",
     present: "Present",
     earlyCareer: "Earlier Career",
     experienceContinued: "Experience (continued)",
@@ -158,6 +160,14 @@ function buildResume(data, { language, trackId = null, jobId = null, market = da
     items: group.items,
   }));
 
+  const credentialRecords = data.credentials.filter((item) => item.status === "usable");
+  const credentials = credentialRecords.map((item) => ({
+    id: item.id,
+    name: item.display_name || item.name,
+    institution: item.institution,
+    year: item.year || null,
+  }));
+
   const uniqueClaimIds = unique(selectedClaimIds);
   const selectedClaims = uniqueClaimIds.map((id) => claimById.get(id));
   const selectedSourceIds = unique([
@@ -167,6 +177,7 @@ function buildResume(data, { language, trackId = null, jobId = null, market = da
     ...data.education
       .filter((item) => item.status === "usable")
       .flatMap((item) => item.source_ids),
+    ...credentialRecords.flatMap((item) => item.source_ids),
   ]).sort();
   const fingerprintPayload = JSON.stringify({
     language,
@@ -181,6 +192,7 @@ function buildResume(data, { language, trackId = null, jobId = null, market = da
       : {}),
     contacts: selectedContactRecords.map(({ id, value, source_ids }) => ({ id, value, source_ids })),
     claims: selectedClaims.map(({ id, text, source_ids }) => ({ id, text, source_ids })),
+    credentials: credentials.map(({ id, name, institution, year }) => ({ id, name, institution, year })),
   });
 
   const resume = {
@@ -204,6 +216,7 @@ function buildResume(data, { language, trackId = null, jobId = null, market = da
     },
     skillGroups,
     education,
+    credentials,
     targetPages: track.target_pages,
   };
 
@@ -219,6 +232,7 @@ function buildResume(data, { language, trackId = null, jobId = null, market = da
     page_break_before_experience: track.page_break_before_experience || null,
     data_fingerprint: crypto.createHash("sha256").update(fingerprintPayload).digest("hex"),
     selected_claim_ids: uniqueClaimIds.sort(),
+    selected_credential_ids: credentials.map((item) => item.id).sort(),
     selected_contact_ids: selectedContactRecords.map((contact) => contact.id).sort(),
     selected_source_ids: selectedSourceIds,
     excluded_source_ids: data.profile.evidence.excluded_source_ids,

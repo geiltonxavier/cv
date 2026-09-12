@@ -166,6 +166,8 @@
           "institution": {"type": "string"},
           "name": {"type": "string"},
           "type": {"type": "string"},
+          "display_name": {"type": "string"},
+          "year": {"type": "string"},
           "status": {"$ref": "#/$defs/status"},
           "source_ids": {"$ref": "#/$defs/sources"},
           "conflict_ids": {"$ref": "#/$defs/conflictIds"}

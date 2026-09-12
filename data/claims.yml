@@ -1,627 +1,1406 @@
 schema_version: 1
-
-# Only claims marked usable may enter a generated CV. Medium/low confidence
-# material remains in the imported inventory until Geilton confirms it.
 claims:
   - id: CLAIM-0002
     experience_id: siemens
     text:
       pt: Lidero decisões arquiteturais e defino padrões de engenharia para o time.
       en: Lead architecture decisions and define engineering standards for the team.
-    tags: [architecture, technical-leadership, engineering-standards]
+    tags:
+      - architecture
+      - technical-leadership
+      - engineering-standards
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0003
     experience_id: siemens
     text:
-      pt: Projeto e implemento sistemas distribuídos, APIs e arquiteturas orientadas a eventos em Azure com .NET.
-      en: Design and implement distributed systems, APIs, and event-driven architectures on Azure with .NET.
-    tags: [dotnet, azure, distributed-systems, event-driven]
+      pt: Projeto e implemento sistemas distribuídos, APIs e arquiteturas orientadas a
+        eventos em Azure com .NET.
+      en: Design and implement distributed systems, APIs, and event-driven
+        architectures on Azure with .NET.
+    tags:
+      - dotnet
+      - azure
+      - distributed-systems
+      - event-driven
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0004
     experience_id: siemens
     text:
-      pt: Aplico DDD, Clean Architecture, padrões de mensageria e estratégias de teste.
+      pt: Aplico DDD, Clean Architecture, padrões de mensageria e estratégias de
+        teste.
       en: Apply DDD, Clean Architecture, messaging patterns, and testing strategies.
-    tags: [ddd, clean-architecture, messaging, testing]
+    tags:
+      - ddd
+      - clean-architecture
+      - messaging
+      - testing
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0005
     experience_id: siemens
     text:
-      pt: Projeto e mantenho pipelines de CI/CD e infraestrutura como código com Docker, Kubernetes, Bicep e PowerShell.
-      en: Design and maintain CI/CD pipelines and infrastructure as code with Docker, Kubernetes, Bicep, and PowerShell.
-    tags: [cicd, docker, kubernetes, bicep, infrastructure-as-code]
+      pt: Projeto e mantenho pipelines de CI/CD e infraestrutura como código com
+        Docker, Kubernetes, Bicep e PowerShell.
+      en: Design and maintain CI/CD pipelines and infrastructure as code with Docker,
+        Kubernetes, Bicep, and PowerShell.
+    tags:
+      - cicd
+      - docker
+      - kubernetes
+      - bicep
+      - infrastructure-as-code
     status: usable
     confidence: high
-    source_ids: [SRC-020, USR-20260810-001]
+    source_ids:
+      - SRC-020
+      - USR-20260810-001
   - id: CLAIM-0006
     experience_id: siemens
     text:
-      pt: Contribuo para segurança, governança e excelência operacional, incluindo IAM, RBAC, observabilidade e confiabilidade.
-      en: Contribute to security, governance, and operational excellence, including IAM, RBAC, observability, and reliability practices.
-    tags: [security, governance, iam, observability, reliability]
+      pt: Contribuo para segurança, governança e excelência operacional, incluindo
+        IAM, RBAC, observabilidade e confiabilidade.
+      en: Contribute to security, governance, and operational excellence, including
+        IAM, RBAC, observability, and reliability practices.
+    tags:
+      - security
+      - governance
+      - iam
+      - observability
+      - reliability
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0007
     experience_id: siemens
     text:
-      pt: Faço mentoria de engenheiros por meio de orientação técnica, revisões de arquitetura e revisões de código.
-      en: Mentor engineers through technical guidance, architecture reviews, and code reviews.
-    tags: [mentoring, architecture, code-review]
+      pt: Faço mentoria de engenheiros por meio de orientação técnica, revisões de
+        arquitetura e revisões de código.
+      en: Mentor engineers through technical guidance, architecture reviews, and code
+        reviews.
+    tags:
+      - mentoring
+      - architecture
+      - code-review
     status: usable
     confidence: high
-    source_ids: [SRC-020]
-
+    source_ids:
+      - SRC-020
   - id: CLAIM-0115
     experience_id: siemens
     text:
-      pt: Atuo com arquitetura e Platform Engineering para sistemas distribuídos em .NET e Azure, definindo padrões técnicos para os times.
-      en: Work across architecture and Platform Engineering for distributed .NET and Azure systems, defining technical standards for teams.
-    tags: [platform-engineering, architecture, dotnet, azure, engineering-standards]
+      pt: Atuo com arquitetura e Platform Engineering para sistemas distribuídos em
+        .NET e Azure, definindo padrões técnicos para os times.
+      en: Work across architecture and Platform Engineering for distributed .NET and
+        Azure systems, defining technical standards for teams.
+    tags:
+      - platform-engineering
+      - architecture
+      - dotnet
+      - azure
+      - engineering-standards
     status: usable
     confidence: high
-    source_ids: [USR-20260809-001]
+    source_ids:
+      - USR-20260809-001
   - id: CLAIM-0116
     experience_id: siemens
     text:
-      pt: Uso Terraform e Bicep para definir e manter infraestrutura como código em ambientes Azure.
-      en: Use Terraform and Bicep to define and maintain infrastructure as code in Azure environments.
-    tags: [terraform, bicep, azure, infrastructure-as-code]
+      pt: Uso Terraform e Bicep para definir e manter infraestrutura como código em
+        ambientes Azure.
+      en: Use Terraform and Bicep to define and maintain infrastructure as code in
+        Azure environments.
+    tags:
+      - terraform
+      - bicep
+      - azure
+      - infrastructure-as-code
     status: usable
     confidence: high
-    source_ids: [SRC-020, USR-20260809-001]
+    source_ids:
+      - SRC-020
+      - USR-20260809-001
   - id: CLAIM-0117
     experience_id: siemens
     text:
-      pt: Aplico Specification-Driven Development (SDD) e desenvolvimento assistido por IA para acelerar o ciclo de desenvolvimento.
-      en: Apply Specification-Driven Development (SDD) and AI-assisted development to accelerate the development lifecycle.
-    tags: [sdd, ai-assisted-development, engineering-productivity]
+      pt: Aplico Specification-Driven Development (SDD) e desenvolvimento assistido
+        por IA para acelerar o ciclo de desenvolvimento.
+      en: Apply Specification-Driven Development (SDD) and AI-assisted development to
+        accelerate the development lifecycle.
+    tags:
+      - sdd
+      - ai-assisted-development
+      - engineering-productivity
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, USR-20260809-001]
-
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - USR-20260809-001
   - id: CLAIM-0120
     experience_id: siemens
     text:
-      pt: Uso Scrum e Kanban diariamente e trabalho com essas práticas ágeis há muitos anos.
-      en: Use Scrum and Kanban daily and have worked with these agile practices for many years.
-    tags: [scrum, kanban, agile, engineering-practices]
+      pt: Uso Scrum e Kanban diariamente e trabalho com essas práticas ágeis há muitos
+        anos.
+      en: Use Scrum and Kanban daily and have worked with these agile practices for
+        many years.
+    tags:
+      - scrum
+      - kanban
+      - agile
+      - engineering-practices
     status: usable
     confidence: high
-    source_ids: [USR-20260810-001]
-
+    source_ids:
+      - USR-20260810-001
   - id: CLAIM-0012
     experience_id: novabase-fidelidade
     text:
-      pt: Liderei iniciativas de modernização e padronização cloud-native que alcançaram 17+ times e 300+ desenvolvedores.
-      en: Led cloud-native modernization and standardization initiatives reaching 17+ delivery teams and 300+ developers.
-    tags: [platform-engineering, technical-leadership, cloud-native]
-    metric_ids: [MET-004, MET-005]
+      pt: Liderei iniciativas de modernização e padronização cloud-native que
+        alcançaram 17+ times e 300+ desenvolvedores.
+      en: Led cloud-native modernization and standardization initiatives reaching 17+
+        delivery teams and 300+ developers.
+    tags:
+      - platform-engineering
+      - technical-leadership
+      - cloud-native
+    metric_ids:
+      - MET-004
+      - MET-005
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020]
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - SRC-020
   - id: CLAIM-0013
     experience_id: novabase-fidelidade
     text:
       pt: Liderei o desenho e a evolução de uma Internal Developer Platform.
       en: Led the design and evolution of an Internal Developer Platform.
-    tags: [platform-engineering, developer-experience, architecture]
+    tags:
+      - platform-engineering
+      - developer-experience
+      - architecture
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020]
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - SRC-020
   - id: CLAIM-0014
     experience_id: novabase-fidelidade
     text:
-      pt: Desenhei e entreguei templates reutilizáveis com logging estruturado, múltiplas opções de acesso a dados e pipelines CI/CD em YAML.
-      en: Designed and delivered reusable templates with structured logging, multiple data-access options, and YAML CI/CD pipelines.
-    tags: [templates, observability, data-access, cicd]
+      pt: Desenhei e entreguei templates reutilizáveis com logging estruturado,
+        múltiplas opções de acesso a dados e pipelines CI/CD em YAML.
+      en: Designed and delivered reusable templates with structured logging, multiple
+        data-access options, and YAML CI/CD pipelines.
+    tags:
+      - templates
+      - observability
+      - data-access
+      - cicd
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0016
     experience_id: novabase-fidelidade
     text:
-      pt: Criei um sistema de discovery e análise de segurança para 5.000+ projetos Git/TFS, correlacionando ownership, vulnerabilidades NuGet e dados do SonarQube.
-      en: Created a discovery and security analysis system for 5,000+ Git/TFS projects, correlating ownership, NuGet vulnerabilities, and SonarQube data.
-    tags: [security, developer-tooling, sonarqube, nuget]
-    metric_ids: [MET-011]
+      pt: Criei um sistema de discovery e análise de segurança para 5.000+ projetos
+        Git/TFS, correlacionando ownership, vulnerabilidades NuGet e dados do
+        SonarQube.
+      en: Created a discovery and security analysis system for 5,000+ Git/TFS
+        projects, correlating ownership, NuGet vulnerabilities, and SonarQube
+        data.
+    tags:
+      - security
+      - developer-tooling
+      - sonarqube
+      - nuget
+    metric_ids:
+      - MET-011
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020]
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - SRC-020
   - id: CLAIM-0017
     experience_id: novabase-fidelidade
     text:
-      pt: Liderei fóruns técnicos regulares com tech leads para identificar bloqueios e disseminar práticas de engenharia.
-      en: Led recurring technical forums with tech leads to identify blockers and spread engineering practices.
-    tags: [technical-leadership, influence, mentoring]
+      pt: Liderei fóruns técnicos regulares com tech leads para identificar bloqueios
+        e disseminar práticas de engenharia.
+      en: Led recurring technical forums with tech leads to identify blockers and
+        spread engineering practices.
+    tags:
+      - technical-leadership
+      - influence
+      - mentoring
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0018
     experience_id: novabase-fidelidade
     text:
-      pt: Defini e padronizei padrões arquiteturais cloud-native adotados por múltiplos times e projetos.
-      en: Defined and standardized cloud-native architecture patterns adopted across multiple teams and projects.
-    tags: [architecture, cloud-native, engineering-standards]
+      pt: Defini e padronizei padrões arquiteturais cloud-native adotados por
+        múltiplos times e projetos.
+      en: Defined and standardized cloud-native architecture patterns adopted across
+        multiple teams and projects.
+    tags:
+      - architecture
+      - cloud-native
+      - engineering-standards
     status: usable
     confidence: high
-    source_ids: [SRC-020]
-
+    source_ids:
+      - SRC-020
   - id: CLAIM-0118
     experience_id: novabase-fidelidade
     text:
-      pt: Treinei mais de 300 desenvolvedores em boas práticas de desenvolvimento de software por meio de sessões práticas, documentação e fóruns técnicos.
-      en: Trained 300+ developers in software-development best practices through hands-on sessions, documentation, and technical forums.
-    tags: [developer-training, engineering-practices, technical-leadership, enablement]
-    metric_ids: [MET-041]
+      pt: Treinei mais de 300 desenvolvedores em boas práticas de desenvolvimento de
+        software por meio de sessões práticas, documentação e fóruns técnicos.
+      en: Trained 300+ developers in software-development best practices through
+        hands-on sessions, documentation, and technical forums.
+    tags:
+      - developer-training
+      - engineering-practices
+      - technical-leadership
+      - enablement
+    metric_ids:
+      - MET-041
     status: usable
     confidence: high
-    source_ids: [SRC-020, USR-20260809-001]
+    source_ids:
+      - SRC-020
+      - USR-20260809-001
   - id: CLAIM-0119
     experience_id: novabase-fidelidade
     text:
-      pt: Conduzi iniciativas cross-team de Platform Engineering e padronização cloud-native em 17+ times de delivery.
-      en: Led cross-team Platform Engineering and cloud-native standardization initiatives across 17+ delivery teams.
-    tags: [cross-team, platform-engineering, cloud-native, technical-leadership]
-    metric_ids: [MET-004]
+      pt: Conduzi iniciativas cross-team de Platform Engineering e padronização
+        cloud-native em 17+ times de delivery.
+      en: Led cross-team Platform Engineering and cloud-native standardization
+        initiatives across 17+ delivery teams.
+    tags:
+      - cross-team
+      - platform-engineering
+      - cloud-native
+      - technical-leadership
+    metric_ids:
+      - MET-004
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020, USR-20260809-001]
-
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - SRC-020
+      - USR-20260809-001
   - id: CLAIM-0022
     experience_id: agap2-softfinanca
     text:
-      pt: Contribuí para o desenho e a evolução de produtos financeiros nos domínios de marketplace e core banking.
-      en: Contributed to the design and evolution of financial products across marketplace and core-banking domains.
-    tags: [financial-systems, product, architecture]
+      pt: Contribuí para o desenho e a evolução de produtos financeiros nos domínios
+        de marketplace e core banking.
+      en: Contributed to the design and evolution of financial products across
+        marketplace and core-banking domains.
+    tags:
+      - financial-systems
+      - product
+      - architecture
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0023
     experience_id: agap2-softfinanca
     text:
-      pt: Desenhei e implementei a arquitetura inicial de um marketplace para farmácias usando Clean Architecture (ports and adapters / hexagonal).
-      en: Designed and implemented the initial architecture of a pharmacy marketplace using Clean Architecture (ports and adapters / hexagonal).
-    tags: [architecture, marketplace, clean-architecture, hexagonal-architecture]
+      pt: Desenhei e implementei a arquitetura inicial de um marketplace para
+        farmácias usando Clean Architecture (ports and adapters / hexagonal).
+      en: Designed and implemented the initial architecture of a pharmacy marketplace
+        using Clean Architecture (ports and adapters / hexagonal).
+    tags:
+      - architecture
+      - marketplace
+      - clean-architecture
+      - hexagonal-architecture
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020, USR-20260910-002]
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - SRC-020
+      - USR-20260910-002
   - id: CLAIM-0024
     experience_id: agap2-softfinanca
     text:
-      pt: Contribuí para a evolução de sistemas de core banking para produtos de cartão de crédito.
-      en: Contributed to the evolution of core-banking systems for credit-card products.
-    tags: [core-banking, payment-cards, backend]
+      pt: Contribuí para a evolução de sistemas de core banking para produtos de
+        cartão de crédito.
+      en: Contributed to the evolution of core-banking systems for credit-card
+        products.
+    tags:
+      - core-banking
+      - payment-cards
+      - backend
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020]
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - SRC-020
   - id: CLAIM-0025
     experience_id: agap2-softfinanca
     text:
-      pt: Liderei melhorias de performance em filtragem de dados e execução de queries por meio da otimização de composições LINQ.
-      en: Led performance improvements in data filtering and query execution by optimizing LINQ query composition.
-    tags: [performance, linq, sql-server]
+      pt: Liderei melhorias de performance em filtragem de dados e execução de queries
+        por meio da otimização de composições LINQ.
+      en: Led performance improvements in data filtering and query execution by
+        optimizing LINQ query composition.
+    tags:
+      - performance
+      - linq
+      - sql-server
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0026
     experience_id: agap2-softfinanca
     text:
       pt: Desenvolvi serviços backend com .NET Core, C#, Web API e WCF.
       en: Developed backend services with .NET Core, C#, Web API, and WCF.
-    tags: [dotnet, csharp, web-api, wcf, backend]
+    tags:
+      - dotnet
+      - csharp
+      - web-api
+      - wcf
+      - backend
     status: usable
     confidence: high
-    source_ids: [SRC-020]
-
+    source_ids:
+      - SRC-020
   - id: CLAIM-0029
     experience_id: mttechne-ticket
     text:
-      pt: Atuei na equipe responsável por um Transaction HUB financeiro central que processava 900 mil transações por dia com 99,9% de disponibilidade.
-      en: Worked on the team responsible for a central financial Transaction HUB processing 900K transactions per day with 99.9% availability.
-    tags: [financial-systems, transactions, backend, high-throughput, scale]
-    metric_ids: [MET-014, MET-015]
+      pt: Atuei na equipe responsável por um Transaction HUB financeiro central que
+        processava 900 mil transações por dia com 99,9% de disponibilidade.
+      en: Worked on the team responsible for a central financial Transaction HUB
+        processing 900K transactions per day with 99.9% availability.
+    tags:
+      - financial-systems
+      - transactions
+      - backend
+      - high-throughput
+      - scale
+    metric_ids:
+      - MET-014
+      - MET-015
     status: usable
     confidence: high
-    source_ids: [SRC-020, USR-20260910-005]
+    source_ids:
+      - SRC-020
+      - USR-20260910-005
   - id: CLAIM-0030
     experience_id: mttechne-ticket
     text:
-      pt: Contribuí para o desenho e a evolução de uma arquitetura baseada em microsserviços.
-      en: Contributed to the design and evolution of a microservices-based architecture.
-    tags: [microservices, architecture]
+      pt: Contribuí para o desenho e a evolução de uma arquitetura baseada em
+        microsserviços.
+      en: Contributed to the design and evolution of a microservices-based
+        architecture.
+    tags:
+      - microservices
+      - architecture
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0031
     experience_id: mttechne-ticket
     text:
-      pt: Implementei padrões orientados a eventos para fluxos financeiros assíncronos e escaláveis.
-      en: Implemented event-driven patterns for asynchronous, scalable financial workflows.
-    tags: [event-driven, asynchronous-processing, financial-systems]
+      pt: Implementei padrões orientados a eventos para fluxos financeiros assíncronos
+        e escaláveis.
+      en: Implemented event-driven patterns for asynchronous, scalable financial
+        workflows.
+    tags:
+      - event-driven
+      - asynchronous-processing
+      - financial-systems
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0032
     experience_id: mttechne-ticket
     text:
       pt: Apliquei DDD e TDD no Transaction HUB.
       en: Applied DDD and TDD in the Transaction HUB.
-    tags: [ddd, tdd]
+    tags:
+      - ddd
+      - tdd
     status: usable
     confidence: high
-    source_ids: [SRC-018, SRC-019, SRC-020, USR-20260810-001]
+    source_ids:
+      - SRC-018
+      - SRC-019
+      - SRC-020
+      - USR-20260810-001
   - id: CLAIM-0033
     experience_id: mttechne-ticket
     text:
-      pt: Contribuí para a evolução da plataforma Ticket Shop de aquisição de cartões pré-pagos e e-commerce.
-      en: Contributed to the evolution of the Ticket Shop prepaid-card acquisition and e-commerce platform.
-    tags: [ecommerce, payment-cards, backend]
+      pt: Contribuí para a evolução da plataforma Ticket Shop de aquisição de cartões
+        pré-pagos e e-commerce.
+      en: Contributed to the evolution of the Ticket Shop prepaid-card acquisition and
+        e-commerce platform.
+    tags:
+      - ecommerce
+      - payment-cards
+      - backend
     status: usable
     confidence: high
-    source_ids: [SRC-019, SRC-020]
-
+    source_ids:
+      - SRC-019
+      - SRC-020
   - id: CLAIM-0036
     experience_id: vizir-second
     text:
-      pt: Trabalhei na plataforma global e multi-país de cadastro e onboarding de consultoras da Natura, que atendia mais de 1 milhão de consultores.
-      en: Worked on Natura's global, multi-country consultant registration and onboarding platform, serving more than 1 million consultants.
-    tags: [onboarding, global-platform, backend, scale]
-    metric_ids: [MET-016]
+      pt: Trabalhei na plataforma global e multi-país de cadastro e onboarding de
+        consultoras da Natura, que atendia mais de 1 milhão de consultores.
+      en: Worked on Natura's global, multi-country consultant registration and
+        onboarding platform, serving more than 1 million consultants.
+    tags:
+      - onboarding
+      - global-platform
+      - backend
+      - scale
+    metric_ids:
+      - MET-016
     status: usable
     confidence: high
-    source_ids: [SRC-016, SRC-019, SRC-020, USR-20260910-005]
+    source_ids:
+      - SRC-016
+      - SRC-019
+      - SRC-020
+      - USR-20260910-005
   - id: CLAIM-0037
     experience_id: vizir-second
     text:
-      pt: Desenvolvi integrações com gateway de pagamento e fluxos de onboarding na plataforma Natura.
-      en: Developed payment-gateway integrations and onboarding workflows for the Natura platform.
-    tags: [payments, integrations, onboarding]
+      pt: Desenvolvi integrações com gateway de pagamento e fluxos de onboarding na
+        plataforma Natura.
+      en: Developed payment-gateway integrations and onboarding workflows for the
+        Natura platform.
+    tags:
+      - payments
+      - integrations
+      - onboarding
     status: usable
     confidence: high
-    source_ids: [SRC-019, SRC-020]
+    source_ids:
+      - SRC-019
+      - SRC-020
   - id: CLAIM-0038
     experience_id: vizir-second
     text:
-      pt: Liderei PoCs com AWS Lambda, API Gateway, SNS e SQS para validar arquiteturas orientadas a eventos.
-      en: Led PoCs with AWS Lambda, API Gateway, SNS, and SQS to validate event-driven architectures.
-    tags: [aws, event-driven, technical-leadership]
+      pt: Liderei PoCs com AWS Lambda, API Gateway, SNS e SQS para validar
+        arquiteturas orientadas a eventos.
+      en: Led PoCs with AWS Lambda, API Gateway, SNS, and SQS to validate event-driven
+        architectures.
+    tags:
+      - aws
+      - event-driven
+      - technical-leadership
     status: usable
     confidence: high
-    source_ids: [SRC-019, SRC-020]
+    source_ids:
+      - SRC-019
+      - SRC-020
   - id: CLAIM-0040
     experience_id: vizir-second
     text:
-      pt: Atuei como engenheiro sênior em um Transaction HUB financeiro baseado em microsserviços da Ticket Serviços.
-      en: Worked as a senior engineer on Ticket Serviços' microservices-based financial Transaction HUB.
-    tags: [microservices, financial-systems, backend]
+      pt: Atuei como engenheiro sênior em um Transaction HUB financeiro baseado em
+        microsserviços da Ticket Serviços.
+      en: Worked as a senior engineer on Ticket Serviços' microservices-based
+        financial Transaction HUB.
+    tags:
+      - microservices
+      - financial-systems
+      - backend
     status: usable
     confidence: high
-    source_ids: [SRC-020]
+    source_ids:
+      - SRC-020
   - id: CLAIM-0043
     experience_id: vizir-second
     text:
-      pt: Contribuí para o desenvolvimento backend do TicketLog usando .NET, WCF e Web API.
+      pt: Contribuí para o desenvolvimento backend do TicketLog usando .NET, WCF e Web
+        API.
       en: Contributed to TicketLog backend development using .NET, WCF, and Web API.
-    tags: [dotnet, wcf, web-api, backend]
+    tags:
+      - dotnet
+      - wcf
+      - web-api
+      - backend
     status: usable
     confidence: high
-    source_ids: [SRC-016, SRC-020]
-
+    source_ids:
+      - SRC-016
+      - SRC-020
   - id: CLAIM-0048
     experience_id: deal-ltm
     text:
       pt: Desenvolvi sistemas de pontos e fidelização B2B e B2C.
       en: Developed B2B and B2C loyalty and points systems.
-    tags: [loyalty, backend, product]
+    tags:
+      - loyalty
+      - backend
+      - product
     status: usable
     confidence: high
-    source_ids: [SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015]
+    source_ids:
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-014
+      - SRC-015
   - id: CLAIM-0050
     experience_id: deal-ltm
     text:
-      pt: Trabalhei na integração com o Web Prêmios para resgate de pontos em e-commerce.
+      pt: Trabalhei na integração com o Web Prêmios para resgate de pontos em
+        e-commerce.
       en: Worked on the Web Prêmios integration for redeeming points in e-commerce.
-    tags: [loyalty, ecommerce, integrations]
+    tags:
+      - loyalty
+      - ecommerce
+      - integrations
     status: usable
     confidence: high
-    source_ids: [SRC-016]
-
+    source_ids:
+      - SRC-016
   - id: CLAIM-0057
     experience_id: freelancer-rails
     text:
       pt: Desenvolvi aplicações web em Ruby on Rails como freelancer.
       en: Developed Ruby on Rails web applications as a freelancer.
-    tags: [ruby, rails, backend, freelance]
+    tags:
+      - ruby
+      - rails
+      - backend
+      - freelance
     status: needs_confirmation
     confidence: medium
-    source_ids: [SRC-014]
-
+    source_ids:
+      - SRC-014
   - id: CLAIM-0058
     experience_id: vizir-first
     text:
-      pt: Corrigi bugs e desenvolvi novos recursos em sistemas existentes, incluindo aplicações Ruby on Rails.
-      en: Fixed bugs and developed new features in existing systems, including Ruby on Rails applications.
-    tags: [ruby, rails, maintenance, backend]
+      pt: Corrigi bugs e desenvolvi novos recursos em sistemas existentes, incluindo
+        aplicações Ruby on Rails.
+      en: Fixed bugs and developed new features in existing systems, including Ruby on
+        Rails applications.
+    tags:
+      - ruby
+      - rails
+      - maintenance
+      - backend
     status: usable
     confidence: high
-    source_ids: [SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-016]
+    source_ids:
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-014
+      - SRC-016
   - id: CLAIM-0060
     experience_id: vizir-first
     text:
-      pt: Trabalhei com Ruby on Rails, RSpec, Cucumber, PostgreSQL, Sidekiq e delayed_job.
-      en: Worked with Ruby on Rails, RSpec, Cucumber, PostgreSQL, Sidekiq, and delayed_job.
-    tags: [ruby, rails, rspec, postgresql, sidekiq]
+      pt: Trabalhei com Ruby on Rails, RSpec, Cucumber, PostgreSQL, Sidekiq e
+        delayed_job.
+      en: Worked with Ruby on Rails, RSpec, Cucumber, PostgreSQL, Sidekiq, and
+        delayed_job.
+    tags:
+      - ruby
+      - rails
+      - rspec
+      - postgresql
+      - sidekiq
     status: usable
     confidence: high
-    source_ids: [SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016]
-
+    source_ids:
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-014
+      - SRC-015
+      - SRC-016
   - id: CLAIM-0068
     experience_id: sofhar-prodesp
     text:
-      pt: Realizei análise, manutenção e desenvolvimento de novos recursos em sistemas de governo eletrônico.
+      pt: Realizei análise, manutenção e desenvolvimento de novos recursos em sistemas
+        de governo eletrônico.
       en: Analyzed, maintained, and developed new features in e-government systems.
-    tags: [public-sector, dotnet, maintenance]
+    tags:
+      - public-sector
+      - dotnet
+      - maintenance
     status: usable
     confidence: high
-    source_ids: [SRC-010, SRC-011, SRC-012, SRC-013, SRC-016]
+    source_ids:
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-016
   - id: CLAIM-0070
     experience_id: sofhar-prodesp
     text:
-      pt: Desenvolvi e mantive o sistema SELJ para gestão de eventos esportivos no Estado de São Paulo.
-      en: Developed and maintained the SELJ system for managing sporting events in the State of São Paulo.
-    tags: [public-sector, product, dotnet]
+      pt: Desenvolvi e mantive o sistema SELJ para gestão de eventos esportivos no
+        Estado de São Paulo.
+      en: Developed and maintained the SELJ system for managing sporting events in the
+        State of São Paulo.
+    tags:
+      - public-sector
+      - product
+      - dotnet
     status: usable
     confidence: high
-    source_ids: [SRC-014, SRC-015]
-
+    source_ids:
+      - SRC-014
+      - SRC-015
   - id: CLAIM-0076
     experience_id: confitec
     text:
-      pt: Desenvolvi e mantive sistemas para a Central Analítica do Instituto de Química da USP.
-      en: Developed and maintained systems for the Analytical Center at the University of São Paulo's Institute of Chemistry.
-    tags: [dotnet, scientific-systems, maintenance]
+      pt: Desenvolvi e mantive sistemas para a Central Analítica do Instituto de
+        Química da USP.
+      en: Developed and maintained systems for the Analytical Center at the University
+        of São Paulo's Institute of Chemistry.
+    tags:
+      - dotnet
+      - scientific-systems
+      - maintenance
     status: usable
     confidence: high
-    source_ids: [SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-020]
+    source_ids:
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-014
+      - SRC-015
+      - SRC-016
+      - SRC-020
   - id: CLAIM-0077
     experience_id: confitec
     text:
-      pt: Desenvolvi e mantive um sistema de controle relacionado à construção da Usina Hidrelétrica de Belo Monte.
-      en: Developed and maintained a control system related to the construction of the Belo Monte hydroelectric plant.
-    tags: [dotnet, energy, construction]
+      pt: Desenvolvi e mantive um sistema de controle relacionado à construção da
+        Usina Hidrelétrica de Belo Monte.
+      en: Developed and maintained a control system related to the construction of the
+        Belo Monte hydroelectric plant.
+    tags:
+      - dotnet
+      - energy
+      - construction
     status: usable
     confidence: high
-    source_ids: [SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016]
-
+    source_ids:
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-014
+      - SRC-015
+      - SRC-016
   - id: CLAIM-0082
     experience_id: fcamara-first
     text:
       pt: Participei da migração de um ERP Bematech de Windows Forms para ASP.NET MVC.
       en: Participated in migrating a Bematech ERP from Windows Forms to ASP.NET MVC.
-    tags: [dotnet, erp, migration]
+    tags:
+      - dotnet
+      - erp
+      - migration
     status: usable
     confidence: high
-    source_ids: [SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016]
+    source_ids:
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-014
+      - SRC-015
+      - SRC-016
   - id: CLAIM-0084
     experience_id: fcamara-first
     text:
       pt: Trabalhei para T4F e Netfarma com busca corporativa usando Apache Solr.
       en: Worked for T4F and Netfarma on enterprise search using Apache Solr.
-    tags: [search, solr, ecommerce]
+    tags:
+      - search
+      - solr
+      - ecommerce
     status: usable
     confidence: high
-    source_ids: [SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013]
-
+    source_ids:
+      - SRC-008
+      - SRC-009
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
   - id: CLAIM-0088
     experience_id: eris
     text:
-      pt: Analisei, configurei e prestei suporte a sistemas ERP em diferentes módulos de negócio.
-      en: Analyzed, configured, and supported ERP systems across multiple business modules.
-    tags: [erp, support, business-systems]
+      pt: Analisei, configurei e prestei suporte a sistemas ERP em diferentes módulos
+        de negócio.
+      en: Analyzed, configured, and supported ERP systems across multiple business
+        modules.
+    tags:
+      - erp
+      - support
+      - business-systems
     status: usable
     confidence: high
-    source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-006]
+    source_ids:
+      - SRC-001
+      - SRC-002
+      - SRC-003
+      - SRC-004
+      - SRC-005
+      - SRC-006
   - id: CLAIM-0091
     experience_id: eris
     text:
-      pt: Levantei requisitos com clientes e produzi manuais, especificações e termos de homologação.
-      en: Gathered requirements with clients and produced manuals, specifications, and acceptance documents.
-    tags: [requirements, documentation, client-facing]
+      pt: Levantei requisitos com clientes e produzi manuais, especificações e termos
+        de homologação.
+      en: Gathered requirements with clients and produced manuals, specifications, and
+        acceptance documents.
+    tags:
+      - requirements
+      - documentation
+      - client-facing
     status: usable
     confidence: high
-    source_ids: [SRC-002, SRC-003, SRC-004, SRC-005, SRC-006]
+    source_ids:
+      - SRC-002
+      - SRC-003
+      - SRC-004
+      - SRC-005
+      - SRC-006
   - id: CLAIM-0093
     experience_id: eris
     text:
-      pt: Desenvolvi um novo ERP com C#, Windows Forms, ASP.NET e SQL Server, além de sustentar sistemas em VB6 e ASP Clássico.
-      en: Developed a new ERP with C#, Windows Forms, ASP.NET, and SQL Server while maintaining VB6 and Classic ASP systems.
-    tags: [dotnet, csharp, erp, sql-server, legacy-modernization]
+      pt: Desenvolvi um novo ERP com C#, Windows Forms, ASP.NET e SQL Server, além de
+        sustentar sistemas em VB6 e ASP Clássico.
+      en: Developed a new ERP with C#, Windows Forms, ASP.NET, and SQL Server while
+        maintaining VB6 and Classic ASP systems.
+    tags:
+      - dotnet
+      - csharp
+      - erp
+      - sql-server
+      - legacy-modernization
     status: usable
     confidence: high
-    source_ids: [SRC-006, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016]
-
+    source_ids:
+      - SRC-006
+      - SRC-008
+      - SRC-009
+      - SRC-010
+      - SRC-011
+      - SRC-012
+      - SRC-013
+      - SRC-014
+      - SRC-015
+      - SRC-016
   - id: CLAIM-0101
     experience_id: pkz
     text:
       pt: Prestei suporte à implantação e ao uso de um sistema ERP.
       en: Supported the implementation and use of an ERP system.
-    tags: [erp, implementation, support]
+    tags:
+      - erp
+      - implementation
+      - support
     status: usable
     confidence: high
-    source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-006, SRC-008, SRC-009, SRC-014, SRC-015]
+    source_ids:
+      - SRC-001
+      - SRC-002
+      - SRC-003
+      - SRC-004
+      - SRC-005
+      - SRC-006
+      - SRC-008
+      - SRC-009
+      - SRC-014
+      - SRC-015
   - id: CLAIM-0104
     experience_id: pkz
     text:
-      pt: Administrei e monitorei redes, Windows Server, permissões, segurança e acessos.
-      en: Administered and monitored networks, Windows Server, permissions, security, and access.
-    tags: [infrastructure, windows-server, security, operations]
+      pt: Administrei e monitorei redes, Windows Server, permissões, segurança e
+        acessos.
+      en: Administered and monitored networks, Windows Server, permissions, security,
+        and access.
+    tags:
+      - infrastructure
+      - windows-server
+      - security
+      - operations
     status: usable
     confidence: high
-    source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-006, SRC-008, SRC-009]
+    source_ids:
+      - SRC-001
+      - SRC-002
+      - SRC-003
+      - SRC-004
+      - SRC-005
+      - SRC-006
+      - SRC-008
+      - SRC-009
   - id: CLAIM-0107
     experience_id: pkz
     text:
       pt: Fui responsável pela infraestrutura de TI da empresa.
       en: Was responsible for the company's IT infrastructure.
-    tags: [infrastructure, ownership, operations]
+    tags:
+      - infrastructure
+      - ownership
+      - operations
     status: usable
     confidence: high
-    source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-006, SRC-008, SRC-009, SRC-014, SRC-015]
-
-  # Confirmado por Geilton em 2026-09-10 (USR-20260910-001/002/004).
-  # Atribuição de stack por empresa: vizir-second, siemens, mttechne-ticket.
+    source_ids:
+      - SRC-001
+      - SRC-002
+      - SRC-003
+      - SRC-004
+      - SRC-005
+      - SRC-006
+      - SRC-008
+      - SRC-009
+      - SRC-014
+      - SRC-015
   - id: CLAIM-0121
     experience_id: mttechne-ticket
     text:
-      pt: Desenvolvi microsserviços em .NET Core com arquitetura hexagonal, Docker e Kubernetes em produção.
-      en: Built .NET Core microservices with hexagonal architecture, Docker, and Kubernetes in production.
-    tags: [microservices, dotnet, hexagonal-architecture, docker, kubernetes]
+      pt: Desenvolvi microsserviços em .NET Core com arquitetura hexagonal, Docker e
+        Kubernetes em produção.
+      en: Built .NET Core microservices with hexagonal architecture, Docker, and
+        Kubernetes in production.
+    tags:
+      - microservices
+      - dotnet
+      - hexagonal-architecture
+      - docker
+      - kubernetes
     status: usable
     confidence: high
-    source_ids: [USR-20260910-004]
+    source_ids:
+      - USR-20260910-004
   - id: CLAIM-0122
     experience_id: mttechne-ticket
     text:
       pt: Usei RabbitMQ para comunicação assíncrona entre serviços em produção.
       en: Used RabbitMQ for asynchronous inter-service communication in production.
-    tags: [rabbitmq, messaging, event-driven, backend]
+    tags:
+      - rabbitmq
+      - messaging
+      - event-driven
+      - backend
     status: usable
     confidence: high
-    source_ids: [USR-20260910-001, USR-20260910-004]
+    source_ids:
+      - USR-20260910-001
+      - USR-20260910-004
   - id: CLAIM-0123
     experience_id: mttechne-ticket
     text:
       pt: Automatizei o pipeline de entrega com GoCD.
       en: Automated the delivery pipeline with GoCD.
-    tags: [cicd, gocd, delivery]
+    tags:
+      - cicd
+      - gocd
+      - delivery
     status: usable
     confidence: high
-    source_ids: [USR-20260910-004]
+    source_ids:
+      - USR-20260910-004
   - id: CLAIM-0124
     experience_id: mttechne-ticket
     text:
       pt: Contribuí com desenvolvimento frontend em Angular.
       en: Contributed frontend development in Angular.
-    tags: [angular, frontend]
+    tags:
+      - angular
+      - frontend
     status: usable
     confidence: high
-    source_ids: [USR-20260910-004]
+    source_ids:
+      - USR-20260910-004
   - id: CLAIM-0125
     experience_id: siemens
     text:
       pt: Participo de rotação de on-call e respondo a incidentes em produção.
       en: Participate in on-call rotations and respond to production incidents.
-    tags: [on-call, incident-response, reliability, operations]
+    tags:
+      - on-call
+      - incident-response
+      - reliability
+      - operations
     status: usable
     confidence: high
-    source_ids: [USR-20260910-002, USR-20260910-004]
+    source_ids:
+      - USR-20260910-002
+      - USR-20260910-004
   - id: CLAIM-0126
     experience_id: siemens
     text:
       pt: Trabalho com pair programming como parte do fluxo diário de desenvolvimento.
       en: Work with pair programming as part of the daily development flow.
-    tags: [pair-programming, engineering-practices, collaboration]
+    tags:
+      - pair-programming
+      - engineering-practices
+      - collaboration
     status: usable
     confidence: high
-    source_ids: [USR-20260910-002, USR-20260910-004]
+    source_ids:
+      - USR-20260910-002
+      - USR-20260910-004
   - id: CLAIM-0127
     experience_id: vizir-second
     text:
       pt: Usei MongoDB como banco NoSQL em produção.
       en: Used MongoDB as a NoSQL database in production.
-    tags: [mongodb, nosql, database]
+    tags:
+      - mongodb
+      - nosql
+      - database
     status: usable
     confidence: high
-    source_ids: [USR-20260910-001, USR-20260910-004]
+    source_ids:
+      - USR-20260910-001
+      - USR-20260910-004
   - id: CLAIM-0128
     experience_id: vizir-second
     text:
       pt: Coloquei em produção serviços AWS com Lambda, SNS, SQS e Elastic Beanstalk.
-      en: Shipped AWS services to production with Lambda, SNS, SQS, and Elastic Beanstalk.
-    tags: [aws, lambda, sqs, sns, serverless, event-driven]
+      en: Shipped AWS services to production with Lambda, SNS, SQS, and Elastic
+        Beanstalk.
+    tags:
+      - aws
+      - lambda
+      - sqs
+      - sns
+      - serverless
+      - event-driven
     status: usable
     confidence: high
-    source_ids: [USR-20260910-002, USR-20260910-004]
+    source_ids:
+      - USR-20260910-002
+      - USR-20260910-004
   - id: CLAIM-0129
     experience_id: vizir-second
     text:
       pt: Usei RabbitMQ para comunicação assíncrona entre serviços em produção.
       en: Used RabbitMQ for asynchronous inter-service communication in production.
-    tags: [rabbitmq, messaging, event-driven, backend]
+    tags:
+      - rabbitmq
+      - messaging
+      - event-driven
+      - backend
     status: usable
     confidence: high
-    source_ids: [USR-20260910-001, USR-20260910-004]
-
-  # Confirmado por Geilton em 2026-09-10 (USR-20260910-006).
+    source_ids:
+      - USR-20260910-001
+      - USR-20260910-004
   - id: CLAIM-0130
     experience_id: agap2-softfinanca
     text:
-      pt: Apliquei arquitetura hexagonal (ports and adapters) nos sistemas backend em que atuei.
-      en: Applied hexagonal architecture (ports and adapters) in the backend systems I worked on.
-    tags: [hexagonal-architecture, architecture, backend]
+      pt: Apliquei arquitetura hexagonal (ports and adapters) nos sistemas backend em
+        que atuei.
+      en: Applied hexagonal architecture (ports and adapters) in the backend systems I
+        worked on.
+    tags:
+      - hexagonal-architecture
+      - architecture
+      - backend
     status: usable
     confidence: high
-    source_ids: [USR-20260910-006]
+    source_ids:
+      - USR-20260910-006
   - id: CLAIM-0131
     experience_id: novabase-fidelidade
     text:
       pt: Usei RabbitMQ para comunicação assíncrona entre serviços.
       en: Used RabbitMQ for asynchronous inter-service communication.
-    tags: [rabbitmq, messaging, event-driven]
+    tags:
+      - rabbitmq
+      - messaging
+      - event-driven
     status: usable
     confidence: high
-    source_ids: [USR-20260910-006]
+    source_ids:
+      - USR-20260910-006
   - id: CLAIM-0132
     experience_id: novabase-fidelidade
     text:
       pt: Trabalhei com Docker em aplicações e serviços.
       en: Worked with Docker in applications and services.
-    tags: [docker, containers, delivery]
+    tags:
+      - docker
+      - containers
+      - delivery
     status: usable
     confidence: high
-    source_ids: [USR-20260910-006]
+    source_ids:
+      - USR-20260910-006
   - id: CLAIM-0133
     experience_id: novabase-fidelidade
     text:
       pt: Usei Kibana para análise de logs e observabilidade de serviços.
       en: Used Kibana for log analysis and service observability.
-    tags: [kibana, observability, logging, monitoring]
+    tags:
+      - kibana
+      - observability
+      - logging
+      - monitoring
     status: usable
     confidence: high
-    source_ids: [USR-20260910-006]
+    source_ids:
+      - USR-20260910-006
   - id: CLAIM-0134
     experience_id: novabase-fidelidade
     text:
       pt: Usei Azure DevOps para pipelines de CI/CD.
       en: Used Azure DevOps for CI/CD pipelines.
-    tags: [azure-devops, cicd, delivery]
+    tags:
+      - azure-devops
+      - cicd
+      - delivery
     status: usable
     confidence: high
-    source_ids: [USR-20260910-006]
-
-  # Confirmado por Geilton em 2026-09-10 (USR-20260910-007).
+    source_ids:
+      - USR-20260910-006
   - id: CLAIM-0135
     experience_id: novabase-fidelidade
     text:
-      pt: Trabalhei com .NET Core, RabbitMQ, Docker, Kubernetes, Azure Key Vault, Azure App Services e pipelines de CI/CD em YAML.
-      en: Worked with .NET Core, RabbitMQ, Docker, Kubernetes, Azure Key Vault, Azure App Services, and CI/CD YAML pipelines.
-    tags: [dotnet-core, kubernetes, azure, key-vault, app-services, rabbitmq, docker, cicd, backend]
+      pt: Trabalhei com .NET Core, RabbitMQ, Docker, Kubernetes, Azure Key Vault,
+        Azure App Services e pipelines de CI/CD em YAML.
+      en: Worked with .NET Core, RabbitMQ, Docker, Kubernetes, Azure Key Vault, Azure
+        App Services, and CI/CD YAML pipelines.
+    tags:
+      - dotnet-core
+      - kubernetes
+      - azure
+      - key-vault
+      - app-services
+      - rabbitmq
+      - docker
+      - cicd
+      - backend
     status: usable
     confidence: high
-    source_ids: [USR-20260910-006, USR-20260910-007]
+    source_ids:
+      - USR-20260910-006
+      - USR-20260910-007
   - id: CLAIM-0136
     experience_id: siemens
     text:
-      pt: Usei Azure Service Bus para comunicação assíncrona entre serviços.
-      en: Used Azure Service Bus for asynchronous inter-service communication.
-    tags: [azure-service-bus, messaging, event-driven, azure]
+      pt: Uso Azure Service Bus para comunicação assíncrona entre serviços.
+      en: Use Azure Service Bus for asynchronous inter-service communication.
+    tags:
+      - azure-service-bus
+      - messaging
+      - event-driven
+      - azure
     status: usable
     confidence: high
-    source_ids: [USR-20260910-007]
+    source_ids:
+      - USR-20260910-007
+  - id: CLAIM-0137
+    experience_id: deal-ltm
+    text:
+      pt: Apliquei sagas, CQRS e event sourcing em sistemas de fidelização.
+      en: Applied sagas, CQRS and event sourcing in loyalty systems.
+    tags:
+      - microservices
+      - sagas
+      - cqrs
+      - event-sourcing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-008
+  - id: CLAIM-0138
+    experience_id: vizir-second
+    text:
+      pt: Apliquei sagas, CQRS e event sourcing em microsserviços e fluxos
+        assíncronos.
+      en: Applied sagas, CQRS and event sourcing in microservices and asynchronous
+        flows.
+    tags:
+      - microservices
+      - sagas
+      - cqrs
+      - event-sourcing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-008
+  - id: CLAIM-0139
+    experience_id: mttechne-ticket
+    text:
+      pt: Apliquei sagas, CQRS e event sourcing nos fluxos financeiros assíncronos do
+        Transaction HUB.
+      en: Applied sagas, CQRS and event sourcing in the Transaction HUB asynchronous
+        financial flows.
+    tags:
+      - microservices
+      - sagas
+      - cqrs
+      - event-sourcing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-008
+  - id: CLAIM-0140
+    experience_id: agap2-softfinanca
+    text:
+      pt: Apliquei sagas, CQRS e event sourcing na evolução dos sistemas de core
+        banking e cartões.
+      en: Applied sagas, CQRS and event sourcing while evolving core-banking and card
+        systems.
+    tags:
+      - microservices
+      - sagas
+      - cqrs
+      - event-sourcing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-008
+  - id: CLAIM-0141
+    experience_id: novabase-fidelidade
+    text:
+      pt: Apliquei sagas, CQRS e event sourcing em iniciativas de modernização e
+        padronização.
+      en: Applied sagas, CQRS and event sourcing in modernization and standardization
+        initiatives.
+    tags:
+      - microservices
+      - sagas
+      - cqrs
+      - event-sourcing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-008
+  - id: CLAIM-0142
+    experience_id: siemens
+    text:
+      pt: Aplico sagas, CQRS e event sourcing em sistemas distribuídos e fluxos
+        assíncronos.
+      en: Apply sagas, CQRS and event sourcing in distributed systems and asynchronous
+        flows.
+    tags:
+      - microservices
+      - sagas
+      - cqrs
+      - event-sourcing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-008
+  - id: CLAIM-0143
+    experience_id: vizir-second
+    text:
+      pt: Operei Jenkins nos pipelines de entrega da plataforma Natura.
+      en: Operated Jenkins in the Natura platform delivery pipelines.
+    tags:
+      - cicd
+      - jenkins
+      - delivery
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-009
+  - id: CLAIM-0144
+    experience_id: siemens
+    text:
+      pt: Integro LLM ao produto no sistema de user management.
+      en: Integrate LLM into the product in the user management system.
+    tags:
+      - ai
+      - llm
+      - product
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0145
+    experience_id: siemens
+    text:
+      pt: Uso Redis como cache distribuído em produção.
+      en: Use Redis as a distributed cache in production.
+    tags:
+      - redis
+      - caching
+      - database
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0146
+    experience_id: siemens
+    text:
+      pt: Atuo em sistemas multi-tenant no user management.
+      en: Work on multi-tenant systems in user management.
+    tags:
+      - multi-tenant
+      - architecture
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0147
+    experience_id: vizir-second
+    text:
+      pt: Atuei em plataforma global multi-tenant e multi-país (Natura).
+      en: Worked on a global multi-tenant, multi-country platform (Natura).
+    tags:
+      - multi-tenant
+      - global-platform
+      - scale
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0148
+    experience_id: agap2-softfinanca
+    text:
+      pt: Atuei em sistemas multi-tenant na SoftFinança.
+      en: Worked on multi-tenant systems at SoftFinanca.
+    tags:
+      - multi-tenant
+      - architecture
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0149
+    experience_id: novabase-fidelidade
+    text:
+      pt: Atuei em sistemas multi-tenant na Fidelidade.
+      en: Worked on multi-tenant systems at Fidelidade.
+    tags:
+      - multi-tenant
+      - architecture
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0150
+    experience_id: mttechne-ticket
+    text:
+      pt: Atuei em sistemas multi-tenant na Ticket/Edenred.
+      en: Worked on multi-tenant systems at Ticket/Edenred.
+    tags:
+      - multi-tenant
+      - architecture
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0151
+    experience_id: deal-ltm
+    text:
+      pt: Atuei em sistemas multi-tenant no Grupo LTM.
+      en: Worked on multi-tenant systems at Grupo LTM.
+    tags:
+      - multi-tenant
+      - architecture
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-010
+  - id: CLAIM-0152
+    experience_id: novabase-fidelidade
+    text:
+      pt: Melhorei a observabilidade com um framework de log que rastreava um request
+        de ponta a ponta entre todos os serviços envolvidos.
+      en: Improved observability with a logging framework that traced a request
+        end-to-end across every service involved.
+    tags:
+      - observability
+      - logging
+      - tracing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-011
+  - id: CLAIM-0153
+    experience_id: novabase-fidelidade
+    text:
+      pt: Conduzi post-mortems com análise de causa raiz, convertendo incidentes em
+        correções sistêmicas.
+      en: Led post-mortems with root cause analysis, turning incidents into systemic
+        fixes.
+    tags:
+      - incident-management
+      - post-mortem
+      - reliability
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-012
+  - id: CLAIM-0154
+    experience_id: siemens
+    text:
+      pt: Atuo com autenticação e autorização no sistema de user management, seguindo
+        princípios de secure-by-design.
+      en: Work on authentication and authorization in the user management system,
+        following secure-by-design principles.
+    tags:
+      - auth
+      - iam
+      - security
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260910-013
+  - id: CLAIM-0155
+    experience_id: siemens
+    text:
+      pt: Desenvolvo em Go e .NET na plataforma de user management.
+      en: Develop in Go and .NET on the user management platform.
+    tags:
+      - go
+      - golang
+      - dotnet
+      - backend
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-002
+  - id: CLAIM-0156
+    experience_id: vizir-second
+    text:
+      pt: Desenvolvi serviços backend em Node.js e TypeScript na plataforma de onboarding
+        da Natura.
+      en: Built backend services in Node.js and TypeScript on the Natura onboarding
+        platform.
+    tags:
+      - nodejs
+      - typescript
+      - backend
+      - global-platform
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-002
