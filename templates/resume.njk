@@ -15,7 +15,7 @@
         <p class="subheadline">{{ resume.person.subheadline }}</p>
         <address class="contacts">
           {% for contact in resume.person.contacts %}
-            <a href="{{ contact.href }}">{{ contact.label }}</a>{% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
+            <a href="{{ contact.href }}">{{ contact.label }}</a>
           {% endfor %}
         </address>
       </header>
