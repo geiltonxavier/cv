@@ -124,7 +124,7 @@ outputs/general/pt/en/architecture-staff/
 
 A job CV is written to `outputs/jobs/<slug>/<language>-<market>/` with the same three files.
 
-`audit.json` records the mode, the config id (`track` or `job_id`), the job metadata and base track for a job run, the market, selected contacts, claims and sources used, target page count and page boundary, blocked metrics excluded from generation, open conflicts, and a deterministic data fingerprint.
+`audit.json` records the mode, the config id (`track` or `job_id`), the job metadata and base track for a job run, the market, selected contacts, credentials, claims and sources used, target page count and page boundary, blocked metrics excluded from generation, open conflicts, and a deterministic data fingerprint.
 
 ## Editing career information
 
@@ -138,8 +138,10 @@ Then run validation and tests before generating a new CV.
 
 Information found only in removed legacy CVs is preserved in `data/review-queue.yml`. Confirm a candidate against real experience before promoting it into the canonical profile, claims, or contacts.
 
+Certifications and affiliations (`credentials` in `data/education.yml`) follow the same status rule: only `usable` ones render, in the Certifications and Affiliations section, as the issuer plus `display_name` (falling back to `name`) and the optional `year`. Use `display_name` when the raw record carries detail the CV should not show (for example a certification ID or an expiry rule).
+
 ## Current limitations
 
 - The imported historical inventory has not been independently verified inside this repository because the original CV files are not present here.
-- Current formal job title, master's status, AZ-204 validity, IEEE membership status, and several strong metrics remain blocked.
+- The formal job title, master's status, AZ-204 validity, and IEEE membership were confirmed and promoted on 2026-09-12. What remains open is mostly early-career precision (dates and contractual titles, `CON-003` to `CON-039`) plus three blocked metrics (`MET-007`, `MET-008`, `MET-009`) behind `CON-048` to `CON-050`; `MET-003` (Siemens 300+ engineers) was discarded as inaccurate.
 - The CLI does not read job postings: turning a posting into `config/jobs/<slug>.yml` is the agent's job. There is no URL ingestion and no text scraping anywhere in `src/`.
