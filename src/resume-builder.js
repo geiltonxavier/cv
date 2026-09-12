@@ -29,7 +29,6 @@ const LABELS = {
 };
 
 const EARLY_CAREER_IDS = [
-  "fcamara-via-varejo",
   "deal-ltm",
   "vizir-first",
   "sofhar-prodesp",

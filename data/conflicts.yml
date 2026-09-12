@@ -3,45 +3,45 @@ schema_version: 1
 # Open conflicts imported from section 12 of the historical evidence inventory.
 # They remain data-quality gates; a generator must not silently resolve them.
 conflicts:
-  - {id: CON-001, field: professional_name, status: open, question: Qual nome profissional deve ser usado atualmente?}
+  - {id: CON-001, field: professional_name, status: resolved, resolution: "Mantido 'Geilton Xavier' como nome profissional no CV (USR-20260912-007).", question: Qual nome profissional deve ser usado atualmente?}
   - {id: CON-002, field: current_phone, status: resolved, question: Qual telefone deve ser usado atualmente nos CVs?, resolution: Portugal e internacional usam +351 910 702 889; empresas brasileiras usam +55 11 92648-6761. Ambos têm WhatsApp.}
-  - {id: CON-003, field: historical_phone, status: open, question: O telefone histórico do Stack Overflow perdeu um dígito ou era outro número?}
-  - {id: CON-004, field: email, status: open, question: O Gmail histórico deve ser tratado como contato profissional?}
-  - {id: CON-005, field: historical_address, status: open, question: Os endereços históricos diferentes representam mudanças reais?}
-  - {id: CON-006, field: deal_start, status: open, question: Qual foi o mês e ano exatos de início na Deal/LTM?}
-  - {id: CON-007, field: deal_early_start, status: open, question: Setembro de 2015 na Deal é erro de versão ou outra relação?}
-  - {id: CON-008, field: deal_end, status: open, question: Qual foi a data final exata na Deal/LTM?}
-  - {id: CON-009, field: deal_title, status: open, question: Qual era o título contratual na Deal/LTM?}
-  - {id: CON-010, field: deal_clients, status: open, question: Quais clientes você atendeu diretamente na Deal/LTM?}
-  - {id: CON-011, field: loyalty_project_company, status: open, question: A plataforma loyalty cloud multi-tenant pertence à Deal/LTM ou à Vizir?}
-  - {id: CON-012, field: deal_leadership_strength, status: open, question: Na Deal você liderou o backend ou atuou como senior individual contributor?}
-  - {id: CON-013, field: fcamara_via_varejo_start, status: open, question: A passagem FCamara/Via Varejo começou em julho ou agosto de 2017?}
-  - {id: CON-014, field: via_varejo_java_scope, status: open, question: Você implementou Java em produção na Via Varejo?}
-  - {id: CON-015, field: vizir_second_start, status: open, question: A segunda passagem na Vizir começou exatamente em 30 de setembro de 2017?}
-  - {id: CON-016, field: vizir_first_start, status: open, question: A primeira passagem na Vizir começou em agosto ou setembro de 2015?}
-  - {id: CON-017, field: vizir_first_end, status: open, question: A primeira passagem na Vizir terminou em junho ou julho de 2016?}
-  - {id: CON-018, field: isa_cteep_ownership, status: open, question: Você era o único engenheiro responsável pelo sistema ISA CTEEP?}
-  - {id: CON-019, field: isa_cteep_scale, status: open, question: Os percentuais de escala da ISA CTEEP eram oficialmente documentados?}
-  - {id: CON-020, field: sofhar_title, status: open, question: Qual era o cargo oficial na Sofhar/PRODESP?}
-  - {id: CON-021, field: sofhar_location, status: open, question: Onde a atividade Sofhar/PRODESP era exercida?}
-  - {id: CON-022, field: prodesp_ownership, status: open, question: Você era o único desenvolvedor do SELJ/SICCEL durante todo o período?}
-  - {id: CON-023, field: sports_system_owner, status: open, question: Qual órgão era responsável pelo sistema esportivo?}
-  - {id: CON-024, field: confitec_title, status: open, question: Qual era seu título oficial na Confitec?}
-  - {id: CON-025, field: belo_monte_scope, status: open, question: O sistema de Belo Monte controlava cargas equipamentos ou ambos?}
-  - {id: CON-026, field: fcamara_first_start, status: open, question: A primeira passagem na FCamara começou em maio junho ou julho de 2013?}
-  - {id: CON-027, field: fcamara_profile_start, status: open, question: Julho de 2013 no perfil atual está correto?}
-  - {id: CON-028, field: fcamara_first_contract, status: open, question: A primeira passagem na FCamara era estágio formal?}
-  - {id: CON-029, field: eris_start, status: open, question: A passagem na Eris começou em janeiro fevereiro ou março de 2012?}
-  - {id: CON-030, field: eris_internship_dates, status: open, question: Quais foram as datas exatas do estágio na Eris?}
-  - {id: CON-031, field: eris_promotion, status: open, question: A promoção na Eris ocorreu em agosto ou outubro de 2012?}
-  - {id: CON-032, field: eris_end, status: open, question: A saída da Eris foi em junho ou julho de 2013?}
-  - {id: CON-033, field: eris_leadership_metrics, status: open, question: Você confirma referência técnica mentoria e ganho de produtividade na Eris?}
-  - {id: CON-034, field: pkz_start, status: open, question: A passagem na PKZ começou em janeiro ou junho de 2010?}
-  - {id: CON-035, field: pkz_role_dates, status: open, question: Quais datas correspondem a Auxiliar e Analista na PKZ?}
-  - {id: CON-036, field: pkz_title, status: open, question: Qual título oficial deve ser preservado para a PKZ?}
-  - {id: CON-037, field: information_systems_institution, status: open, question: O curso de Sistemas de Informação foi na São Judas ou Cruzeiro do Sul?}
-  - {id: CON-038, field: information_systems_status, status: open, question: O curso de Sistemas de Informação foi formalmente interrompido em 2013?}
-  - {id: CON-039, field: ads_completion_month, status: open, question: Qual foi o mês de conclusão do tecnólogo em ADS?}
+  - {id: CON-003, field: historical_phone, status: resolved, resolution: "Fechado em 2026-09-12 (USR-20260912-010): nenhum telefone histórico entra na base ou no CV.", question: O telefone histórico do Stack Overflow perdeu um dígito ou era outro número?}
+  - {id: CON-004, field: email, status: resolved, resolution: "Fechado em 2026-09-12 (USR-20260912-010): nenhum e-mail histórico entra como contato profissional.", question: O Gmail histórico deve ser tratado como contato profissional?}
+  - {id: CON-005, field: historical_address, status: resolved, resolution: "Fechado em 2026-09-12 (USR-20260912-010): nenhum endereço histórico entra na base ou no CV.", question: Os endereços históricos diferentes representam mudanças reais?}
+  - {id: CON-006, field: deal_start, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-009): a Deal/LTM começou em dezembro de 2016.", question: Qual foi o mês e ano exatos de início na Deal/LTM?}
+  - {id: CON-007, field: deal_early_start, status: resolved, resolution: "Encerrado em 2026-09-12 (USR-20260912-009): setembro de 2015 era erro de versão; a passagem pela Deal/LTM é dez/2016 a set/2017.", question: Setembro de 2015 na Deal é erro de versão ou outra relação?}
+  - {id: CON-008, field: deal_end, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-009): a Deal/LTM terminou em setembro de 2017.", question: Qual foi a data final exata na Deal/LTM?}
+  - {id: CON-009, field: deal_title, status: resolved, resolution: "Fechado em 2026-09-12 (USR-20260912-009): ele não lembra o título contratual da Deal/LTM, então o CV não afirma título para essa passagem.", question: Qual era o título contratual na Deal/LTM?}
+  - {id: CON-010, field: deal_clients, status: resolved, resolution: "Corrigido em 2026-09-12 (USR-20260912-009): Ticket e ISA CTEEP eram clientes da VIZIR, não da Deal. O sistema SELJ e a ISA CTEEP são da era Vizir.", question: Quais clientes você atendeu diretamente na Deal/LTM?}
+  - {id: CON-011, field: loyalty_project_company, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-008): a plataforma loyalty cloud multi-tenant era da Deal/LTM, não da Vizir.", question: A plataforma loyalty cloud multi-tenant pertence à Deal/LTM ou à Vizir?}
+  - {id: CON-012, field: deal_leadership_strength, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-008): na Deal/LTM foi senior individual contributor, sem liderança formal — nenhuma claim pode sugerir liderança de time lá.", question: Na Deal você liderou o backend ou atuou como senior individual contributor?}
+  - {id: CON-013, field: fcamara_via_varejo_start, status: resolved, resolution: "Encerrado em 2026-09-12 (USR-20260912-009): passagem curta pela FCamara/Via Varejo, que ele mesmo já havia tirado do CV. A experiência foi removida da base.", question: A passagem FCamara/Via Varejo começou em julho ou agosto de 2017?}
+  - {id: CON-014, field: via_varejo_java_scope, status: resolved, resolution: "Encerrado em 2026-09-12 (USR-20260912-009): com a remoção da passagem FCamara/Via Varejo, o escopo de Java em produção não se aplica a nenhuma experiência da base.", question: Você implementou Java em produção na Via Varejo?}
+  - {id: CON-015, field: vizir_second_start, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-009): a segunda passagem pela Vizir começou em 30/09/2017.", question: A segunda passagem na Vizir começou exatamente em 30 de setembro de 2017?}
+  - {id: CON-016, field: vizir_first_start, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-009): a primeira passagem pela Vizir começou em agosto de 2015.", question: A primeira passagem na Vizir começou em agosto ou setembro de 2015?}
+  - {id: CON-017, field: vizir_first_end, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-009): a primeira passagem pela Vizir terminou em julho de 2016.", question: A primeira passagem na Vizir terminou em junho ou julho de 2016?}
+  - {id: CON-018, field: isa_cteep_ownership, status: resolved, resolution: "Encerrado em 2026-09-12 (USR-20260912-009): a premissa estava errada — ISA CTEEP é cliente da Vizir (1ª passagem, ago/2015 a jun/2016), em C#. Registrado como CLAIM-0166; ownership exclusivo não foi confirmado e a base não afirma isso.", question: Você era o único engenheiro responsável pelo sistema ISA CTEEP?}
+  - {id: CON-019, field: isa_cteep_scale, status: resolved, resolution: "Encerrado em 2026-09-12 (USR-20260912-009): percentuais de escala da ISA CTEEP não confirmados; nada sobre isso consta na base nem no CV.", question: Os percentuais de escala da ISA CTEEP eram oficialmente documentados?}
+  - {id: CON-020, field: sofhar_title, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-011): o cargo na Sofhar/PRODESP era Analista Programador .NET.", question: Qual era o cargo oficial na Sofhar/PRODESP?}
+  - {id: CON-021, field: sofhar_location, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-011): a atividade era presencial em São Paulo/SP.", question: Onde a atividade Sofhar/PRODESP era exercida?}
+  - {id: CON-022, field: prodesp_ownership, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-008): foi o único desenvolvedor do SELJ durante todo o período. Promovido como CLAIM-0165.", question: Você era o único desenvolvedor do SELJ/SICCEL durante todo o período?}
+  - {id: CON-023, field: sports_system_owner, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-008): a PRODESP executava o projeto para a Secretaria de Esportes do Estado de São Paulo.", question: Qual órgão era responsável pelo sistema esportivo?}
+  - {id: CON-024, field: confitec_title, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-011): o título na Confitec era Desenvolvedor de Software.", question: Qual era seu título oficial na Confitec?}
+  - {id: CON-025, field: belo_monte_scope, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-008): o sistema controlava cargas e equipamentos. CLAIM-0077 atualizada.", question: O sistema de Belo Monte controlava cargas equipamentos ou ambos?}
+  - {id: CON-026, field: fcamara_first_start, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): a primeira passagem pela FCamara começou em julho de 2013.", question: A primeira passagem na FCamara começou em maio junho ou julho de 2013?}
+  - {id: CON-027, field: fcamara_profile_start, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): julho de 2013 é a data correta.", question: Julho de 2013 no perfil atual está correto?}
+  - {id: CON-028, field: fcamara_first_contract, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): era estágio formal — o cargo passou a Estagiário de Desenvolvimento .NET.", question: A primeira passagem na FCamara era estágio formal?}
+  - {id: CON-029, field: eris_start, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): entrada na Eris em janeiro de 2012.", question: A passagem na Eris começou em janeiro fevereiro ou março de 2012?}
+  - {id: CON-030, field: eris_internship_dates, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): o estágio na Eris começou em janeiro de 2012.", question: Quais foram as datas exatas do estágio na Eris?}
+  - {id: CON-031, field: eris_promotion, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): a promoção na Eris foi em agosto de 2012.", question: A promoção na Eris ocorreu em agosto ou outubro de 2012?}
+  - {id: CON-032, field: eris_end, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): a saída da Eris foi em junho de 2013.", question: A saída da Eris foi em junho ou julho de 2013?}
+  - {id: CON-033, field: eris_leadership_metrics, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): foi referência técnica do time com mentoria e ganho de produtividade. Registrado como CLAIM-0167.", question: Você confirma referência técnica mentoria e ganho de produtividade na Eris?}
+  - {id: CON-034, field: pkz_start, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): a PKZ começou em janeiro de 2010.", question: A passagem na PKZ começou em janeiro ou junho de 2010?}
+  - {id: CON-035, field: pkz_role_dates, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): foi Auxiliar e depois Analista na PKZ.", question: Quais datas correspondem a Auxiliar e Analista na PKZ?}
+  - {id: CON-036, field: pkz_title, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-010): a PKZ fica fora do CV, então nenhum título precisa ser preservado para exibição.", question: Qual título oficial deve ser preservado para a PKZ?}
+  - {id: CON-037, field: information_systems_institution, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-011): o curso de Sistemas de Informação foi na Faculdade São Judas.", question: O curso de Sistemas de Informação foi na São Judas ou Cruzeiro do Sul?}
+  - {id: CON-038, field: information_systems_status, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-011): o curso de Sistemas de Informação foi interrompido em 2013. Decisão: não entra no CV, que mostra só o tecnólogo e as formações posteriores.", question: O curso de Sistemas de Informação foi formalmente interrompido em 2013?}
+  - {id: CON-039, field: ads_completion_month, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-011): conclusão em 30/06/2015 (ele digitou 2025 por engano). O CV segue mostrando 2013 – 2015.", question: Qual foi o mês de conclusão do tecnólogo em ADS?}
   - {id: CON-040, field: masters_degree_name, status: resolved, resolution: "Mestrado em Engenharia Informática (Universidade de Évora); admissão em 2025 com 2º lugar no processo seletivo (USR-20260912-002).", question: Qual é o nome oficial do mestrado na Universidade de Évora?}
   - {id: CON-041, field: masters_status, status: resolved, resolution: "Programa em pausa (trancado), sem data de conclusão. Decisão de 2026-09-12: manter no CV como sinal positivo, com o período 2025-2026 (USR-20260912-002).", question: Qual é o status atual do mestrado?}
   - {id: CON-042, field: bachelors_completion, status: resolved, resolution: "Concluído em 2024; cursado de 2022 a 2024, dois anos a menos por aproveitamento de créditos do tecnólogo em Análise e Desenvolvimento de Sistemas (USR-20260912-002).", question: O bacharelado em Ciência da Computação foi concluído em 2024?}
@@ -54,4 +54,4 @@ conflicts:
   - {id: CON-049, field: idp_adoption, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-005): o template interno era o EBL (Enterprise Business Layer) e a contagem saiu de métricas sobre a nomenclatura dos repositórios criados a partir dele. MET-008 passou a usable.", question: Qual era a definição e a data de corte dos 70+ projetos?}
   - {id: CON-050, field: ai_issue_analysis, status: resolved, resolution: "Confirmado em 2026-09-12 (USR-20260912-005): na Fidelidade ele coletava métricas de issues no Jira e classificava com LLM (system prompt) mais métricas internas. MET-009 passou a usable.", question: O sistema Jira e Azure OpenAI esteve em produção e como os 70% foram medidos?}
   - {id: CON-051, field: transaction_hub_scale, status: resolved, question: "Você confirma 900K transações por dia e 99,9% de disponibilidade?", resolution: "Confirmado em 2026-09-10 (USR-20260910-005); as métricas MET-014 e MET-015 passaram de blocked para usable."}
-  - {id: CON-052, field: unidentified_erp_letter, status: open, question: A carta de apresentação descreve a PKZ ou outra empresa?}
+  - {id: CON-052, field: unidentified_erp_letter, status: resolved, resolution: "Encerrado em 2026-09-12 (USR-20260912-011): ele não reconhece a carta de apresentação legada — não é dele e fica fora da base.", question: A carta de apresentação descreve a PKZ ou outra empresa?}

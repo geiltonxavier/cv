@@ -227,3 +227,73 @@ direct_sources:
         He collected issue recurrence metrics from Jira, summarized them with an
         LLM, and no longer had to review thousands of open issues to see what
         kept coming back as a problem.
+  - id: USR-20260912-007
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - The Ruby on Rails payment-gateway APIs were built during the first Vizir
+        period (2015), not the second one.
+      - PostgreSQL was the primary database of the Rails application at Vizir.
+      - "Ticket/Edenred stack - C# and .NET Core with RabbitMQ, Rancher and later
+        Kubernetes, Oracle database, and Angular. The legacy candidate about Ruby
+        checkout services was not confirmed for that period."
+      - The Siemens identity-synchronization APIs across enterprise systems are
+        confirmed.
+      - Oracle at Ticket/Edenred was missing from the earlier relational-database
+        summary (USR-20260910-010, which listed SQL Server and PostgreSQL); it is a
+        fourth relational database in his history.
+      - Keeps "Geilton Xavier" as the professional name on the CV.
+  - id: USR-20260912-008
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - The multi-tenant loyalty cloud platform was at Deal/LTM (2016-2017), not
+        at Vizir.
+      - At Deal/LTM he was a senior individual contributor without formal
+        leadership; the CV must not imply leading people there.
+      - At Sofhar/PRODESP he was the only developer of SELJ for the whole period;
+        PRODESP delivered the project for the Sports Secretariat of the State of
+        São Paulo.
+      - The Confitec system for the Belo Monte hydroelectric plant controlled both
+        cargo and equipment.
+  - id: USR-20260912-009
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - "The FCamara/Via Varejo passage (2017) was a short stint he had already
+        taken off the CV; it is deleted from the canonical data."
+      - Deal/LTM dates are Dec/2016 to Sep/2017 (his choice); the LinkedIn shows
+        Jun/2016 to Sep/2017, and the short FCamara passage sat between Deal and
+        the return to Vizir.
+      - Ticket and ISA CTEEP were Vizir clients, not Deal clients. ISA CTEEP was
+        during the first Vizir period (Aug/2015 to Jun/2016), working in C#.
+      - Vizir first period ran Aug/2015 to Jul/2016; the second period started
+        30/09/2017.
+      - He does not recall the contractual title at Deal/LTM, so the CV claims
+        none.
+  - id: USR-20260912-010
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - No historical phone, email address, or address enters the canonical data
+        or the CV.
+      - The first FCamara period started in July/2013 and it was a formal
+        internship.
+      - Eris Sistemas - entered Jan/2012, promoted Aug/2012, left Jun/2013; he was
+        the team's technical reference there.
+      - "PKZ Plastic - started Jan/2010, went from Auxiliar (assistant) to
+        Analista (analyst); the company stays out of the CV."
+  - id: USR-20260912-011
+    kind: user_confirmation
+    recorded_at: 2026-09-12
+    statements:
+      - Sofhar/PRODESP role was Analista Programador .NET, on-site in São Paulo
+        (SP, Brazil).
+      - The Confitec title was Desenvolvedor de Software.
+      - The earlier Information Systems course was at Faculdade São Judas and was
+        interrupted in 2013 (it stays out of the CV; only the technology degree
+        and the later degrees are shown).
+      - The technology degree in Systems Analysis and Development (Cruzeiro do
+        Sul) was completed on 30/06/2015 — he typed 2025 by mistake.
+      - He does not recognise the legacy cover letter; it is not his and stays
+        out of the base.

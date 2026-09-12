@@ -81,30 +81,14 @@ experiences:
     source_ids: [SRC-016, SRC-018, SRC-019, SRC-020]
     conflict_ids: [CON-011]
 
-  - id: fcamara-via-varejo
-    evidence_id: EXP-006
-    company: FCamara · Via Varejo
-    role:
-      pt: Desenvolvedor de Software Sênior
-      en: Senior Software Developer
-    start: 2017
-    end: 2017
-    location:
-      pt: São Paulo, Brasil
-      en: São Paulo, Brazil
-    domains: [retail, backoffice]
-    status: reference_only
-    source_ids: [SRC-015, SRC-016]
-    conflict_ids: [CON-013, CON-014]
-
   - id: deal-ltm
     evidence_id: EXP-007
     company: Deal · Grupo LTM
     role:
       pt: Desenvolvedor de Software
       en: Software Developer
-    start: 2016
-    end: 2017
+    start: 2016-12
+    end: 2017-09
     location:
       pt: São Paulo, Brasil
       en: São Paulo, Brazil
@@ -119,8 +103,8 @@ experiences:
     role:
       pt: Desenvolvedor .NET e Ruby on Rails
       en: .NET and Ruby on Rails Developer
-    start: 2015
-    end: 2016
+    start: 2015-08
+    end: 2016-07
     location:
       pt: São Paulo, Brasil
       en: São Paulo, Brazil
@@ -162,9 +146,9 @@ experiences:
     evidence_id: EXP-012
     company: FCamara
     role:
-      pt: Desenvolvedor .NET
-      en: .NET Developer
-    start: 2013
+      pt: Estagiário de Desenvolvimento .NET
+      en: .NET Development Intern
+    start: 2013-07
     end: 2013-09
     location:
       pt: São Paulo, Brasil
@@ -180,8 +164,8 @@ experiences:
     role:
       pt: Suporte ERP e Desenvolvimento .NET
       en: ERP Support and .NET Development
-    start: 2012
-    end: 2013
+    start: 2012-01
+    end: 2013-06
     location:
       pt: São Paulo, Brasil
       en: São Paulo, Brazil
@@ -196,7 +180,7 @@ experiences:
     role:
       pt: Suporte e Infraestrutura de TI
       en: IT Support and Infrastructure
-    start: 2010
+    start: 2010-01
     end: 2012-01
     location:
       pt: Taboão da Serra, Brasil

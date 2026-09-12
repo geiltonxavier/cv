@@ -689,10 +689,10 @@ claims:
   - id: CLAIM-0077
     experience_id: confitec
     text:
-      pt: Desenvolvi e mantive um sistema de controle relacionado à construção da
-        Usina Hidrelétrica de Belo Monte.
-      en: Developed and maintained a control system related to the construction of the
-        Belo Monte hydroelectric plant.
+      pt: Desenvolvi e mantive o sistema de controle de cargas e equipamentos da construção
+        da Usina Hidrelétrica de Belo Monte.
+      en: Developed and maintained the cargo and equipment control system for the
+        construction of the Belo Monte hydroelectric plant.
     tags:
       - dotnet
       - energy
@@ -1482,3 +1482,96 @@ claims:
     source_ids:
       - USR-20260912-005
       - USR-20260912-006
+  - id: CLAIM-0162
+    experience_id: vizir-first
+    text:
+      pt: Criei APIs backend em Ruby on Rails para integração com gateways de pagamento.
+      en: Built Ruby on Rails backend APIs for payment-gateway integration.
+    tags:
+      - ruby
+      - rails
+      - payments
+      - integrations
+      - backend
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-007
+  - id: CLAIM-0163
+    experience_id: mttechne-ticket
+    text:
+      pt: Trabalhei com Oracle como banco de dados e orquestrei containers com Rancher
+        e, depois, Kubernetes em produção.
+      en: Worked with Oracle as the database and orchestrated containers with Rancher
+        and later Kubernetes in production.
+    tags:
+      - oracle
+      - rancher
+      - kubernetes
+      - containers
+      - database
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-007
+  - id: CLAIM-0164
+    experience_id: siemens
+    text:
+      pt: Construí APIs e serviços de integração para sincronizar identidades entre
+        sistemas corporativos.
+      en: Built APIs and integration services to synchronize identities across
+        enterprise systems.
+    tags:
+      - iam
+      - integrations
+      - identity
+      - backend
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-007
+  - id: CLAIM-0165
+    experience_id: sofhar-prodesp
+    text:
+      pt: Fui o único desenvolvedor do SELJ (gestão de eventos esportivos) na PRODESP,
+        para a Secretaria de Esportes do Estado de SP.
+      en: Was the only developer of SELJ (sports-event management) at PRODESP, a
+        project delivered for the Sports Secretariat of the State of São Paulo.
+    tags:
+      - public-sector
+      - dotnet
+      - product
+      - ownership
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-008
+  - id: CLAIM-0166
+    experience_id: vizir-first
+    text:
+      pt: Atuei em C# no sistema da ISA CTEEP, cliente da Vizir na primeira passagem.
+      en: Worked in C# on the ISA CTEEP system, a Vizir client during the first period.
+    tags:
+      - dotnet
+      - csharp
+      - energy
+      - client-facing
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-009
+  - id: CLAIM-0167
+    experience_id: eris
+    text:
+      pt: Atuei como referência técnica do time na Eris, com mentoria e ganho de
+        produtividade do time.
+      en: Acted as the team's technical reference at Eris, mentoring and improving
+        team productivity.
+    tags:
+      - mentoring
+      - technical-leadership
+      - erp
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260912-010

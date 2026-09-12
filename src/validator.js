@@ -5,7 +5,6 @@ const { SCHEMA_DIR } = require("./paths");
 const { resolveJobConfig } = require("./jobs");
 
 const EARLY_CAREER_EXPERIENCE_IDS = new Set([
-  "fcamara-via-varejo",
   "deal-ltm",
   "vizir-first",
   "sofhar-prodesp",
