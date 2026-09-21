@@ -297,3 +297,36 @@ direct_sources:
         Sul) was completed on 30/06/2015 — he typed 2025 by mistake.
       - He does not recognise the legacy cover letter; it is not his and stays
         out of the base.
+
+  - id: USR-20260918-001
+    kind: user_confirmation
+    recorded_at: 2026-09-18
+    statements:
+      - .NET Framework (non-Core) was used at every company before Deal
+        (Eris, FCamara, Confitec, Sofhar/PRODESP, Vizir) and also at SoftFinança.
+      - He migrated a project from .NET Framework to .NET Core at SoftFinança
+        (agap2IT).
+      - At Fidelidade he took part in modernizing applications from .NET
+        Framework to .NET Core and .NET 8.
+      - ASP.NET WebForms was used at Confitec.
+      - Windows Services ran in production at Ticket/Edenred and at
+        SoftFinança.
+      - He has no Blazor experience (stays out of the CV).
+      - He never used Python in production (stays out of the CV).
+      - For the Caylent application he did not confirm IIS hosting, Windows-to-Linux
+        porting, MSMQ, ECS/Fargate, NuGet-conflict work or React; those stay out of
+        the CV.
+
+  - id: USR-20260918-002
+    kind: user_confirmation
+    recorded_at: 2026-09-18
+    statements:
+      - Entity Framework (Core) in production since 2016, starting at Deal with
+        the first version of .NET Core, and used at every company since then.
+      - SQL Server in production (no company named beyond the ERP work).
+      - PostgreSQL in production.
+      - Oracle in production (already in the base).
+      - Relational modelling and query tuning (LINQ and SQL).
+      - He does NOT know Kafka — it must never be written in the CV even when the
+        posting asks for it (BTG asks; the equivalent in the base is RabbitMQ and
+        Azure Service Bus).

@@ -60,23 +60,23 @@ tracks:
     summary_claim_ids: [CLAIM-0003, CLAIM-0115, CLAIM-0136, CLAIM-0116, CLAIM-0117, CLAIM-0144, CLAIM-0022, CLAIM-0026, CLAIM-0031]
     experience_claims:
       siemens: [CLAIM-0003, CLAIM-0155, CLAIM-0136, CLAIM-0116, CLAIM-0117, CLAIM-0144, CLAIM-0164]
-      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0013, CLAIM-0135, CLAIM-0016, CLAIM-0131, CLAIM-0161]
-      agap2-softfinanca: [CLAIM-0023, CLAIM-0026, CLAIM-0025, CLAIM-0024]
-      mttechne-ticket: [CLAIM-0029, CLAIM-0121, CLAIM-0122, CLAIM-0163, CLAIM-0031]
+      novabase-fidelidade: [CLAIM-0118, CLAIM-0119, CLAIM-0013, CLAIM-0135, CLAIM-0170, CLAIM-0175, CLAIM-0016, CLAIM-0131, CLAIM-0161]
+      agap2-softfinanca: [CLAIM-0169, CLAIM-0174, CLAIM-0023, CLAIM-0026, CLAIM-0025, CLAIM-0024]
+      mttechne-ticket: [CLAIM-0029, CLAIM-0121, CLAIM-0171, CLAIM-0176, CLAIM-0122, CLAIM-0163, CLAIM-0031]
       vizir-second: [CLAIM-0036, CLAIM-0043, CLAIM-0128, CLAIM-0129, CLAIM-0127]
-    early_career_claim_ids: [CLAIM-0048, CLAIM-0165, CLAIM-0076, CLAIM-0093, CLAIM-0158]
+    early_career_claim_ids: [CLAIM-0173, CLAIM-0048, CLAIM-0177, CLAIM-0165, CLAIM-0076, CLAIM-0168, CLAIM-0093, CLAIM-0158]
     page_break_before_experience: mttechne-ticket
     target_pages: 2
     skill_groups:
       - label: {pt: Backend, en: Backend}
-        items: [C#, .NET, .NET Core, Go, REST APIs, Web API, WCF, Microservices]
-        evidence_claim_ids: [CLAIM-0003, CLAIM-0026, CLAIM-0043, CLAIM-0121, CLAIM-0155]
+        items: [C#, .NET, .NET Framework, .NET Core, Entity Framework Core, ASP.NET (WebForms), Windows Services, Go, REST APIs, Web API, WCF, Microservices]
+        evidence_claim_ids: [CLAIM-0003, CLAIM-0026, CLAIM-0043, CLAIM-0121, CLAIM-0155, CLAIM-0168, CLAIM-0169, CLAIM-0170, CLAIM-0173, CLAIM-0174, CLAIM-0175]
       - label: {pt: Arquitetura, en: Architecture}
         items: [Distributed Systems, Event-Driven Architecture, DDD, TDD, Clean Architecture, Hexagonal Architecture, CQRS, Sagas, Multi-tenant]
         evidence_claim_ids: [CLAIM-0004, CLAIM-0023, CLAIM-0030, CLAIM-0031, CLAIM-0032, CLAIM-0130, CLAIM-0139, CLAIM-0142, CLAIM-0146, CLAIM-0151]
       - label: {pt: Mensageria e dados, en: Messaging & Data}
-        items: [RabbitMQ, Azure Service Bus, MongoDB, Redis, SQL Server, Oracle, LINQ]
-        evidence_claim_ids: [CLAIM-0122, CLAIM-0129, CLAIM-0131, CLAIM-0136, CLAIM-0145, CLAIM-0127, CLAIM-0025, CLAIM-0163]
+        items: [RabbitMQ, Azure Service Bus, MongoDB, Redis, SQL Server, PostgreSQL, Oracle, LINQ]
+        evidence_claim_ids: [CLAIM-0122, CLAIM-0129, CLAIM-0131, CLAIM-0136, CLAIM-0145, CLAIM-0127, CLAIM-0025, CLAIM-0163, CLAIM-0176, CLAIM-0177]
       - label: {pt: Cloud e entrega, en: Cloud & Delivery}
         items: [Azure, AWS, Terraform, Bicep, Docker, Kubernetes, Rancher, CI/CD, Azure DevOps, Jenkins, GoCD]
         evidence_claim_ids: [CLAIM-0116, CLAIM-0005, CLAIM-0038, CLAIM-0134, CLAIM-0143, CLAIM-0123, CLAIM-0128]

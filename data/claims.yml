@@ -1575,3 +1575,146 @@ claims:
     confidence: high
     source_ids:
       - USR-20260912-010
+
+  - id: CLAIM-0168
+    experience_id: confitec
+    text:
+      pt: Desenvolvi e mantive aplicações web em ASP.NET WebForms e .NET Framework.
+      en: Built and maintained web applications in ASP.NET WebForms and .NET Framework.
+    tags:
+      - dotnet
+      - aspnet
+      - webforms
+      - legacy-systems
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-001
+
+  - id: CLAIM-0169
+    experience_id: agap2-softfinanca
+    text:
+      pt: Migrei um projeto de .NET Framework para .NET Core.
+      en: Migrated a project from .NET Framework to .NET Core.
+    tags:
+      - dotnet
+      - legacy-modernization
+      - migration
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-001
+
+  - id: CLAIM-0170
+    experience_id: novabase-fidelidade
+    text:
+      pt: Participei da modernização de aplicações de .NET Framework para .NET Core e .NET 8.
+      en: Took part in modernizing applications from .NET Framework to .NET Core and .NET 8.
+    tags:
+      - dotnet
+      - legacy-modernization
+      - migration
+      - cloud-native
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-001
+
+  - id: CLAIM-0171
+    experience_id: mttechne-ticket
+    text:
+      pt: Mantive serviços Windows (Windows Services) rodando em produção no Transaction HUB.
+      en: Maintained Windows Services running in production for the Transaction HUB.
+    tags:
+      - dotnet
+      - windows-services
+      - legacy-systems
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-001
+
+  - id: CLAIM-0172
+    experience_id: agap2-softfinanca
+    text:
+      pt: Mantive serviços Windows (Windows Services) em produção nos sistemas de core banking e cartões.
+      en: Maintained Windows Services in production for the core banking and card systems.
+    tags:
+      - dotnet
+      - windows-services
+      - legacy-systems
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-001
+
+  - id: CLAIM-0173
+    experience_id: deal-ltm
+    text:
+      pt: Comecei a usar Entity Framework Core em produção em 2016, na primeira versão do .NET Core.
+      en: Started using Entity Framework Core in production in 2016, on the first version of .NET Core.
+    tags:
+      - dotnet
+      - entity-framework
+      - orm
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-002
+
+  - id: CLAIM-0174
+    experience_id: agap2-softfinanca
+    text:
+      pt: Usei Entity Framework Core no desenvolvimento backend em .NET Core.
+      en: Used Entity Framework Core in backend development with .NET Core.
+    tags:
+      - dotnet
+      - entity-framework
+      - orm
+      - core-banking
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-002
+
+  - id: CLAIM-0175
+    experience_id: novabase-fidelidade
+    text:
+      pt: Usei Entity Framework Core nos serviços .NET Core em produção.
+      en: Used Entity Framework Core in .NET Core services in production.
+    tags:
+      - dotnet
+      - entity-framework
+      - orm
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-002
+
+  - id: CLAIM-0176
+    experience_id: mttechne-ticket
+    text:
+      pt: Modelagem de dados relacionais e tuning de queries em SQL Server e Oracle no Transaction HUB.
+      en: Relational data modelling and query tuning on SQL Server and Oracle for the Transaction HUB.
+    tags:
+      - sql-server
+      - oracle
+      - data-modelling
+      - query-tuning
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-002
+
+  - id: CLAIM-0177
+    experience_id: vizir-first
+    text:
+      pt: Trabalhei com PostgreSQL em produção em aplicações Ruby on Rails.
+      en: Worked with PostgreSQL in production on Ruby on Rails applications.
+    tags:
+      - postgresql
+      - database
+    status: usable
+    confidence: high
+    source_ids:
+      - USR-20260918-002
